@@ -1,0 +1,540 @@
+# LANGUAGE translation for M2. Getting to Know Godot (Interactive Tours) for the following files:
+# res://tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+# res://addons/godot_tours/tour.gd
+# res://tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: M2. Getting to Know Godot (Interactive Tours)\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid "Open the start scene"
+msgstr "startシーンを開く"
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid "Let's start by opening the scene we will be working with."
+msgstr "それではこれから作業するシーンを開きましょう。"
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid ""
+"In the [b]FileSystem Dock[/b] at the bottom-left, find and [b]double-click[/"
+"b] on the scene we will be working with: [b]%s[/b]."
+msgstr ""
+"左下の[b]ファイルシステムドック[/b]から、これから作業する[b]%s[/b]シーンを見"
+"つけて[b]ダブルクリック[/b]します。"
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid "Open the scene [b]%s[/b]."
+msgstr "[b]%s[/b]シーンを開いてください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Press the [b]%s[/b] button."
+msgstr "[b]%s[/b]ボタンを押してください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Turn the [b]%s[/b] button %s."
+msgstr "[b]%s[/b]ボタンを%sしてください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Change to the [b]%s[/b] tab."
+msgstr "タブを[b]%s[/b]に変更してください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Select the %s %s in the [b]Scene Dock[/b]."
+msgstr "[b]シーンドック[/b]で%s %sを選択してください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Set [b]%s[/b] to [code]%s[/code]"
+msgstr "[b]%s[/b]を[code]%s[/code]に設定してください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Set [b]%s[/b]'s [b]%s[/b] property to [b]%s[/b]"
+msgstr "[b]%s[/b]の[b]%s[/b]プロパティを[b]%s[/b] に設定してください"
+
+#: addons/godot_tours/tour.gd
+msgid "Open the scene [b]%s[/b]"
+msgstr "[b]%s[/b]シーンを開いてください"
+
+#: addons/godot_tours/tour.gd
+msgid "Expand the property [b]%s[/b] in the [b]Inspector[/b]"
+msgstr "[b]Inspector[/b]のプロパティ[b]%s[/b]を展開してください"
+
+#: addons/godot_tours/tour.gd
+msgid "Move [b]%s[/b] inside the guide box"
+msgstr "ガイドボックスの内側に[b]%s[/b]を移動してください"
+
+#: addons/godot_tours/tour.gd
+msgid "Instantiate the [b]%s[/b] scene as a child of [b]%s[/b]"
+msgstr "[b]%s[/b] シーンを [b]%s[/b] の子としてインスタンス化してください"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Fleshing out the game"
+msgstr "ゲームの肉付け"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"You will usually start creating a game with the character and level "
+"structure, then flesh out the background and add user interface."
+msgstr ""
+"通常、キャラクターとレベル構成からゲームを作り始め、背景を練り上げ、ユーザー"
+"インターフェースを追加します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"We have the playable character and level, so we'll add a sky and health bar "
+"next."
+msgstr ""
+"操作可能なキャラクターとレベルは揃いましたので、次は青空とHP（ヒットポイン"
+"ト）バーを追加しましょう。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "The background is a dull flat color. Let's start with the sky."
+msgstr ""
+"現在背景はくすんだ平坦な色をしています。まずは青空から追加し始めましょう。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Re-select the Start node"
+msgstr "Startノードを再び選択する"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"We usually add background elements as children of the scene root node to "
+"keep the scene organized."
+msgstr ""
+"通常、シーンを整理するために背景要素をシーンのルートノードの子として追加しま"
+"す。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "In this case, the scene root node is the [b]Start[/b] node."
+msgstr "今回の場合、シーンのルートノードは[b]Start[/b]ノードです。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Click on the [b]Start[/b] node in the [b]Scene Dock[/b] to re-select it."
+msgstr "[b]シーンドック[/b]の[b]Start[/b]ノードをクリックして再選択します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Add the sky scene"
+msgstr "青空のシーンを追加する"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Drag and drop the [b]%s[/b] file onto the viewport to create an instance of "
+"it."
+msgstr ""
+"[b]%s[/b]ファイルをビューポートにドラッグ&ドロップして、インスタンスを作成し"
+"ます。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"This will add the sky to the game as a child of the selected [b]Start[/b] "
+"node."
+msgstr ""
+"これにより、青空シーンが選択した[b]Start[/b]ノードの子としてゲームに追加され"
+"ます。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Add the [b]Background Blue Sky Scene[/b] to the [b]Scene[/b]."
+msgstr "[b]BackgroundBlueSky[/b] を [b]シーン[/b] に追加します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Perfect!"
+msgstr "完璧です！"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Run the game to see how the sky always fills up the background and improves "
+"the experience."
+msgstr ""
+"ゲームを実行して、青空が常に背景に表示され、見た目が改善されている事を確認し"
+"ましょう。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"A game's feel improves with all the little things you add: background, "
+"animations, sounds, special effects..."
+msgstr ""
+"ゲームの面白さは、背景・アニメーション・サウンド・特殊効果など、あらゆる小さ"
+"な工夫を追加することで向上します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Click the [b]Play Edited Scene[/b] button to run the scene."
+msgstr "[b]編集したシーンの実行[/b]ボタンをクリックして、シーンを実行します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Play Edited Scene"
+msgstr "現在のシーンを実行"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Adding user interface"
+msgstr "ユーザーインターフェースの追加"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Our next task is to add a health bar to see when the character takes damage."
+msgstr ""
+"次のタスクはキャラクターがいつダメージを受けるかを確認するためにHP（ヒットポ"
+"イント）バーを追加することです。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Until now, we've only created scene instances. This time, we will also "
+"create a node."
+msgstr ""
+"これまではシーンインスタンスのみを作成していました。\n"
+"今回はノードも作成します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "The CanvasLayer node"
+msgstr "CanvasLayerノード"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"When we add visual elements to the game, by default, they don't move with "
+"the player."
+msgstr ""
+"ゲームにビジュアル要素を追加しても、デフォルトではプレイヤーと一緒に動きませ"
+"ん。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"For the user interface, we want it to move with the player so it always "
+"stays on screen."
+msgstr ""
+"ユーザーインターフェースはプレーヤーと一緒に移動して、常に画面上にとどまる必"
+"要があります。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"We can use a [b]CanvasLayer node[/b] for this. By default, it keeps visuals "
+"we add as a child of it on screen at all times."
+msgstr ""
+"これを実現するには [b]CanvasLayer ノード [/b] を使用できます。\n"
+"既定では、子として追加したビジュアルが常に画面上に保持されます。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Let's add a CanvasLayer node to the scene so that our user interface moves "
+"with the player."
+msgstr ""
+"シーンに CanvasLayer ノードを追加して、ユーザー インターフェイスがプレイヤー"
+"と一緒に動くようにしましょう。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Select the Start node"
+msgstr "Startノードを選択する"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"We want to add the [b]CanvasLayer[/b] node as a child of the [b]Start[/b] "
+"node, [b]not[/b] as a child of the currently selected [b]BackgroundBlueSky[/"
+"b], to keep our scene hierarchy organized."
+msgstr ""
+"[b]CanvasLayer[/b] ノードを 現在選択されている[b]BackgroundBlueSky[/b]ノード"
+"の子[b]ではなく[/b]、\n"
+"[b]Start[/b] ノードの子として追加してシーン階層を整理したいです。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Click on the [b]Start[/b] node in the [b]Scene Dock[/b] to select it."
+msgstr "[b]シーンドック[/b]の[b]Start[/b]ノードをクリックして選択します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "The Create Node dialog"
+msgstr "ノード作成ダイアログ"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"To add a node, click on the plus icon in the top-left of the [b]Scene Dock[/"
+"b], or press [b]%s + A[/b] on your keyboard."
+msgstr ""
+"ノードを追加するには、[b]シーンドック[/b]の左上にある＋アイコンをクリックする"
+"か、キーボードの[b]%s + A[/b]を押します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"This will open a popup window listing all the types of nodes built into "
+"Godot."
+msgstr ""
+"これによりGodotに組み込まれているすべてのタイプのノードを一覧表示するポップ"
+"アップウィンドウが開きます。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Godot's built-in nodes"
+msgstr "Godotのビルドインノード"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "This popup window is the [b]Create Node[/b] dialog."
+msgstr "このポップアップウィンドウは、[b]Nodeを新規作成[/b]ダイアログです。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "It lists over 100 node types Godot provides out of the box!"
+msgstr "Godotがすぐに使用できる100以上のノードタイプが一覧表示されます!"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Each has a specific purpose, like displaying an image, playing a sound, or "
+"letting you draw with a tilemap."
+msgstr ""
+"それぞれに特定の目的があり、画像の表示・サウンドの再生・タイルマップでの描画"
+"などが可能です。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Add the CanvasLayer node"
+msgstr "CanvasLayerノードを追加する"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "We need to add a [b]CanvasLayer node[/b]."
+msgstr "[b]CanvasLayerノード[/b]を追加する必要があります。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Click the search bar at the top to select it and search the node list. It's "
+"the fastest way to find nodes."
+msgstr ""
+"上部の検索バーをクリックして選択しノードリストを検索します。この方法はノード"
+"を見つける最速の方法です。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"In the central panel of the popup window, click on the [b]CanvasLayer[/b] "
+"node to select it."
+msgstr ""
+"ポップアップウィンドウの中央パネルで、[b]CanvasLayer[/b]ノードをクリックして"
+"選択します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Then, click the [b]Create[/b] button at the bottom of the window to add the "
+"node (or press the [b]Enter[/b] key on your keyboard)."
+msgstr ""
+"次にウィンドウ下部の [b]Create[/b] ボタンをクリックしてノードを追加します (ま"
+"たはキーボードの [b]Enter[/b] キーを押します)。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Create the [b]CanvasLayer[/b] node."
+msgstr "[b]CanvasLayer[/b] ノードを作成します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Great job!"
+msgstr "よくできました！"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"You just created your first node. Godot automatically selects a newly "
+"created node for you, so that you can immediately change its properties in "
+"the Inspector on the right."
+msgstr ""
+"最初のノードを作成しました。Godotは新しく作成されたノードを自動的に選択するた"
+"め、右側のインスペクターでそのプロパティをすぐに変更できます。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Let's add the health bar next."
+msgstr "次にHPバーを追加しましょう。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Add the health bar"
+msgstr "HPバーを追加する"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"To stay on screen at all times, the health bar must be a child of the "
+"[b]CanvasLayer[/b] node."
+msgstr ""
+"常に画面に表示されるようにするには、HPバーが [b]CanvasLayer[/b] ノードの子で"
+"ある必要があります。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Drag and drop the [b]%s[/b] scene onto the [b]CanvasLayer[/b] node in the "
+"[b]Scene Dock[/b] to create an instance of it."
+msgstr ""
+"[b]%s[/b]シーンを[b]シーンドック[/b]の[b]CanvasLayer[/b]ノードにドラッグ&ド"
+"ロップしてインスタンスを作成します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Dragging the scene onto a node in the [b]Scene Dock[/b] creates the instance "
+"as a child of the node."
+msgstr ""
+"シーンを [b]シーンドック[/b] のノードにドラッグすると、インスタンスがノードの"
+"子として作成されます。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Add the [b]Health Bar Scene[/b] to the [b]Scene[/b]."
+msgstr "[b]ui_health_bar.tscn[/b]を[b]シーン[/b]に追加します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "The screen area"
+msgstr "画面領域"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"We need to ensure that the health bar is positioned correctly to be visible "
+"on-screen."
+msgstr ""
+"HPバーが画面に表示されるように正しく配置されていることを確認する必要がありま"
+"す。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"In the viewport, four thin lines are forming a rectangle. They represent the "
+"extent of the game window, the window that opens when you run the game."
+msgstr ""
+"ビューポートでは、4 本の細い線が長方形を形成しています。\n"
+"これらは、ゲームウィンドウの範囲、つまりゲームの実行時に開くウィンドウを表し"
+"ます。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"The four lines can be difficult to spot as they're thin. Look at the "
+"flashing area in the viewport. It highlights this window extent area."
+msgstr ""
+"4本の線は細いので見分けがつきにくい場合があります。\n"
+"ビューポートの点滅する領域を見てください。このウィンドウ範囲領域が強調表示さ"
+"れます。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Any user interface you want to keep on-screen in the game should be placed "
+"inside this rectangle."
+msgstr ""
+"ゲーム内で画面上に表示したいユーザー インターフェイスはこの長方形内に配置する"
+"必要があります。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Place the health bar on-screen"
+msgstr "HPバーを画面上に配置する"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Let's learn a third way to move an element: using the [b]Inspector[/b] and "
+"typing coordinates manually."
+msgstr ""
+"要素を移動する3つ目の方法、つまり[b]インスペクター[/b]を使用して座標を手動で"
+"入力する方法を学びましょう。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"We currently have the [b]UIHealthBar[/b] node selected in the [b]Scene[/b] "
+"dock."
+msgstr "現在[b]シーン[/b]ドックで[b]UIHealthBar[/b]ノードが選択されています。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"On the right, in the [b]Inspector Dock[/b], in the section [b]Layout -> "
+"Transform[/b], you can find the [b]Position[/b] property."
+msgstr ""
+"右側の [b]インスペクタードック[/b] の [b]Layout -> Transform[/b] セクションに"
+"は、[b]Position[/b] プロパティがあります。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Earlier, when you moved and placed rooms around the viewport with the select "
+"and move modes, you changed the [b]Position[/b] property of individual rooms."
+msgstr ""
+"以前、選択モードと移動モードでビューポートの周囲に部屋を移動して配置したとき"
+"に、それぞれの部屋の [b]Position[/b] プロパティを変更しました。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "The position property"
+msgstr "position プロパティ"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"The Position property has two coordinates: the [b]x[/b] coordinate controls "
+"the [b]horizontal[/b] position of the health bar, and the [b]y[/b] "
+"coordinate controls its [b]vertical[/b] position."
+msgstr ""
+"Position プロパティには 2 つの座標があり、\n"
+"[b]x[/b] 座標はHPバーの [b] 水平 [/b] 位置を制御し、\n"
+"[b]y[/b] 座標は [b]垂直[/b] 位置を制御します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Click the number of each coordinate to edit it. Type a new number and press "
+"[b]Enter[/b] on your keyboard to confirm the new value."
+msgstr ""
+"各座標の数値をクリックして編集します。\n"
+"新しい数値を入力し、キーボードの[b]Enter[/b]を押して新しい値を確認します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Change the x coordinate to 60, and the y coordinate to 60 as well. This will "
+"place the health bar in the top-left corner of the game window when playing."
+msgstr ""
+"x 座標とy 座標をそれぞれ 60 に変更します。これによりプレイ中にゲームウィンド"
+"ウの左上隅にヘルスバーが配置されます。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Set the [b]x Position[/b] property of the [b]UIHealthBar[/b] to [b]60px[/b] "
+"(pixels)."
+msgstr ""
+"[b]UIHealthBar[/b] の [b]x Position[/b] プロパティを [b]60px[/b] (ピクセル) "
+"に設定します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Set the [b]y Position[/b] property of the [b]UIHealthBar[/b] to [b]60px[/b] "
+"(pixels)."
+msgstr ""
+"[b]UIHealthBar[/b] の [b]y Position[/b] プロパティを [b]60px[/b] (ピクセル) "
+"に設定します。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Excellent!"
+msgstr "素晴らしい！"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "You know what time it is? Yes, let's run the scene!"
+msgstr "ここまで出来ましたか? 出来てましたらシーンを実行しましょう!"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Click the [b]Play Current Scene[/b] button and pay attention to how the "
+"health bar stays on screen as your progress through the level."
+msgstr ""
+"[b]現在のシーンを実行[/b]ボタンをクリックし、レベルが進むにつれてHPバーが画面"
+"上にとどまるかに注意してください。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"Also, try to go touch an enemy and pay attention to what happens to the "
+"health bar."
+msgstr "また、敵に触れてHPバーがどうなるかに注意を払ってください。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Play Current Scene"
+msgstr "現在のシーンを実行"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "In summary"
+msgstr "まとめ"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"You added a background and a health bar to the game. Most importantly, you "
+"learned to create a node and add the health bar as a child of it to make the "
+"user interface stay on screen."
+msgstr ""
+"ゲームに背景とHPバーを追加しました。\n"
+"最も重要なのはノードを作成し・HPバーをその子として追加して、\n"
+"ユーザー インターフェイスを画面に表示したままにする方法を学習したことです。"
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid ""
+"In the next part, you'll use signals to connect the health bar to the "
+"player's health."
+msgstr "次のパートではシグナルを使用して、HPバーをプレイヤーのHPに接続します。"

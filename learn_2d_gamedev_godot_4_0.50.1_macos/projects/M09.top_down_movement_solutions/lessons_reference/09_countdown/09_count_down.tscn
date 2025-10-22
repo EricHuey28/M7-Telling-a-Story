@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://i0urqcykw47f"]
+
+[ext_resource type="Script" uid="uid://ddc5y3bkctp0s" path="res://lessons_reference/09_countdown/09_count_down.gd" id="1_mx0qv"]
+[ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="3_2nst0"]
+[ext_resource type="Script" uid="uid://57e8080cpukf" path="res://assets/countdown/count_down.gd" id="3_s0wbt"]
+[ext_resource type="PackedScene" uid="uid://xl56q8amb611" path="res://assets/finish_line/finish_line.tscn" id="4_bh66a"]
+[ext_resource type="Texture2D" uid="uid://5vl7p0xb7nd8" path="res://assets/circuit_background.png" id="5_e2lpk"]
+[ext_resource type="PackedScene" uid="uid://cwk136csprv66" path="res://lessons_reference/04_obstacles/04_circuit_obstacle.tscn" id="6_5bc8r"]
+[ext_resource type="PackedScene" uid="uid://dvtdgo0n3gkyq" path="res://lessons_reference/08_finish_line/08_runner.tscn" id="6_132de"]
+
+[node name="WithGameStates" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_mx0qv")
+
+[node name="Runner" parent="." instance=ExtResource("6_132de")]
+unique_name_in_owner = true
+position = Vector2(1208, 536)
+
+[node name="FinishLine" parent="." instance=ExtResource("4_bh66a")]
+unique_name_in_owner = true
+position = Vector2(576, 1152)
+area_width = 256
+
+[node name="CircuitBackground" type="Sprite2D" parent="."]
+texture = ExtResource("5_e2lpk")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Circuit" parent="." instance=ExtResource("6_5bc8r")]
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CountDown" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_2nst0")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_s0wbt")

@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bnikx6qolb8dl"]
+
+[ext_resource type="Texture2D" uid="uid://x5rk2rs3n3a4" path="res://turrets/weapons/explosion/explosion_1.png" id="1_mu300"]
+
+[sub_resource type="Gradient" id="Gradient_02u65"]
+offsets = PackedFloat32Array(0.850575, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_bafc0"]
+gradient = SubResource("Gradient_02u65")
+
+[sub_resource type="Curve" id="Curve_hd53x"]
+_data = [Vector2(0, 0.561082), 0.0, 0.0, 0, 0, Vector2(0.368852, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_lavcu"]
+curve = SubResource("Curve_hd53x")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_623ro"]
+particle_flag_disable_z = true
+angle_min = -720.0
+angle_max = 720.0
+direction = Vector3(-1, 0, 0)
+initial_velocity_min = 83.82
+initial_velocity_max = 164.67
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -100.0
+linear_accel_max = -85.03
+damping_min = 50.0
+damping_max = 59.88
+scale_min = 0.4
+scale_max = 0.55
+scale_curve = SubResource("CurveTexture_lavcu")
+color_ramp = SubResource("GradientTexture1D_bafc0")
+
+[node name="SmokePuff" type="GPUParticles2D"]
+z_index = -1
+emitting = false
+amount = 10
+texture = ExtResource("1_mu300")
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.9
+draw_order = 0
+process_material = SubResource("ParticleProcessMaterial_623ro")

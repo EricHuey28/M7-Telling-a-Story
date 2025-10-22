@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TurretUpgrade" load_steps=3 format=3 uid="uid://pmrniaebpqkb"]
+
+[ext_resource type="PackedScene" uid="uid://dkyp7bwsbgo2w" path="res://lessons_reference/turrets/weapons/rocket_launcher.tscn" id="1_0tala"]
+[ext_resource type="Script" uid="uid://bpgfcjrkqvcc4" path="res://lessons_reference/turrets/upgrades/turret_upgrade.gd" id="1_84n77"]
+
+[resource]
+script = ExtResource("1_84n77")
+cost = 300
+mob_detection_radius_change = 800.0
+attack_rate_change = -0.7
+damage_change = 4.0
+replacement_weapon = ExtResource("1_0tala")

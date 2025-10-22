@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7av2g8ji53du"]
+
+[ext_resource type="Script" uid="uid://dtg5jw6ejwx0k" path="res://lessons_reference/UI_samples/custom_container.gd" id="1_pd501"]
+
+[node name="CustomContainer" type="Container"]
+offset_left = 381.0
+offset_top = 275.0
+offset_right = 577.0
+offset_bottom = 404.0
+script = ExtResource("1_pd501")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+text = "A"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+text = "B"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 2
+text = "C"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 2
+text = "D"

@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://wqo7irlnca0a"]
+
+[ext_resource type="Material" uid="uid://dxrtaju87p2an" path="res://assets/practice_background_material.tres" id="1_cpfjh"]
+[ext_resource type="Script" uid="uid://pwys6ufhi28t" path="res://addons/gdpractice/practice_solutions/L4.P1.populate_inventory/populate_inventory.gd" id="1_f2jl0"]
+[ext_resource type="Theme" uid="uid://qk3rjf73qo8w" path="res://assets/practices/practices_theme.tres" id="1_ucby1"]
+
+[node name="PopulateInventory" type="ColorRect"]
+material = ExtResource("1_cpfjh")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f2jl0")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ucby1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+columns = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 2
+theme_type_variation = &"SmallText"
+bbcode_enabled = true
+text = "Icons courtesy of https://game-icons.net"
+fit_content = true
+selection_enabled = true

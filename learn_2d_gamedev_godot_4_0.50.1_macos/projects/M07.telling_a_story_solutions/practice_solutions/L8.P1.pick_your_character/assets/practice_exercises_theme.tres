@@ -1,0 +1,115 @@
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://cfwqt5h4pl0p5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oatgu"]
+content_margin_left = 30.0
+content_margin_top = 10.0
+content_margin_right = 30.0
+content_margin_bottom = 15.0
+bg_color = Color(0.552941, 0.0980392, 0.843137, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50rp1"]
+content_margin_left = 30.0
+content_margin_top = 10.0
+content_margin_right = 30.0
+content_margin_bottom = 15.0
+bg_color = Color(0.698039, 0.364706, 0.984314, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3k6m"]
+content_margin_left = 30.0
+content_margin_top = 10.0
+content_margin_right = 30.0
+content_margin_bottom = 15.0
+bg_color = Color(0.698039, 0.364706, 0.984314, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gl0vl"]
+content_margin_left = 30.0
+content_margin_top = 10.0
+content_margin_right = 30.0
+content_margin_bottom = 15.0
+bg_color = Color(0.552941, 0.0980392, 0.843137, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4aim6"]
+content_margin_left = 30.0
+content_margin_top = 10.0
+content_margin_right = 30.0
+content_margin_bottom = 15.0
+bg_color = Color(0.698039, 0.364706, 0.984314, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="Gradient" id="Gradient_dlpx7"]
+offsets = PackedFloat32Array(0, 0.407658, 0.560811, 0.572072)
+colors = PackedColorArray(0.732196, 0.441712, 0.990319, 1, 0.733292, 0.443086, 0.99209, 1, 0.352835, 0.0219638, 0.548026, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ks1n8"]
+gradient = SubResource("Gradient_dlpx7")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw6qh"]
+bg_color = Color(0.172549, 0, 0.231373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijnpc"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.580392, 0.101961, 0.882353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6pkus"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.454902, 0.0509804, 0.698039, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6uqpx"]
+content_margin_left = 40.0
+content_margin_top = 10.0
+content_margin_right = 40.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[resource]
+default_font_size = 50
+Button/styles/disabled = SubResource("StyleBoxFlat_oatgu")
+Button/styles/focus = SubResource("StyleBoxFlat_50rp1")
+Button/styles/hover = SubResource("StyleBoxFlat_c3k6m")
+Button/styles/normal = SubResource("StyleBoxFlat_gl0vl")
+Button/styles/pressed = SubResource("StyleBoxFlat_4aim6")
+HBoxContainer/constants/separation = 20
+HSlider/icons/grabber = SubResource("GradientTexture2D_ks1n8")
+HSlider/icons/grabber_disabled = SubResource("GradientTexture2D_ks1n8")
+HSlider/icons/grabber_highlight = SubResource("GradientTexture2D_ks1n8")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_yw6qh")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_ijnpc")
+HSlider/styles/slider = SubResource("StyleBoxFlat_6pkus")
+Label/colors/font_color = Color(0.34902, 0.0196078, 0.541176, 1)
+RichTextLabel/colors/default_color = Color(0.101961, 0.101961, 0.101961, 1)
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_6uqpx")
+VBoxContainer/constants/separation = 20

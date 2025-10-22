@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0a1rfmu2wl88"]
+
+[ext_resource type="Script" uid="uid://bhdthpucw8ky8" path="res://addons/gdpractice/practice_solutions/L6.P2.coins_and_energy_packs/collectible.gd" id="1_rallo"]
+[ext_resource type="Texture2D" uid="uid://bdkl4qmqe0suw" path="res://assets/practice_assets/energy_pack.png" id="2_nkmq1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gmkso"]
+radius = 57.1402
+
+[node name="EnergyPack" type="Area2D" groups=["energy"]]
+script = ExtResource("1_rallo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_nkmq1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gmkso")

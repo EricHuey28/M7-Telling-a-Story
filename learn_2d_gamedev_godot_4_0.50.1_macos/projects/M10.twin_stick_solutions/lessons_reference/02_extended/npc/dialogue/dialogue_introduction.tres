@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=7 format=3 uid="uid://byce57cqdx5qp"]
+
+[ext_resource type="Script" uid="uid://bu71li0xpxhht" path="res://lessons_reference/02_extended/npc/dialogue/dialogue_entry.gd" id="1_ceny1"]
+[ext_resource type="Script" uid="uid://d3i5qn3xupmfg" path="res://lessons_reference/02_extended/npc/dialogue/dialogue.gd" id="2_andof"]
+[ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://npc/dialogue/sophia.png" id="2_gqexc"]
+[ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://npc/dialogue/emotion_regular.png" id="3_1p6au"]
+
+[sub_resource type="Resource" id="Resource_kdo1v"]
+script = ExtResource("1_ceny1")
+expression = ExtResource("3_1p6au")
+character = ExtResource("2_gqexc")
+text = "Hi, adventurer! In these chests, you'll find healing crystals to aid you on your journey."
+
+[sub_resource type="Resource" id="Resource_8rtbp"]
+script = ExtResource("1_ceny1")
+expression = ExtResource("3_1p6au")
+character = ExtResource("2_gqexc")
+text = "Walk in front of the chest and press E to open it."
+
+[resource]
+script = ExtResource("2_andof")
+entries = Array[ExtResource("1_ceny1")]([SubResource("Resource_kdo1v"), SubResource("Resource_8rtbp")])

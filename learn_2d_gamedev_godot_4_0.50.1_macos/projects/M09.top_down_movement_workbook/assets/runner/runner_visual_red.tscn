@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://bm8s1oaoxngwq"]
+
+[ext_resource type="PackedScene" uid="uid://hjn4sr1lgmmx" path="res://assets/runner/runner_visual_purple.tscn" id="1_i8e4b"]
+[ext_resource type="Texture2D" uid="uid://pgwdkcat1x2m" path="res://assets/runner/red_parts/foot.png" id="2_pbjpl"]
+[ext_resource type="Texture2D" uid="uid://cc28lc47urejl" path="res://assets/runner/red_parts/body.png" id="3_c2s05"]
+[ext_resource type="Texture2D" uid="uid://c4ftdxyamufn" path="res://assets/runner/red_parts/head.png" id="4_jlvl7"]
+[ext_resource type="Texture2D" uid="uid://dkbvndnmsqdem" path="res://assets/runner/red_parts/face.png" id="6_vqybe"]
+[ext_resource type="Texture2D" uid="uid://bqic37e4ko357" path="res://assets/runner/red_parts/red_face_back.png" id="7_gwbl7"]
+[ext_resource type="Texture2D" uid="uid://dyajtqt6p6af2" path="res://assets/runner/red_parts/ear.png" id="8_0e8o4"]
+[ext_resource type="Texture2D" uid="uid://dyqynsxl8many" path="res://assets/runner/red_parts/antenna.png" id="9_wrnpm"]
+[ext_resource type="Texture2D" uid="uid://dkgxdq5fb0tob" path="res://assets/runner/red_parts/hand.png" id="10_e8mf4"]
+
+[node name="RunnerVisualRed" instance=ExtResource("1_i8e4b")]
+
+[node name="FootL" parent="Visual" index="0"]
+scale = Vector2(0.999957, 0.999957)
+skew = -5.13792e-05
+
+[node name="FootSprite" parent="Visual/FootL" index="0"]
+texture = ExtResource("2_pbjpl")
+
+[node name="FootR" parent="Visual" index="1"]
+scale = Vector2(0.999905, 0.999907)
+skew = -4.87566e-05
+
+[node name="FootSprite" parent="Visual/FootR" index="0"]
+texture = ExtResource("2_pbjpl")
+
+[node name="ArmR" parent="Visual" index="2"]
+self_modulate = Color(0.839277, 0.317525, 0.152895, 1)
+points = PackedVector2Array(16, -71.5275, 48, -45.5275)
+
+[node name="ArmL" parent="Visual" index="3"]
+self_modulate = Color(0.839277, 0.317525, 0.152895, 1)
+points = PackedVector2Array(-16, -71.5275, -48, -45.5275)
+
+[node name="LegR" parent="Visual" index="4"]
+self_modulate = Color(0.839277, 0.317525, 0.152895, 1)
+points = PackedVector2Array(16, -37.5275, 16, -23)
+
+[node name="LegL" parent="Visual" index="5"]
+self_modulate = Color(0.839277, 0.317525, 0.152895, 1)
+points = PackedVector2Array(-16, -37.5275, -16, -23)
+
+[node name="Body" parent="Visual" index="6"]
+position = Vector2(0, -53.3659)
+texture = ExtResource("3_c2s05")
+
+[node name="HeadShape" parent="Visual" index="7"]
+position = Vector2(0, -143.105)
+texture = ExtResource("4_jlvl7")
+
+[node name="Face" parent="Visual/HeadShape" index="0"]
+texture = ExtResource("6_vqybe")
+
+[node name="Back" parent="Visual/HeadShape" index="1"]
+position = Vector2(192, 0)
+texture = ExtResource("7_gwbl7")
+
+[node name="EarR" parent="Visual" index="8"]
+position = Vector2(82, -132.442)
+texture = ExtResource("8_0e8o4")
+
+[node name="AntennaR" parent="Visual/EarR" index="0"]
+texture = ExtResource("9_wrnpm")
+
+[node name="EarL" parent="Visual" index="9"]
+position = Vector2(-82, -132.442)
+texture = ExtResource("8_0e8o4")
+
+[node name="AntennaL" parent="Visual/EarL" index="0"]
+texture = ExtResource("9_wrnpm")
+
+[node name="HandR" parent="Visual" index="10"]
+position = Vector2(48, -45.3659)
+texture = ExtResource("10_e8mf4")
+
+[node name="HandL" parent="Visual" index="11"]
+position = Vector2(-48, -45.3659)
+texture = ExtResource("10_e8mf4")

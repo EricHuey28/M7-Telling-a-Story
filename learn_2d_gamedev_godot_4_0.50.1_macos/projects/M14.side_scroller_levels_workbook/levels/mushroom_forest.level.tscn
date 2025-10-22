@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk68dvcxa54jn"]
+
+[ext_resource type="PackedScene" uid="uid://brdsbllfrxj4k" path="res://player/player.tscn" id="1_0sgqc"]
+[ext_resource type="Script" uid="uid://dr6sq0gfhuwqx" path="res://entities/kill_plane.gd" id="2_scpgr"]
+
+[sub_resource type="TileSet" id="TileSet_geim3"]
+physics_layer_0/collision_layer = 11
+physics_layer_0/collision_mask = 0
+
+[node name="MushroomForest" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_0sgqc")]
+position = Vector2(208, 0)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, -16)
+zoom = Vector2(3, 3)
+limit_left = -348
+limit_right = 2156
+limit_bottom = 112
+position_smoothing_enabled = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_geim3")
+
+[node name="KillPlane2D" type="Area2D" parent="."]
+position = Vector2(208, 114.457)
+collision_layer = 0
+script = ExtResource("2_scpgr")
+metadata/_custom_type_script = "uid://dr6sq0gfhuwqx"

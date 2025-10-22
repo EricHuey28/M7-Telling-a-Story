@@ -1,0 +1,145 @@
+[gd_scene load_steps=2 format=3 uid="uid://p2lqkia0elow"]
+
+[ext_resource type="Theme" uid="uid://dp1nmwxx5vbr5" path="res://lessons_reference/UI_samples/assets/ui_samples_theme.tres" id="1_kageg"]
+
+[node name="SettingsScreen" type="VBoxContainer"]
+offset_right = 976.0
+offset_bottom = 442.0
+theme = ExtResource("1_kageg")
+theme_type_variation = &"VBoxMain"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_type_variation = &"OptionsScreenTitle"
+text = "Text Options"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"VBoxSecondary"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionLabel"
+text = "Language"
+
+[node name="LanguageOptionButton" type="OptionButton" parent="ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 3
+selected = 0
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Pirate"
+popup/item_1/id = 1
+popup/item_2/text = "Beep boop"
+popup/item_2/id = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionLabel"
+text = "Window Mode"
+
+[node name="WindowModeButton" type="OptionButton" parent="ScrollContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 3
+selected = 0
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "FullScreen"
+popup/item_1/id = 1
+popup/item_2/text = "Maximized"
+popup/item_2/id = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionLabel"
+text = "V-Sync"
+
+[node name="AutoAdvanceDialogueCheckbox" type="CheckButton" parent="ScrollContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionLabel"
+text = "BGM Volume"
+
+[node name="BGMVolumeSlider" type="HSlider" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionLabel"
+text = "SFX Volume"
+
+[node name="SFXVolumeSlider" type="HSlider" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionLabel"
+text = "Voice Volume"
+
+[node name="VoiceVolumeSlider" type="HSlider" parent="ScrollContainer/VBoxContainer/HBoxContainer7"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionLabel"
+text = "Auto advance dialogue"
+
+[node name="AutoAdvanceDialogueCheckbox" type="CheckButton" parent="ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="ButtonOk" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonMain"
+text = "Ok"
+
+[node name="ButtonCancel" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "Cancel"

@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://dusrtd8ws7n3s"]
+
+[ext_resource type="Script" uid="uid://bnu47op1plhiq" path="res://lessons_reference/13_playing_cop/13_playing_cop.gd" id="1_y7gny"]
+[ext_resource type="Texture2D" uid="uid://5vl7p0xb7nd8" path="res://assets/circuit_background.png" id="2_oye55"]
+[ext_resource type="PackedScene" uid="uid://xl56q8amb611" path="res://assets/finish_line/finish_line.tscn" id="3_lfc0m"]
+[ext_resource type="PackedScene" uid="uid://dvtdgo0n3gkyq" path="res://lessons_reference/08_finish_line/08_runner.tscn" id="4_05aod"]
+[ext_resource type="PackedScene" uid="uid://cwk136csprv66" path="res://lessons_reference/04_obstacles/04_circuit_obstacle.tscn" id="5_cj0nr"]
+[ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="6_gkbnm"]
+[ext_resource type="Script" uid="uid://57e8080cpukf" path="res://assets/countdown/count_down.gd" id="7_3gkv5"]
+[ext_resource type="PackedScene" uid="uid://ciegbyfrx5lf3" path="res://lessons_reference/10_pause_screen/pause_screen.tscn" id="8_pk1i5"]
+[ext_resource type="PackedScene" uid="uid://clwrrqoy35n3u" path="res://lessons_reference/13_playing_cop/bouncer_following_player.tscn" id="9_bwj68"]
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_y7gny")
+
+[node name="CircuitBackground" type="Sprite2D" parent="."]
+texture = ExtResource("2_oye55")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="FinishLine" parent="." instance=ExtResource("3_lfc0m")]
+unique_name_in_owner = true
+position = Vector2(576, 1152)
+area_width = 256
+
+[node name="Runner" parent="." instance=ExtResource("4_05aod")]
+unique_name_in_owner = true
+position = Vector2(1505, 541)
+
+[node name="Circuit" parent="." instance=ExtResource("5_cj0nr")]
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CountDown" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+process_mode = 1
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -109.5
+offset_right = 20.0
+offset_bottom = 109.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_gkbnm")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_3gkv5")
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("8_pk1i5")]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="Bouncer" parent="." instance=ExtResource("9_bwj68")]
+unique_name_in_owner = true
+position = Vector2(893, 792)

@@ -1,0 +1,141 @@
+[gd_scene load_steps=14 format=3 uid="uid://c17u04d3rcx0q"]
+
+[ext_resource type="Material" uid="uid://dxrtaju87p2an" path="res://assets/practice_background_material.tres" id="1_cebdc"]
+[ext_resource type="Theme" uid="uid://qk3rjf73qo8w" path="res://assets/practices/practices_theme.tres" id="1_ptqdi"]
+[ext_resource type="Script" uid="uid://d1ldfmnlroi72" path="res://addons/gdpractice/practice_solutions/L5.P1.shopping_loot/shopping_loot.gd" id="2_88m7i"]
+[ext_resource type="Script" uid="uid://dgbm6p85ndqg5" path="res://addons/gdpractice/practice_solutions/L5.P1.shopping_loot/shopping_entry.gd" id="3_246th"]
+
+[sub_resource type="Resource" id="Resource_einw5"]
+script = ExtResource("3_246th")
+text = "sword"
+amount = 1
+price = 20
+
+[sub_resource type="Resource" id="Resource_3vork"]
+script = ExtResource("3_246th")
+text = "shield"
+amount = 1
+price = 15
+
+[sub_resource type="Resource" id="Resource_cdsvl"]
+script = ExtResource("3_246th")
+text = "coin"
+amount = 1
+price = 1
+
+[sub_resource type="Resource" id="Resource_8qe1c"]
+script = ExtResource("3_246th")
+text = "key"
+amount = 1
+price = 5
+
+[sub_resource type="Resource" id="Resource_liiu0"]
+script = ExtResource("3_246th")
+text = "gem"
+amount = 1
+price = 30
+
+[sub_resource type="Resource" id="Resource_in6ku"]
+script = ExtResource("3_246th")
+text = "shrimp"
+amount = 1
+price = 99
+
+[sub_resource type="Resource" id="Resource_jcjg8"]
+script = ExtResource("3_246th")
+text = "ring"
+amount = 1
+price = 45
+
+[sub_resource type="Resource" id="Resource_hjao8"]
+script = ExtResource("3_246th")
+text = "torch"
+amount = 1
+price = 2
+
+[sub_resource type="Resource" id="Resource_cu25v"]
+script = ExtResource("3_246th")
+text = "scroll"
+amount = 1
+price = 25
+
+[node name="ShoppingLoot" type="ColorRect"]
+material = ExtResource("1_cebdc")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_88m7i")
+items_list = Array[ExtResource("3_246th")]([SubResource("Resource_einw5"), SubResource("Resource_3vork"), SubResource("Resource_cdsvl"), SubResource("Resource_8qe1c"), SubResource("Resource_liiu0"), SubResource("Resource_in6ku"), SubResource("Resource_jcjg8"), SubResource("Resource_hjao8"), SubResource("Resource_cu25v")])
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ptqdi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+columns = 3
+
+[node name="Panel" type="Panel" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer/HBoxContainer/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 55.0
+grow_horizontal = 2
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -42.0
+offset_top = -47.0
+offset_right = 42.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "buy"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 2
+theme_type_variation = &"SmallText"
+bbcode_enabled = true
+text = "Icons courtesy of https://game-icons.net"
+fit_content = true
+selection_enabled = true

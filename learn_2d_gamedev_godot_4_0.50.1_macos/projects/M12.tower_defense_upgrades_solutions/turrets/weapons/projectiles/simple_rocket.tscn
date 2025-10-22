@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://qttsoyhahirb"]
+
+[ext_resource type="Script" uid="uid://nhy7lobi8jxh" path="res://turrets/weapons/projectiles/simple_rocket.gd" id="1_w03jc"]
+[ext_resource type="Texture2D" uid="uid://dmpm4tf4uk7yn" path="res://turrets/weapons/projectiles/rocket.png" id="2_fpupq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03cig"]
+size = Vector2(30, 12)
+
+[node name="SimpleRocket" type="Area2D"]
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_w03jc")
+speed = 800.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_fpupq")
+offset = Vector2(-28, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7, 0)
+shape = SubResource("RectangleShape2D_03cig")

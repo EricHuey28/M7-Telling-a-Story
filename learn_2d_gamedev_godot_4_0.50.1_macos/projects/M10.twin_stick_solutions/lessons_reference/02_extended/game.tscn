@@ -1,0 +1,175 @@
+[gd_scene load_steps=30 format=4 uid="uid://dofqeppj2idyc"]
+
+[ext_resource type="Script" uid="uid://doak6w25dibca" path="res://lessons_reference/01_standard/game.gd" id="1_6lg7g"]
+[ext_resource type="PackedScene" uid="uid://kg6lb726rgpa" path="res://lessons_reference/01_standard/player/player.tscn" id="2_k0srx"]
+[ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="3_sig6m"]
+[ext_resource type="PackedScene" uid="uid://dk5pncq4jw6d7" path="res://lessons_reference/01_standard/pickups/pickup.tscn" id="4_qyjgl"]
+[ext_resource type="Resource" uid="uid://c7fv4hglw2o6a" path="res://lessons_reference/01_standard/items/green_heart.tres" id="5_ppanw"]
+[ext_resource type="PackedScene" uid="uid://dg3p8oikrnmhw" path="res://lessons_reference/01_standard/mobs/mob_follow.tscn" id="6_gcgyl"]
+[ext_resource type="PackedScene" uid="uid://dgayuh42w4v6u" path="res://levels/rooms/room_b.tscn" id="7_f36oi"]
+[ext_resource type="Texture2D" uid="uid://bl7fmqsn8uu8h" path="res://levels/props/books_3.png" id="8_08u18"]
+[ext_resource type="Texture2D" uid="uid://cemsu0d7gpb1d" path="res://levels/props/statue_hammer.png" id="9_b8bfk"]
+[ext_resource type="PackedScene" uid="uid://brrtwsx13dhqv" path="res://lessons_reference/01_standard/pickups/chest.tscn" id="10_71uyv"]
+[ext_resource type="Script" uid="uid://bcwfpukatf0fb" path="res://lessons_reference/01_standard/items/item.gd" id="11_uacvq"]
+[ext_resource type="PackedScene" uid="uid://cq0mmphkbrvmm" path="res://levels/rooms/room_c.tscn" id="12_4hg1v"]
+[ext_resource type="PackedScene" uid="uid://bpn27at7povsj" path="res://lessons_reference/02_extended/mobs/mob_flying_turret.tscn" id="12_an1a5"]
+[ext_resource type="PackedScene" uid="uid://c78c3an1eibvf" path="res://lessons_reference/01_standard/teleporter/teleporter.tscn" id="13_i3ql3"]
+[ext_resource type="Texture2D" uid="uid://cncfew4k5q8jk" path="res://levels/props/statue_ruin.png" id="14_3jbfs"]
+[ext_resource type="Texture2D" uid="uid://c1cch51fhbxi8" path="res://levels/props/rocks_sword.png" id="15_jjtsc"]
+[ext_resource type="PackedScene" uid="uid://c3fl3stluv0gn" path="res://levels/bridges.tscn" id="16_feuuj"]
+[ext_resource type="PackedScene" uid="uid://diw0kp1e3livt" path="res://levels/rooms/room_d.tscn" id="16_j22wl"]
+[ext_resource type="PackedScene" uid="uid://dlxjrgals3rg2" path="res://levels/invisible_walls.tscn" id="17_1dmhl"]
+[ext_resource type="PackedScene" uid="uid://d308a1bgxorpw" path="res://lessons_reference/02_extended/npc/npc.tscn" id="17_b56l2"]
+[ext_resource type="PackedScene" uid="uid://wdey00p3syru" path="res://levels/background/background_blue_sky.tscn" id="18_3r0qh"]
+[ext_resource type="AudioStream" uid="uid://cgkhr5s5txcxx" path="res://common/music/EZDNB2 (CC-BY Of Far Different Nature).ogg" id="19_188y7"]
+[ext_resource type="PackedScene" uid="uid://bchl7sgkqsmjr" path="res://lessons_reference/01_standard/ui/end_menu.tscn" id="20_m0lh6"]
+[ext_resource type="PackedScene" uid="uid://cjtrjw4el5gxg" path="res://lessons_reference/02_extended/ui/pause_menu.tscn" id="23_tk25x"]
+[ext_resource type="Script" uid="uid://ckvatijx6ptuq" path="res://lessons_reference/02_extended/ui/menus_controller.gd" id="24_dii16"]
+[ext_resource type="PackedScene" uid="uid://dvb0hknpapvid" path="res://lessons_reference/02_extended/ui/settings_menu.tscn" id="26_tg5oc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxoa0"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a442w"]
+size = Vector2(130.792, 104.342)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q4pvi"]
+size = Vector2(125.583, 90.685)
+
+[node name="Main" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_6lg7g")
+
+[node name="Player" parent="." instance=ExtResource("2_k0srx")]
+position = Vector2(448, 2880)
+
+[node name="RoomA" parent="." instance=ExtResource("3_sig6m")]
+
+[node name="Pickup" parent="RoomA" instance=ExtResource("4_qyjgl")]
+position = Vector2(739.897, 89.848)
+rotation = 0.00114604
+item = ExtResource("5_ppanw")
+
+[node name="MobFollow2" parent="RoomA" instance=ExtResource("6_gcgyl")]
+position = Vector2(868.416, 509.996)
+
+[node name="RoomB" parent="." instance=ExtResource("7_f36oi")]
+position = Vector2(2304, 256)
+
+[node name="MobFollow3" parent="RoomB" instance=ExtResource("6_gcgyl")]
+position = Vector2(832, 320)
+rotation = -0.00114604
+
+[node name="Books3" type="Sprite2D" parent="RoomB"]
+position = Vector2(579.18, 46.751)
+texture = ExtResource("8_08u18")
+
+[node name="Statue" type="StaticBody2D" parent="RoomB"]
+position = Vector2(444.472, 450.822)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomB/Statue"]
+shape = SubResource("RectangleShape2D_wxoa0")
+
+[node name="StatueHammer" type="Sprite2D" parent="RoomB/Statue"]
+position = Vector2(4.28674, -61.2908)
+texture = ExtResource("9_b8bfk")
+
+[node name="Chest" parent="RoomB" instance=ExtResource("10_71uyv")]
+position = Vector2(1128, 676)
+possible_items = Array[ExtResource("11_uacvq")]([ExtResource("5_ppanw")])
+
+[node name="MobFlyingTurret" parent="RoomB" instance=ExtResource("12_an1a5")]
+position = Vector2(704, 128)
+
+[node name="MobFlyingTurret2" parent="RoomB" instance=ExtResource("12_an1a5")]
+position = Vector2(1088, 256)
+
+[node name="RoomC" parent="." instance=ExtResource("12_4hg1v")]
+position = Vector2(1792, -2048)
+
+[node name="MobFollow" parent="RoomC" instance=ExtResource("6_gcgyl")]
+position = Vector2(448, 576)
+
+[node name="MobFollow2" parent="RoomC" instance=ExtResource("6_gcgyl")]
+position = Vector2(832, 576)
+
+[node name="Teleporter" parent="RoomC" instance=ExtResource("13_i3ql3")]
+unique_name_in_owner = true
+position = Vector2(640, 192)
+
+[node name="Statue" type="StaticBody2D" parent="RoomC"]
+position = Vector2(958.606, 822.355)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomC/Statue"]
+position = Vector2(7.99823, 3.47375)
+shape = SubResource("RectangleShape2D_a442w")
+
+[node name="StatueHammer" type="Sprite2D" parent="RoomC/Statue"]
+position = Vector2(4.28674, -61.2908)
+texture = ExtResource("14_3jbfs")
+
+[node name="Statue2" type="StaticBody2D" parent="RoomC"]
+position = Vector2(473.417, 1131.63)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomC/Statue2"]
+position = Vector2(3.58301, 25.7125)
+shape = SubResource("RectangleShape2D_q4pvi")
+
+[node name="RocksSword" type="Sprite2D" parent="RoomC/Statue2"]
+texture = ExtResource("15_jjtsc")
+
+[node name="RoomD" parent="." instance=ExtResource("16_j22wl")]
+position = Vector2(0, 1792)
+
+[node name="NPC" parent="RoomD" instance=ExtResource("17_b56l2")]
+position = Vector2(703.413, 512.807)
+
+[node name="Chest" parent="RoomD" instance=ExtResource("10_71uyv")]
+position = Vector2(895.413, 513.027)
+possible_items = Array[ExtResource("11_uacvq")]([ExtResource("5_ppanw")])
+
+[node name="Bridges" parent="." instance=ExtResource("16_feuuj")]
+tile_map_data = PackedByteArray("AAALAAQAAAABAAEAAAAMAAQAAAAAAAEAAAANAAQAAAAAAAEAAAAOAAQAAAAAAAEAAAAPAAQAAAAAAAAAAAAPAAUAAAADAAEAAAAPAAYAAAACAAAAAAAQAAYAAAAAAAEAAAARAAYAAAACAAEAAAAXAPr/AAAFAAEAAAAXAPv/AAADAAEAAAAXAPz/AAADAAEAAAAXAP3/AAADAAEAAAAXAP7/AAADAAEAAAAXAP//AAACAAAAAAAYAP//AAAAAAEAAAAZAP//AAAAAAAAAAAZAAAAAAADAAEAAAAZAAEAAAAEAAEAAAAGAA0AAAAEAAEAAAAGAAwAAAADAAEAAAAGAAsAAAADAAEAAAAGAAoAAAAFAAEAAAAGAAkAAAAEAAEAAAA=")
+
+[node name="InvisibleWalls" parent="." instance=ExtResource("17_1dmhl")]
+unique_name_in_owner = true
+tile_map_data = PackedByteArray("AAAHAAoAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAUAAAAAAAAAAAANAAMAAAAAAAAAAAANAAUAAAAAAAAAAAAOAAMAAAAAAAAAAAAOAAUAAAAAAAAAAAAOAAYAAAAAAAAAAAAOAAcAAAAAAAAAAAAPAAMAAAAAAAAAAAAPAAcAAAAAAAAAAAAQAAMAAAAAAAAAAAAQAAQAAAAAAAAAAAAQAAUAAAAAAAAAAAAQAAcAAAAAAAAAAAAWAPz/AAAAAAAAAAAWAP3/AAAAAAAAAAAWAP7/AAAAAAAAAAAWAP//AAAAAAAAAAAWAAAAAAAAAAAAAAAXAAAAAAAAAAAAAAAYAPz/AAAAAAAAAAAYAP3/AAAAAAAAAAAYAP7/AAAAAAAAAAAYAAAAAAAAAAAAAAAZAPz/AAAAAAAAAAAZAP7/AAAAAAAAAAAaAP7/AAAAAAAAAAAaAP//AAAAAAAAAAAaAAAAAAAAAAAAAAA=")
+
+[node name="BackgroundBlueSky" parent="." instance=ExtResource("18_3r0qh")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_188y7")
+volume_db = -18.0
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="EndMenu" parent="CanvasLayer" instance=ExtResource("20_m0lh6")]
+unique_name_in_owner = true
+visible = false
+
+[node name="MenusController" type="Control" parent="CanvasLayer"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("24_dii16")
+
+[node name="PauseMenu" parent="CanvasLayer/MenusController" instance=ExtResource("23_tk25x")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="SettingsMenu" parent="CanvasLayer/MenusController" instance=ExtResource("26_tg5oc")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1

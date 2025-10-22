@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7le2os75mfd2"]
+
+[ext_resource type="Texture2D" uid="uid://bhl4rcp3uh84b" path="res://assets/simple_obstacle.svg" id="1_sav7s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_roje3"]
+size = Vector2(128, 108)
+
+[node name="SimpleObstacle" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 74)
+texture = ExtResource("1_sav7s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 74)
+shape = SubResource("RectangleShape2D_roje3")
+debug_color = Color(0.960784, 0, 0.517647, 0.419608)

@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://br5efwxfx18sr"]
+
+[ext_resource type="Material" uid="uid://bh6iut4pkigwe" path="res://addons/gdpractice/practice_solutions/L10.P1.image_slideshow/assets/practice_background_material.tres" id="1_btayw"]
+[ext_resource type="Theme" uid="uid://dfvhb11alilgu" path="res://addons/gdpractice/practice_solutions/L10.P1.image_slideshow/assets/practice_exercises_theme.tres" id="2_p4hrb"]
+[ext_resource type="Script" uid="uid://dqep6tqeug8ew" path="res://addons/gdpractice/practice_solutions/L10.P1.image_slideshow/image_slideshow.gd" id="3_o706k"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_lh885"]
+
+[node name="ImageSlideshow" type="ColorRect"]
+material = ExtResource("1_btayw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_p4hrb")
+script = ExtResource("3_o706k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -292.0
+offset_top = -363.0
+offset_right = 292.0
+offset_bottom = 363.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+texture = SubResource("CanvasTexture_lh885")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "next"

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://uu6p85cmt7wg"]
+
+[ext_resource type="Script" uid="uid://dd5rpw5mytiy4" path="res://lessons_reference/04.spawn_items_randomly/random_item_placer.gd" id="1_nrj5k"]
+
+[node name="RandomItemPlacer" type="Node2D"]
+script = ExtResource("1_nrj5k")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

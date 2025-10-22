@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdw6md1eatbe"]
+
+[ext_resource type="Script" uid="uid://bdcp07q782vhx" path="res://lessons_reference/02_extended/mobs/weapons/fire_shot.gd" id="1_8dkuc"]
+[ext_resource type="PackedScene" uid="uid://b7vb8npjbnbm3" path="res://lessons_reference/02_extended/weapons/bullets/fireball_mob.tscn" id="2_e40li"]
+[ext_resource type="AudioStream" uid="uid://8k3b4dtgtm7h" path="res://weapons/shoot_fire.wav" id="2_oinqo"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1kk4q"]
+random_pitch = 1.6
+streams_count = 1
+stream_0/stream = ExtResource("2_oinqo")
+
+[node name="FireShot" type="Node2D" node_paths=PackedStringArray("shoot_sound")]
+script = ExtResource("1_8dkuc")
+bullet_scene = ExtResource("2_e40li")
+shoot_sound = NodePath("ShootFire")
+
+[node name="ShootFire" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_1kk4q")

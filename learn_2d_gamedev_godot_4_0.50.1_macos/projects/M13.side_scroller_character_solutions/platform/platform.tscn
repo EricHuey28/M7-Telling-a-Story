@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://c10ucj5wvv6hj"]
+
+[ext_resource type="Script" uid="uid://d0h41hwes4o1u" path="res://platform/platform.gd" id="1_0n7li"]
+[ext_resource type="Texture2D" uid="uid://cj0vto6ljiewx" path="res://platform/ground_platform.png" id="2_2q7nh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_802t3"]
+resource_local_to_scene = true
+size = Vector2(128, 16)
+
+[node name="Platform" type="AnimatableBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_0n7li")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_802t3")
+
+[node name="Sprite" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -8.0
+offset_right = 64.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2q7nh")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://5t8mu775yfgo"]
+
+[ext_resource type="Texture2D" uid="uid://4int57g6vqyq" path="res://assets/kenney-particles/spark_02.png" id="1_aatkd"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ek6h6"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_begvu"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.5), -5.61552, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_12bc5"]
+curve = SubResource("Curve_begvu")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vown0"]
+particle_flag_disable_z = true
+emission_shape = 2
+emission_sphere_radius = 100.0
+angle_min = -180.0
+angle_max = 180.0
+radial_velocity_max = 100.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.01
+scale_max = 0.4
+scale_curve = SubResource("CurveTexture_12bc5")
+color = Color(1, 0.928589, 0.648438, 1)
+hue_variation_min = -0.05
+hue_variation_max = 0.1
+
+[node name="TestParticlesEnergySparkes" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_ek6h6")
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_vown0")
+texture = ExtResource("1_aatkd")
+lifetime = 0.3

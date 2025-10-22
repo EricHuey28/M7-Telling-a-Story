@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://chrqtkseacr8v"]
+
+[ext_resource type="PackedScene" uid="uid://dnq05er7dvi3h" path="res://lessons_reference/challenges/reduce_health/ship_reduce_health.tscn" id="1_3yoc7"]
+[ext_resource type="PackedScene" uid="uid://0vofl0snmxpy" path="res://lessons_reference/05.completed/random_item_placer.tscn" id="2_nf6j8"]
+[ext_resource type="PackedScene" uid="uid://bxfevggvxo634" path="res://assets/background/space_background.tscn" id="3_6xo61"]
+
+[node name="SpaceLevel" type="Node2D"]
+
+[node name="ShipReduceHealth" parent="." instance=ExtResource("1_3yoc7")]
+position = Vector2(960, 540)
+
+[node name="RandomItemPlacer" parent="." instance=ExtResource("2_nf6j8")]
+
+[node name="SpaceBackground" parent="." instance=ExtResource("3_6xo61")]

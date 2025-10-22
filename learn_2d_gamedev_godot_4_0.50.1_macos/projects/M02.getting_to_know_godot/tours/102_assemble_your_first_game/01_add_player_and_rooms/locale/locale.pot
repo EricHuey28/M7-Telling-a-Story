@@ -1,0 +1,421 @@
+# LANGUAGE translation for M2. Getting to Know Godot (Interactive Tours) for the following files:
+# res://addons/godot_tours/tour.gd
+# res://tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: M2. Getting to Know Godot (Interactive Tours)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: addons/godot_tours/tour.gd
+msgid "Press the [b]%s[/b] button."
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Turn the [b]%s[/b] button %s."
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Change to the [b]%s[/b] tab."
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Select the %s %s in the [b]Scene Dock[/b]."
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Set [b]%s[/b] to [code]%s[/code]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Set [b]%s[/b]'s [b]%s[/b] property to [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Open the scene [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Expand the property [b]%s[/b] in the [b]Inspector[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Move [b]%s[/b] inside the guide box"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Instantiate the [b]%s[/b] scene as a child of [b]%s[/b]"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Assemble your first game"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "In this tour, you get to assemble your first game from premade parts."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "You will put what you learned in the previous tour into practice."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "You'll select and move nodes, create scene instances, use Godot's tilemap editor, and more."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Let's get started!"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Let's make a little game"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "By the end of this tutorial, you'll have a little playable game like this one."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "In this first part, you'll learn how to instantiate scenes, move entities, and draw bridges between rooms using a tilemap."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "You can try it right now: click the play icon in the top right of the editor to run the Godot project."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Then, press [b]%s[/b] or close the game window to stop the game."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Let's head to the starter scene and assemble the game."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Open the start scene"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "In the [b]FileSystem Dock[/b] at the bottom-left, find and [b]double-click[/b] on the scene we will be working with: [b]%s[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Open the scene [b]%s[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Add Player Scene"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Now let's add a playable character to the scene! Drag and drop the player from the [b]FileSystem Dock[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Add the [b]Player Scene[/b] to the [b]Scene[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Great job!"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Remember [b]a scene is a template[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "By dragging the [b]Player Scene[/b] into the viewport in the center, you created a copy of the player template in the start scene."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "You can see in the [b]Scene Dock[/b] that there is now an [b]instance[/b] of the player scene in the start scene."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Flesh out the environment"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "We're lacking an environment for players to explore. Let's add a couple of rooms next."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "We've prepared rooms for you to place in the level."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Snap to grid"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "To place the rooms accurately, we will use grid snapping."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "You can toggle the grid on and off by clicking the [b]Grid[/b] button at the top (but keep it on!)."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Change grid size"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "The grid is too small. Let's make it bigger."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Click the the three vertical dots in the toolbar to access the grid settings."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Then, click [b]Configure Snap...[/b], and change [b]Grid Step[/b] to [b]128px[/b] by [b]128px[/b]. Then, click [b]Ok[/b] to confirm."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "How to zoom in and out"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Before adding rooms, let's learn to zoom and pan the view. You'll likely need to zoom out to place the rooms comfortably."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "To zoom in and out, use your [b]Mouse Wheel[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "On touch displays and supported touchpads, you can pinch two fingers."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Give it a try!"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Using the zoom buttons"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Alternatively, you can click the [b]Zoom In[/b] button %s and [b]Zoom Out[/b] %s button in the top-left of the viewport to zoom in and out."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "How to pan the view"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "To pan the view, click and drag using the [b]Middle Mouse Button[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "If you don't have a mouse wheel, press the [b]Spacebar[/b] and click and drag with the [b]Left Mouse Button[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "And if you're using a touchpad, you can keep the [b]%s[/b] key down and slide two fingers over your touchpad."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Add Rooms"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Now, you can start placing rooms!"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Drag and drop one of each room type (a, b, and c) from the [b]FileSystem Dock[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Place them so that the rooms do not overlap, and keep some space between them, as we'll connect the rooms with bridges later."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Use the [b]Middle Mouse Button[/b] to pan the view if you need to."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Use the [b]Mouse Wheel[/b] to zoom in and out."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Don't worry if their position isn't perfect: we'll learn to move the rooms next."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Add [b]RoomA[/b] to the [b]Scene[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Add [b]RoomB[/b] to the [b]Scene[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Add [b]RoomC[/b] to the [b]Scene[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Your game now has 3 rooms."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Did you notice how rooms snap to the grid?"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Next, let's learn to select and move the rooms directly in the viewport."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Move the rooms"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "To move a node, like the rooms, you first need to [b]select[/b] it. You can use the [b]Select Mode[/b] for that."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Ensure that the [b]Select Mode[/b] is active in the toolbar at the top."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Its icon looks like a mouse cursor. If it's active, the icon will be blue."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "The select tool is active by default when you create a new project in Godot."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Select a room"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "With the [b]Select Mode[/b] active, you can now select the rooms."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "To select a room, in the viewport, click on the room's little grey cross %s with the [b]Left Mouse Button[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Once you've selected a room, the cross will turn orange %s."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "You can visually select any node that has a cross in the viewport."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Select one of the [b]Room[/b] nodes."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Move with the select mode"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Click and drag [b]on the cross[/b] to move the node. Try to move the rooms."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "If you need to pan the view, move the mouse while pressing the [b]Middle Mouse Button[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Alternatively, you can press down the [b]Spacebar[/b] and click and drag on the view with the [b]Left Mouse Button[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Excellent!"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Take a moment to move the rooms around and arrange them to your liking."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Try to make the openings between rooms align a bit. It will make it easier to add bridges between them later."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Also, try to keep some space between the rooms so you can add bridges between them later."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Once you're happy with the layout, move on to the next step."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Moving the player to the first room"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Next, we'll move the player inside [b]RoomA[/b] so that when running the game, the player starts in the room."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "We'll take this opportunity to learn another useful way of selecting and moving nodes."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Find RoomA"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "To find [b]RoomA[/b], we'll use the [b]Scene Dock[/b] and the viewport in the center."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Click each of the room nodes and pay attention to the crosses in the viewport."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Each cross %s represents the position of one room. When you select a room, its cross turns orange: %s."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Click on [b]RoomA[/b] to select it and find the room's location."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Select the Player"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Let's select the player node to move it next. Click on [b]Player[/b] node in the [b]Scene Dock[/b] to select it."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Move the Player"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "To move a node, you can use the [b]Move Mode[/b] "
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid " in the toolbar. Click the move tool to activate it."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "With the move tool selected, click and drag anywhere on the viewport until the player is inside of [b]RoomA[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Move the [b]Player[/b] inside of [b]RoomA[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "You created several scene instances and learned to select and move them in the viewport."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "In the next part, you'll learn how to use the TileMap editor and Terrains to draw bridges that connect the rooms."
+msgstr ""

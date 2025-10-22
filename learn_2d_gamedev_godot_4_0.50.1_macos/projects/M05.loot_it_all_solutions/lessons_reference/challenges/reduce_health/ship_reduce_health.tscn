@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnq05er7dvi3h"]
+
+[ext_resource type="PackedScene" uid="uid://xlnp8333w4el" path="res://lessons_reference/05.completed/ship.tscn" id="1_b86wi"]
+[ext_resource type="Script" uid="uid://e13bsfciosur" path="res://lessons_reference/challenges/reduce_health/ship_reduce_health.gd" id="2_ciasc"]
+
+[node name="ShipReduceHealth" instance=ExtResource("1_b86wi")]
+script = ExtResource("2_ciasc")
+
+[node name="Timer" type="Timer" parent="." index="0"]
+autostart = true
+
+[node name="MainThruster" parent="Sprite2D" index="0"]
+points = PackedVector2Array(0, 0, 33.3333, 0, 66.6667, 0)

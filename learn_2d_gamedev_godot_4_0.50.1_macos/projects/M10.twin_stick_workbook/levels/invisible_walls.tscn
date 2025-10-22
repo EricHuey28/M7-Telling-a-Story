@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlxjrgals3rg2"]
+
+[ext_resource type="TileSet" uid="uid://cqb2wtrubw0n6" path="res://levels/rooms/tilesets/tileset_invisible_walls.tres" id="1_06wdc"]
+
+[node name="InvisibleWalls" type="TileMapLayer"]
+use_parent_material = true
+tile_set = ExtResource("1_06wdc")

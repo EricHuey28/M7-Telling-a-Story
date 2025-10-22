@@ -1,0 +1,12 @@
+{
+  "background.tscn": "a85ad7ef5e84465b67f88cada9762a8b",
+  "balloon_sting.gd": "eae5970bdaa8dc4f81e5005d68cdeb6f",
+  "balloon_sting.tscn": "921d21735d6b9a5a7e3dc0cd3f62f491",
+  "balloon_tail.png": "116fa5332cb1756735845eb813ad85b9",
+  "balloon_tail.png.import": "92ea31c58abddb4d1bd617fcf201907f",
+  "balloon_top.png": "a06eba33877f4a9a4b8e53c057856991",
+  "balloon_top.png.import": "c65b134da60abd13af7eb46b79c61b57",
+  "group_outline.gdshader": "515709e97afab7c27405c6deb0129123",
+  "material.tres": "11642a0cad38daa3321f0279ab2e8f5b",
+  "sting_the_balloon.tscn": "479c7bf152c6abde4ef0877baacf083a"
+}

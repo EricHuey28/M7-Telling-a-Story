@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq0t6gr4vn1t2"]
+
+[ext_resource type="Texture2D" uid="uid://be5kdh3miv8eq" path="res://turrets/weapons/wave_area.png" id="1_ok45x"]
+[ext_resource type="Script" uid="uid://cvyocpxr4ccio" path="res://lessons_reference/turrets/weapons/slowdown_wave.gd" id="2_ji8hf"]
+
+[node name="SlowdownWave" type="Sprite2D"]
+unique_name_in_owner = true
+z_index = 10
+texture = ExtResource("1_ok45x")
+script = ExtResource("2_ji8hf")

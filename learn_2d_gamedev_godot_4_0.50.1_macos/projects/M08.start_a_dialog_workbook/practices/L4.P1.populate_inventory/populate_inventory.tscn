@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Material" path="res://assets/practice_background_material.tres" id="1_wwxe1"]
+[ext_resource type="Script" path="res://practices/L4.P1.populate_inventory/populate_inventory.gd" id="2_3d36s"]
+[ext_resource type="Theme" path="res://assets/practices/practices_theme.tres" id="3_rrp1y"]
+
+[node name="PopulateInventory" type="ColorRect"]
+material = ExtResource("1_wwxe1")
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_3d36s")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_rrp1y")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+columns = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 2
+theme_type_variation = &"SmallText"
+bbcode_enabled = true
+text = "Icons courtesy of https://game-icons.net"
+fit_content = true
+selection_enabled = true

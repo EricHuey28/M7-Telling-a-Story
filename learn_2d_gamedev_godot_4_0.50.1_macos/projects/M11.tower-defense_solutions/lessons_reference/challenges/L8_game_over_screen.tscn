@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://q8rv4xtkxasn"]
+
+[ext_resource type="FontFile" uid="uid://btiybsu6acuy7" path="res://addons/gdpractice/assets/fonts/Montserrat-Bold.ttf" id="1_q1qe3"]
+[ext_resource type="Script" uid="uid://6aj2gwftpate" path="res://lessons_reference/challenges/L8_game_over_screen.gd" id="1_t5uvn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_788du"]
+bg_color = Color(0.152653, 0.177452, 0.18125, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_g3vaf"]
+font = ExtResource("1_q1qe3")
+font_size = 48
+
+[node name="GameOverScreen" type="ColorRect"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.364706)
+script = ExtResource("1_t5uvn")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = -253.0
+offset_right = 324.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_788du")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "Game Over"
+label_settings = SubResource("LabelSettings_g3vaf")
+horizontal_alignment = 1
+
+[node name="RetryButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_q1qe3")
+theme_override_font_sizes/font_size = 28
+text = "Retry"
+
+[node name="QuitButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_q1qe3")
+theme_override_font_sizes/font_size = 28
+text = "Quit"

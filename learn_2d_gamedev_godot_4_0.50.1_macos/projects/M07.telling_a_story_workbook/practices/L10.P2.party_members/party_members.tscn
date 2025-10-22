@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Material" path="res://practices/L10.P2.party_members/assets/practice_background_material.tres" id="1_7rtxs"]
+[ext_resource type="Theme" path="res://practices/L10.P2.party_members/assets/practice_exercises_theme.tres" id="2_pxvyq"]
+[ext_resource type="Script" path="res://practices/L10.P2.party_members/party_members.gd" id="3_tk8em"]
+
+[node name="PartyMembers" type="ColorRect"]
+material = ExtResource("1_7rtxs")
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_pxvyq")
+script = ExtResource("3_tk8em")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.164
+anchor_right = 1.0
+anchor_bottom = 0.836
+offset_left = 470.0
+offset_top = -75.12
+offset_right = -470.0
+offset_bottom = 85.12
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_pxvyq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+fit_content = true
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_pxvyq")
+alignment = 1
+
+[node name="ButtonPrevious" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "previous"
+
+[node name="ButtonNext" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "next"

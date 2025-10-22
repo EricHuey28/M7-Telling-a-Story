@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgrb1w7oebbne"]
+
+[ext_resource type="Texture2D" uid="uid://ckht6ne2j2gb" path="res://lessons_reference/UI_samples/assets/character_gdbot.png" id="1_igjy2"]
+[ext_resource type="Theme" uid="uid://bucmdylmb8cjw" path="res://lessons_reference/UI_samples/assets/hud_sample_theme.tres" id="1_kf85n"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_kf85n")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture = ExtResource("1_igjy2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="Control" parent="."]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+
+[node name="LifeSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 29.0
+offset_top = 32.0
+offset_right = 29.0
+offset_bottom = 80.0
+grow_horizontal = 2
+theme_type_variation = &"SliderMain"
+value = 50.0
+editable = false
+scrollable = false
+
+[node name="StaminaSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 11.0
+offset_top = 96.0
+offset_right = -141.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_type_variation = &"SliderSecondary"
+max_value = 90.0
+value = 50.0
+editable = false
+scrollable = false
+tick_count = 4

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dks1dwyrcaujc"]
+
+[ext_resource type="PackedScene" uid="uid://bnyjo0j7j0t3c" path="res://addons/gdpractice/practice_solutions/L7.P1.spawn_random_items/random_collectible_placer.tscn" id="1_rmeuj"]
+[ext_resource type="PackedScene" uid="uid://bsjr80r5hl3qt" path="res://addons/gdpractice/practice_solutions/L7.P1.spawn_random_items/background.tscn" id="2_j84hv"]
+
+[node name="SpawnRandomItems" type="Node2D"]
+
+[node name="RandomCollectiblePlacer" parent="." instance=ExtResource("1_rmeuj")]
+position = Vector2(960, 540)
+
+[node name="Background" parent="." instance=ExtResource("2_j84hv")]

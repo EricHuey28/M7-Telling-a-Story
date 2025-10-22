@@ -1,0 +1,103 @@
+[gd_scene load_steps=11 format=3 uid="uid://bqls3o5daeu2s"]
+
+[ext_resource type="Theme" uid="uid://cshg3sgf0xxq" path="res://assets/main_theme.tres" id="1_628t2"]
+[ext_resource type="Script" uid="uid://cheh7b73m0fds" path="res://lessons/slideshow.gd" id="2_wbt3f"]
+[ext_resource type="Shader" uid="uid://dm7717xxg836f" path="res://assets/sliding_background.gdshader" id="3_qyyxv"]
+[ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="4_s7o0p"]
+[ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="5_omd3l"]
+[ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="6_vfoky"]
+[ext_resource type="AudioStream" uid="uid://chgko4hmxwxu5" path="res://assets/talking_synth.ogg" id="7_nppuw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_efgpg"]
+shader = ExtResource("3_qyyxv")
+shader_parameter/pattern_sampler = ExtResource("4_s7o0p")
+shader_parameter/bg_color = Color(0.980392, 0.94902, 0.72549, 1)
+shader_parameter/pattern_color = Color(0.996078, 0.878431, 0.564706, 1)
+shader_parameter/pattern_size = 256.0
+
+[sub_resource type="InputEventAction" id="InputEventAction_3rk3v"]
+action = &"advance_text"
+
+[sub_resource type="Shortcut" id="Shortcut_7vboy"]
+events = [SubResource("InputEventAction_3rk3v")]
+
+[node name="Slideshow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_628t2")
+script = ExtResource("2_wbt3f")
+
+[node name="Background" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_efgpg")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Body" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = 174.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_omd3l")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Expression" type="TextureRect" parent="Body"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_vfoky")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -360.32
+offset_top = 440.0
+offset_right = -176.0
+offset_bottom = -519.0
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Hello World"
+fit_content = true
+
+[node name="NextButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -198.0
+offset_top = -107.0
+offset_right = -24.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+shortcut = SubResource("Shortcut_7vboy")
+text = "next"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_nppuw")

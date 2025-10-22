@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://csvcjtttpo038"]
+
+[ext_resource type="Shader" uid="uid://48d3cfqfxrnl" path="res://assets/ship_visual_effects/ship_perspective_layered.gdshader" id="1_lubvm"]
+[ext_resource type="Texture2D" uid="uid://ccaltbfx5mgyo" path="res://assets/ship_visual_effects/ship_layers.png" id="2_5m006"]
+[ext_resource type="Texture2D" uid="uid://bniyrxn3r2v8h" path="res://assets/ship.png" id="3_pdppw"]
+[ext_resource type="Script" uid="uid://clcl471p8mapk" path="res://lessons_reference/01.your_first_collectible/ship_first_collectible.gd" id="4_p1sls"]
+[ext_resource type="PackedScene" uid="uid://dgf54k70yiiff" path="res://assets/ship_visual_effects/main_thruster/main_thruster.tscn" id="5_q7c3l"]
+[ext_resource type="PackedScene" uid="uid://bklom8bhpxg4h" path="res://assets/ship_visual_effects/side_thruster/side_thruster.tscn" id="6_1updt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_quu6q"]
+shader = ExtResource("1_lubvm")
+shader_parameter/parts_sampler = ExtResource("2_5m006")
+shader_parameter/field_of_view = 90.0
+shader_parameter/rotation_y = 0.0
+shader_parameter/rotation_x = 0.0
+shader_parameter/inset = 0.0
+shader_parameter/line_thickness = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kpkmc"]
+radius = 26.0192
+
+[node name="Ship" type="Area2D"]
+material = SubResource("ShaderMaterial_quu6q")
+script = ExtResource("4_p1sls")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_pdppw")
+
+[node name="MainThruster" parent="Sprite2D" instance=ExtResource("5_q7c3l")]
+position = Vector2(-33, 0)
+points = PackedVector2Array(0, 0, 33.333332, 0, 66.666664, 0)
+
+[node name="SideThruster" parent="Sprite2D" instance=ExtResource("6_1updt")]
+position = Vector2(-44, -21)
+rotation = 1.74987
+
+[node name="SideThruster2" parent="Sprite2D" instance=ExtResource("6_1updt")]
+position = Vector2(-45, 19)
+rotation = 1.36715
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kpkmc")

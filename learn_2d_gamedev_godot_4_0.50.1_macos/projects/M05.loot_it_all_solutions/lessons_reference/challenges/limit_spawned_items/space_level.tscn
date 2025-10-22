@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca05kn0llsrby"]
+
+[ext_resource type="PackedScene" uid="uid://bxfevggvxo634" path="res://assets/background/space_background.tscn" id="1_h62wk"]
+[ext_resource type="PackedScene" uid="uid://bxu6ag24iy80l" path="res://lessons_reference/04.spawn_items_randomly/ship.tscn" id="2_hsblr"]
+[ext_resource type="PackedScene" uid="uid://bni5jnnsvw5hq" path="res://lessons_reference/challenges/limit_spawned_items/random_item_placer_limit.tscn" id="3_5yv0w"]
+
+[node name="Level" type="Node2D"]
+
+[node name="SpaceBackground" parent="." instance=ExtResource("1_h62wk")]
+
+[node name="Ship" parent="." instance=ExtResource("2_hsblr")]
+position = Vector2(959, 522)
+
+[node name="RandomItemPlacerLimit" parent="." instance=ExtResource("3_5yv0w")]

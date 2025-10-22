@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckbfjff8edh5q"]
+
+[ext_resource type="Script" uid="uid://cle0ssrsiksc" path="res://lessons_reference/02_extended/weapons/fire_continuous.gd" id="1_g8glm"]
+[ext_resource type="AudioStream" uid="uid://8k3b4dtgtm7h" path="res://weapons/shoot_fire.wav" id="2_rvumr"]
+
+[node name="FireContinuous" type="Node2D" node_paths=PackedStringArray("shoot_sound")]
+script = ExtResource("1_g8glm")
+max_range = 700.0
+max_bullet_speed = 1200.0
+shoot_sound = NodePath("ShootFire")
+
+[node name="ShootFire" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_rvumr")
+
+[node name="CooldownTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.2
+one_shot = true

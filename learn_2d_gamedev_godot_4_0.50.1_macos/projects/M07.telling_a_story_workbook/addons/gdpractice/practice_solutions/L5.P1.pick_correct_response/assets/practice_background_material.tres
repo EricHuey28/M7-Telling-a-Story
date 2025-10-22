@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 ]
+
+[ext_resource type="Shader" path="res://assets/sliding_background.gdshader" id="1_6awxe"]
+[ext_resource type="Texture2D"  path="res://assets/bubble_pattern.png" id="2_6ogeu"]
+
+[resource]
+shader = ExtResource("1_6awxe")
+shader_parameter/bg_color = Color(0.858824, 0.733333, 0.996078, 1)
+shader_parameter/pattern_color = Color(0.776471, 0.556863, 0.992157, 1)
+shader_parameter/pattern_size = 256.0
+shader_parameter/pattern_sampler = ExtResource("2_6ogeu")

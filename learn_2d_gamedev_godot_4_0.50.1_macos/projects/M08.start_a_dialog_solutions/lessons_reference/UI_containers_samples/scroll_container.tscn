@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://f0c0rul6q184"]
+
+[ext_resource type="PackedScene" uid="uid://ch4vdkw7ggfr8" path="res://lessons_reference/UI_containers_samples/v_box_container.tscn" id="1_nm1xt"]
+[ext_resource type="PackedScene" uid="uid://cbbj6xlffto47" path="res://lessons_reference/UI_containers_samples/h_box_container.tscn" id="2_nyghv"]
+[ext_resource type="PackedScene" uid="uid://d2741w0m02hv7" path="res://lessons_reference/UI_containers_samples/aspect_ratio_container.tscn" id="3_qdatj"]
+[ext_resource type="PackedScene" uid="uid://dtjui1a1k10ak" path="res://lessons_reference/UI_containers_samples/grid_container.tscn" id="4_4vmks"]
+
+[node name="ScrollContainer" type="ScrollContainer"]
+offset_right = 350.0
+offset_bottom = 304.0
+
+[node name="VBoxContainer" parent="." instance=ExtResource("1_nm1xt")]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+
+[node name="HBoxContainer" parent="VBoxContainer" instance=ExtResource("2_nyghv")]
+layout_mode = 2
+
+[node name="AspectRatioContainer" parent="VBoxContainer" instance=ExtResource("3_qdatj")]
+layout_mode = 2
+
+[node name="GridContainer" parent="VBoxContainer" instance=ExtResource("4_4vmks")]
+layout_mode = 2

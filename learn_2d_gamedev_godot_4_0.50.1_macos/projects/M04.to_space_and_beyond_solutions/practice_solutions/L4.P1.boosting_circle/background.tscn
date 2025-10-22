@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://crw87eh83lfr5"]
+
+[ext_resource type="Texture2D" uid="uid://ci5b253al1tus" path="res://assets/practice_assets/ellipse_yellow.png" id="1_4p2eh"]
+
+[node name="Background" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" groups=["GDFExcludeVisibility"]]
+z_index = -3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.364706, 0.12549, 0.776471, 1)
+
+[node name="Ellipse" type="Sprite2D" parent="CanvasLayer"]
+top_level = true
+z_index = -1
+position = Vector2(960, 540)
+texture = ExtResource("1_4p2eh")
+
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
+position = Vector2(960, 540)

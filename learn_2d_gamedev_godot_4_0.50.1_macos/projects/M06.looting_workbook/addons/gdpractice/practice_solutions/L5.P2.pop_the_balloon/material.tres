@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bh8me21qj0etl"]
+
+[ext_resource type="Shader" path="res://addons/gdpractice/practice_solutions/L5.P2.pop_the_balloon/group_outline.gdshader" id="1_wstje"]
+
+[resource]
+shader = ExtResource("1_wstje")
+shader_parameter/line_color = Color(0, 0, 0, 1)
+shader_parameter/line_thickness = 5.0
+shader_parameter/viewport_scale = Vector2(1, 1)

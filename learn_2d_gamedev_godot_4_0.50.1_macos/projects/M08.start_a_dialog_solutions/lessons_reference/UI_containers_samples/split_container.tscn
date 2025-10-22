@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cweg3hybnlpps"]
+
+[node name="SplitContainer" type="SplitContainer"]
+offset_right = 584.0
+offset_bottom = 563.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+text = "left"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+text = "right"

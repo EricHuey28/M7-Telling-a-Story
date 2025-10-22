@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://0h8ymjl03vh4"]
+
+[ext_resource type="PackedScene" uid="uid://c7le2os75mfd2" path="res://lessons_reference/04_obstacles/04_simple_obstacle.tscn" id="1_dcjdw"]
+[ext_resource type="PackedScene" uid="uid://besl2b0j8rv01" path="res://lessons_reference/02_character_controller/02_runner.tscn" id="2_c70cm"]
+
+[node name="TempScene" type="Node2D"]
+y_sort_enabled = true
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_dcjdw")]
+position = Vector2(928, 544)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("1_dcjdw")]
+position = Vector2(1380, 702)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("1_dcjdw")]
+position = Vector2(348, 922)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("1_dcjdw")]
+position = Vector2(284, 589)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("1_dcjdw")]
+position = Vector2(1289, 949)
+
+[node name="Runner" parent="." instance=ExtResource("2_c70cm")]
+position = Vector2(1027, 586)

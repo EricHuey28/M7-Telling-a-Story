@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bni5jnnsvw5hq"]
+
+[ext_resource type="Script" uid="uid://ydagbbss2sp3" path="res://lessons_reference/challenges/limit_spawned_items/random_item_placer_limit.gd" id="1_fmfso"]
+
+[node name="RandomItemPlacerLimit" type="Node2D"]
+script = ExtResource("1_fmfso")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

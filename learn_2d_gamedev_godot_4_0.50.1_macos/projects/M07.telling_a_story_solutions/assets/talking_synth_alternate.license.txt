@@ -1,0 +1,2 @@
+ License: CC-By-Sa 4.0 (https://creativecommons.org/licenses/by/4.0/)
+ Code generating the sounds by Thibaud Goiffon

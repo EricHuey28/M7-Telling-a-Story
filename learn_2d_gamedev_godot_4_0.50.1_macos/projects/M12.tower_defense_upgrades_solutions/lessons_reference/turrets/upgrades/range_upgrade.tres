@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TurretUpgrade" load_steps=2 format=3 uid="uid://bi84lsi7oaxfo"]
+
+[ext_resource type="Script" uid="uid://bpgfcjrkqvcc4" path="res://lessons_reference/turrets/upgrades/turret_upgrade.gd" id="1_lhu1o"]
+
+[resource]
+script = ExtResource("1_lhu1o")
+cost = 125
+mob_detection_radius_change = 30.0
+attack_rate_change = 0.0
+damage_change = 0.0

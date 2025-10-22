@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dsly7w1omg4hh"]
+
+[node name="VFlowContainer" type="VFlowContainer"]
+offset_right = 180.0
+offset_bottom = 197.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+text = "Button 1"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+text = "Button 2"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 2
+text = "Button 3"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 2
+text = "Button 4"
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 2
+text = "Button 5"
+
+[node name="Button6" type="Button" parent="."]
+layout_mode = 2
+text = "Button 6"

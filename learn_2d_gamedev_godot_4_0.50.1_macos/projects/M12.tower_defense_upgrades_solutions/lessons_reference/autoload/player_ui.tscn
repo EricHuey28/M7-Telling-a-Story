@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=3 uid="uid://xp6gh6x06ent"]
+
+[ext_resource type="Script" uid="uid://bk4gveaucwt76" path="res://lessons_reference/autoload/player_ui.gd" id="1_c0pq6"]
+[ext_resource type="Texture2D" uid="uid://cgaxlo44jh6vm" path="res://mobs/coin.png" id="2_sh3rp"]
+[ext_resource type="Texture2D" uid="uid://cr7d6dy88ohwf" path="res://ui/health_bar_background.png" id="3_ryd4p"]
+[ext_resource type="Texture2D" uid="uid://ofew82gbqai4" path="res://ui/heart.png" id="4_5ng0m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rtcdx"]
+font_size = 36
+
+[node name="PlayerUI" type="Control"]
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_c0pq6")
+metadata/_edit_horizontal_guides_ = [51.0]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -208.0
+offset_top = 45.0
+offset_right = -64.0
+offset_bottom = 95.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="CoinLabel" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "500"
+label_settings = SubResource("LabelSettings_rtcdx")
+horizontal_alignment = 2
+
+[node name="CoinIcon" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_sh3rp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 448.0
+offset_bottom = 82.0
+texture = ExtResource("3_ryd4p")
+
+[node name="HeartHBoxContainer" type="HBoxContainer" parent="TextureRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.5
+offset_top = -15.0
+offset_right = 175.5
+offset_bottom = 42.0
+grow_horizontal = 2
+
+[node name="Heart" type="TextureRect" parent="TextureRect/HeartHBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_5ng0m")
+
+[node name="Heart2" type="TextureRect" parent="TextureRect/HeartHBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_5ng0m")
+
+[node name="Heart3" type="TextureRect" parent="TextureRect/HeartHBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_5ng0m")
+
+[node name="Heart4" type="TextureRect" parent="TextureRect/HeartHBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_5ng0m")
+
+[node name="Heart5" type="TextureRect" parent="TextureRect/HeartHBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_5ng0m")

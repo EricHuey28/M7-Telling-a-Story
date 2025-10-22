@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://uvnpqjehft7p"]
+
+[ext_resource type="Texture2D" uid="uid://5vl7p0xb7nd8" path="res://assets/circuit_background.png" id="1_hatfj"]
+[ext_resource type="PackedScene" uid="uid://b5vd0cg4ilxbj" path="res://lessons_reference/05_inertia/05_runner_step_2.tscn" id="1_vui2f"]
+[ext_resource type="PackedScene" uid="uid://cwk136csprv66" path="res://lessons_reference/04_obstacles/04_circuit_obstacle.tscn" id="3_cwtug"]
+
+[node name="03" type="Node2D"]
+y_sort_enabled = true
+
+[node name="CircuitBackground" type="Sprite2D" parent="."]
+texture = ExtResource("1_hatfj")
+centered = false
+
+[node name="Runner" parent="." instance=ExtResource("1_vui2f")]
+position = Vector2(1495, 543)
+
+[node name="Circuit" parent="." instance=ExtResource("3_cwtug")]
+metadata/_edit_lock_ = true

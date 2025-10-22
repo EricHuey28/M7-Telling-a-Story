@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://eujxcp85jnev"]
+
+[ext_resource type="Script" path="res://addons/gdpractice/practice_solutions/L6.P1.the_pinata/candy/candy.gd" id="1_oxgee"]
+[ext_resource type="Texture2D" uid="uid://b2rhorpbfx1kt" path="res://addons/gdpractice/practice_solutions/L6.P1.the_pinata/candy/candy_red.png" id="2_xhmb3"]
+
+[node name="Candy" type="Node2D" groups=["candy"]]
+script = ExtResource("1_oxgee")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(0.729167, 0.729167)
+texture = ExtResource("2_xhmb3")

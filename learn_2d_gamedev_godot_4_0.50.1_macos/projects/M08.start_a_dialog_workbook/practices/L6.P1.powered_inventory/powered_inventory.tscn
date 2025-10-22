@@ -1,0 +1,97 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Shader" path="res://assets/sliding_background.gdshader" id="1_rra8b"]
+[ext_resource type="Texture2D" path="res://assets/bubble_pattern.png" id="2_u5mi4"]
+[ext_resource type="Script" path="res://practices/L6.P1.powered_inventory/powered_inventory.gd" id="3_tv2rc"]
+[ext_resource type="Theme" path="res://assets/practices/practices_theme.tres" id="4_lnplv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p0ea8"]
+shader = ExtResource("1_rra8b")
+shader_parameter/pattern_sampler = ExtResource("2_u5mi4")
+shader_parameter/bg_color = Color(0.537824, 0.0789613, 0.817605, 1)
+shader_parameter/pattern_color = Color(0.467561, 0.0634301, 0.715504, 1)
+shader_parameter/pattern_size = 256.0
+
+[node name="PoweredInventory" type="ColorRect"]
+material = SubResource("ShaderMaterial_p0ea8")
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_tv2rc")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_lnplv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(324, 384)
+layout_mode = 2
+columns = 2
+
+[node name="Panel" type="Panel" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer/HBoxContainer/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 55.0
+grow_horizontal = 2
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -42.0
+offset_top = -47.0
+offset_right = 42.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "buy"
+
+[node name="PowerupsVBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 2
+theme_type_variation = &"SmallText"
+bbcode_enabled = true
+text = "Icons courtesy of https://game-icons.net"
+fit_content = true
+selection_enabled = true

@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://bhk7i876yvhtf"]
+
+[ext_resource type="Theme" uid="uid://cshg3sgf0xxq" path="res://assets/main_theme.tres" id="1_wmd4o"]
+[ext_resource type="Script" uid="uid://enau0hx6mypn" path="res://lessons_reference/01.interesting_choices/interesting_choices_step_2.gd" id="2_jfkm1"]
+[ext_resource type="Shader" uid="uid://dm7717xxg836f" path="res://assets/sliding_background.gdshader" id="3_p50xr"]
+[ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="4_y7mg8"]
+[ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="5_qpyov"]
+[ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="6_1nxgf"]
+[ext_resource type="AudioStream" uid="uid://chgko4hmxwxu5" path="res://assets/talking_synth.ogg" id="7_1s71x"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_efgpg"]
+shader = ExtResource("3_p50xr")
+shader_parameter/pattern_sampler = ExtResource("4_y7mg8")
+shader_parameter/bg_color = Color(0.980392, 0.94902, 0.72549, 1)
+shader_parameter/pattern_color = Color(0.996078, 0.878431, 0.564706, 1)
+shader_parameter/pattern_size = 256.0
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_wmd4o")
+script = ExtResource("2_jfkm1")
+
+[node name="Background" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_efgpg")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Body" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = 174.0
+texture = ExtResource("5_qpyov")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Expression" type="TextureRect" parent="Body"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_1nxgf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = 222.0
+offset_right = -220.0
+offset_bottom = -208.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "hello world"
+fit_content = true
+
+[node name="ActionButtonsVBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+alignment = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/ActionButtonsVBoxContainer"]
+layout_mode = 2
+text = "An option"
+
+[node name="Button2" type="Button" parent="VBoxContainer/ActionButtonsVBoxContainer"]
+layout_mode = 2
+text = "Another option"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_1s71x")

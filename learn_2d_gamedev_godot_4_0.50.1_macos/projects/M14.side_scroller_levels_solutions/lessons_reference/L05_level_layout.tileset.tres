@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://d4khug2x8xja"]
+
+[ext_resource type="PackedScene" uid="uid://dual15nkjm5g6" path="res://entities/end_flag/end_flag.tscn" id="1_0qb2w"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_5gymu"]
+resource_name = "Interactables"
+scenes/1/scene = ExtResource("1_0qb2w")
+
+[resource]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 0
+terrain_set_0/mode = 1
+terrain_set_0/terrain_0/name = "Terrain 0"
+terrain_set_0/terrain_0/color = Color(0, 0.731999, 0.9875, 1)
+sources/1 = SubResource("TileSetScenesCollectionSource_5gymu")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://u2e0ge3w0mb5"]
+
+[ext_resource type="Script" uid="uid://d3p52424r0hkw" path="res://lessons_reference/01_standard/weapons/weapon.gd" id="1_66hhf"]
+[ext_resource type="AudioStream" uid="uid://8k3b4dtgtm7h" path="res://weapons/shoot_fire.wav" id="2_0e6on"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1kk4q"]
+random_pitch = 1.6
+streams_count = 1
+stream_0/stream = ExtResource("2_0e6on")
+
+[node name="BasicFire" type="Node2D" node_paths=PackedStringArray("shoot_sound")]
+script = ExtResource("1_66hhf")
+max_bullet_speed = 1150.0
+shoot_sound = NodePath("ShootSound")
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamRandomizer_1kk4q")
+
+[node name="CooldownTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true

@@ -1,0 +1,518 @@
+# LANGUAGE translation for M2. Getting to Know Godot (Interactive Tours) for the following files:
+# res://tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+# res://addons/godot_tours/tour.gd
+# res://tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: M2. Getting to Know Godot (Interactive Tours)\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid "Open the start scene"
+msgstr "startシーンを開く"
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid "Let's start by opening the scene we will be working with."
+msgstr "それではこれから作業するシーンを開きましょう。"
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid ""
+"In the [b]FileSystem Dock[/b] at the bottom-left, find and [b]double-click[/"
+"b] on the scene we will be working with: [b]%s[/b]."
+msgstr ""
+"左下の[b]ファイルシステムドック[/b]から、これから作業する[b]%s[/b]シーンを見"
+"つけて[b]ダブルクリック[/b]します。"
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Open the scene [b]%s[/b]."
+msgstr "[b]%s[/b]シーンを開いてください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Press the [b]%s[/b] button."
+msgstr "[b]%s[/b]ボタンを押してください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Turn the [b]%s[/b] button %s."
+msgstr "[b]%s[/b]ボタンを%sしてください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Change to the [b]%s[/b] tab."
+msgstr "タブを[b]%s[/b]に変更してください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Select the %s %s in the [b]Scene Dock[/b]."
+msgstr "[b]シーンドック[/b]で%s %sを選択してください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Set [b]%s[/b] to [code]%s[/code]"
+msgstr "[b]%s[/b]を[code]%s[/code]に設定してください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Set [b]%s[/b]'s [b]%s[/b] property to [b]%s[/b]"
+msgstr "[b]%s[/b]の[b]%s[/b]プロパティを[b]%s[/b] に設定してください"
+
+#: addons/godot_tours/tour.gd
+msgid "Open the scene [b]%s[/b]"
+msgstr "[b]%s[/b]シーンを開いてください"
+
+#: addons/godot_tours/tour.gd
+msgid "Expand the property [b]%s[/b] in the [b]Inspector[/b]"
+msgstr "[b]Inspector[/b]のプロパティ[b]%s[/b]を展開してください"
+
+#: addons/godot_tours/tour.gd
+msgid "Move [b]%s[/b] inside the guide box"
+msgstr "ガイドボックスの内側に[b]%s[/b]を移動してください"
+
+#: addons/godot_tours/tour.gd
+msgid "Instantiate the [b]%s[/b] scene as a child of [b]%s[/b]"
+msgstr "[b]%s[/b] シーンを [b]%s[/b] の子としてインスタンス化してください"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Changing RoomA"
+msgstr "RoomAを変更する"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"We added several scene instances to the [b]Start[/b] scene: the [b]Player[/"
+"b], the [b]UIHealthBar[/b], the [b]BackgroundBlueSky[/b], and the rooms."
+msgstr ""
+"これまでのツアーで[b]Start[/b]シーンにいくつかのシーンインスタンスを追加しま"
+"した：\n"
+"[b]Player[/b]・[b]UIHealthBar[/b]・[b]BackgroundBlueSky[/b]・そしてRoomです。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"We can open and modify any of those scenes. Any changes we make to the scene "
+"source files in the [b]FileSystem[/b] dock will be reflected in their "
+"instances."
+msgstr ""
+"これらのシーンを開いて、変更することができます。\n"
+"[b]FileSystem[/b]ドック内のシーンソースファイルに加えた変更は、それらのインス"
+"タンスに反映されます。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"The opposite is not true: Changes we make to a specific instance of a scene "
+"applies to that instance only."
+msgstr ""
+"その逆は反映されません： \n"
+"シーン内の特定のインスタンスに加えた変更は、そのインスタンスにのみ適用されま"
+"す。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Open the RoomA scene"
+msgstr "RoomA シーンを開く"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Let's give this a try. Open the [b]RoomA[/b] scene."
+msgstr ""
+"変更が反映されるか試してみましょう。\n"
+"[b]RoomA[/b]シーンを開きます。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Double-click the file [b]%s[/b] in the [b]FileSystem dock[/b] in the bottom-"
+"left to open the scene."
+msgstr ""
+"左下の[b]FileSystem dock[/b]にあるファイル[b]%s[/b]をダブルクリックしてシーン"
+"を開きます。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "The RoomA scene"
+msgstr "RoomAシーン"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "We're now inside the room's scene."
+msgstr "部屋のシーンに入りました。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Anything we add here will be reflected in the [b]Start[/b] scene when we "
+"play the game."
+msgstr ""
+"ここで追加したものはゲームをプレーするときの[b]Start[/b]シーンに反映されま"
+"す。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "The chest"
+msgstr "箱（チェスト）"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"In the project, we prepared a chest scene for you: [b]%s[/b]. You can see it "
+"in the [b]FileSystem Dock[/b] in the bottom-left."
+msgstr ""
+"このプロジェクトでは、あなたのために[b]%s[/b]というフタ付きの箱のシーンを用意"
+"しました。\n"
+"左下の[b]FileSystem Dock[/b]から見ることができます。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Drag and drop the [b]%s[/b] file onto the viewport to create an instance of "
+"it, and place it inside of the room."
+msgstr ""
+"[b]%s[/b]ファイルをビューポートにドラッグ＆ドロップして、\n"
+"部屋の中にインスタンス化された箱を配置します。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Add the [b]Chest Scene[/b] to the [b]Scene[/b]."
+msgstr "[b]シーン[/b]に[b]Chest シーン[/b]を追加します。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Place the [b]Chest Scene[/b] inside of the room."
+msgstr "[b]Chestシーン[/b]を部屋の中に配置します。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Save the scene"
+msgstr "シーンを保存する"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Press [b]%s+S[/b] on your keyboard to save the [b]RoomA[/b] scene."
+msgstr "キーボードの[b]%s+S[/b]を押して[b]RoomA[/b] シーンを保存しましょう。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "This will save your change and update the [b]Start[/b] scene."
+msgstr "変更を保存すると、[b]Start[/b]シーンが更新されます。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Head back to the start scene"
+msgstr "Startシーンに戻る"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Let's now head back to the [b]Start[/b] scene where you can see the chest."
+msgstr "それでは、フタ付きの箱が見える[b]Start[/b]シーンに戻りましょう。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Click on the scene tab that says %s above the viewport."
+msgstr ""
+"ビューポートの上にある「%s」と表示されているシーンタブをクリックします。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Click the [b]Start[/b] scene tab."
+msgstr "[b]start[/b]シーンタブをクリックします。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Time to play!"
+msgstr "プレイしてみましょう！"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Click the [b]Play Current Scene[/b] button to run the scene and move the "
+"player near the chest."
+msgstr ""
+"[b]現在のシーンを実行[/b]ボタンをクリックしてシーンを実行し、プレイヤーを箱の"
+"近くに移動させます。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "What do you observe?"
+msgstr "どうなりましたか?"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Press [b]%s[/b] on your keyboard or close the game window to return to the "
+"editor."
+msgstr ""
+"キーボードの[b]%s[/b]を押すか、ゲームウィンドウを閉じてエディタに戻ります。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Play Current Scene"
+msgstr "現在のシーンを実行"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Your first line of code"
+msgstr "初めてのコード行"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Currently, when we approach the chest, it opens, and nothing comes out of "
+"it. That's because we're missing the code that spawns pickups when the chest "
+"opens."
+msgstr ""
+"現在箱に近づいたらフタが開きますが中から何も出てきません。\n"
+"なぜならフタが開いたときにピックアップをスポーンするコードが足りないからで"
+"す。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Nodes and scenes can fill up the game world but without [b]code[/b], they "
+"don't make a complete game."
+msgstr ""
+"ノードやシーンはゲームの世界を埋め尽くすことはできますが、[b]コード[/b]がなけ"
+"れば完全なゲームにはなりません。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "To add life and interaction to your game, you need to write code."
+msgstr "ゲームに命を吹き込むには、コードを書く必要があります。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Open the chest scene"
+msgstr "chestシーンを開く"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Let's make something come out of the chest by adding a line of code to it."
+msgstr "この箱に1行コードを追加して、箱から何かを出してみましょう。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "First, open the [b]Chest[/b] scene by double-clicking on it."
+msgstr "まず、[b]Chest[/b]のシーンをダブルクリックして開きます。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Open the scene [b]chest.tscn[/b]."
+msgstr "[b]chest.tscn[/b]を開きましょう。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Open the script"
+msgstr "スクリプトを開く"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"To make nodes interactive, we need to tell the computer how they interact. "
+"We do that using code."
+msgstr ""
+"ノードをインタラクティブにするには、どのように相互作用するかをコンピュータに"
+"伝える必要があります。そのためにコードを使いましょう。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "In Godot, we write code in a text file that we attach to a node."
+msgstr "Godotでは、テキストファイルにコードを書いてノードにアタッチします。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"You can see that the chest node has a code file attached to it thanks to the "
+"script icon %s. We call a code file a [b]script[/b]."
+msgstr ""
+"スクリプトアイコン(%s)のおかげで、chestノードにコード・ファイルがアタッチされ"
+"ていることがわかります。\n"
+"コードファイルのことを[b]スクリプト[/b]と呼びます。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Click the script icon %s to open this file in the script view."
+msgstr "%s をクリックして、このファイルをスクリプトビューで開きます。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Open the script attached to the [b]Chest[/b] node."
+msgstr "[b]Chest[/b]ノードにアタッチされているスクリプトを開きます。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "The chest script"
+msgstr "箱のスクリプト"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "This file already contains a bunch of GDScript code."
+msgstr "このファイルには、すでにたくさんのGDScriptコードが含まれていますね。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"GDScript is a language made by gamedevs for gamedevs. It's designed to code "
+"games fast."
+msgstr ""
+"GDScriptはゲーム開発者のためにゲーム開発者が作った言語です。\n"
+"ゲームを高速にコーディングするために設計されています。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Again, don't worry if you can't understand the code yet: that's what the "
+"next modules are for."
+msgstr "繰り返しになりますが、まだコードを理解できなくても心配ご無用です。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"For now, we'll just add one missing line to get familiar with the script "
+"editor."
+msgstr ""
+"とりあえずスクリプトエディターに慣れるために、足りない行を1行追加してみましょ"
+"う。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "The loot function"
+msgstr "loot 関数"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"In the highlighted lines of code, we define a [b]function[/b] named [b]loot[/"
+"b]."
+msgstr "ハイライトした行では[b]loot[/b]という[b]関数[/b]を定義しています。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"A function is a group of instructions you can run by [b]calling[/b] the "
+"function's name, like so: [b]loot()[/b]."
+msgstr ""
+"関数とは[b]loot()[/b]のように、関数名を[b]呼び出す[/b]ことで実行できる命令群"
+"のことです。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Connected signal"
+msgstr "シグナルを接続する"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"The loot function is [b]called[/b] from the [b]_on_body_entered[/b] function."
+msgstr "loot関数は[b]_on_body_entered[/b]関数から[b]呼び出されます。[/b]"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Notice the green icon %s in the margin on the left. It tells us that "
+"[b]_on_body_entered[/b] is connected to a signal."
+msgstr ""
+"左の余白にある緑のアイコン%sに注目してください。\n"
+"これは[b]_on_body_entered[/b]がシグナルに接続されていることを示しています。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "This is why the chest opens when the player approaches it."
+msgstr "そのため、プレイヤーが箱に近づくと箱が開くのです。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "The open animation"
+msgstr "開くアニメーション"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Inside the loot function, we play the [b]open[/b] animation, which makes the "
+"chest open."
+msgstr ""
+"loot関数の中で、[b]open[/b]アニメーションを再生し、チェストを開かせています。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "And currently, that's all! This is why nothing comes out of the chest."
+msgstr ""
+"なんと、それだけしかありません！\n"
+"だから箱からは何も出てこないのです。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "The create_pickup function"
+msgstr "create_pickup関数"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Below the [b]loot[/b] function, in the highlighted lines, there's a function "
+"defined to create pickups. We named it [b]create_pickup[/b]."
+msgstr ""
+"[b]loot[/b]関数の下のハイライトされている行に、箱の中身を作成する関数が定義さ"
+"れています。\n"
+"これを[b]create_pickup[/b]と名付けました。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Don't worry about how it's coded yet. For now, just notice that while this "
+"function is defined, it's not called anywhere in the script file, which "
+"means it's not used by the [b]loot[/b] function."
+msgstr ""
+"どのようにコード化されているかはまだ気にしないでください。\n"
+"ここで気を付けるポイントは、この関数は定義されているのに、スクリプトのどこに"
+"も呼び出されていないこと、\n"
+"つまり[b]loot[/b]関数が呼んでいないことです。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"We need to call it in the [b]loot[/b] function so that the loot function can "
+"do two things:"
+msgstr ""
+"create_pickupを[b]loot[/b]関数の中で呼び出して、loot関数が2つのことをできるよ"
+"うにする必要があります："
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "1. Play the chest open animation."
+msgstr "1. フタを開くアニメーションを再生すること。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "2. Create pickups."
+msgstr "2.箱の中身を作成すること。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Write the code"
+msgstr "コードを書く"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"On line 14, type [b]create_pickup()[/b] to call the function. Be careful to "
+"type exactly what you see here, including the parentheses."
+msgstr ""
+"14行目に[b]create_pickup()[/b]と入力して関数を呼び出せるようにしましょう。\n"
+"()を含めて、ここに表示されているものを正確に入力するように注意してください。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"The name \"create_pickup\" tells the computer which function we want to "
+"refer to, and the parentheses () run the function's lines of code."
+msgstr ""
+"create_pickup “という名前は、どの関数を参照したいかをコンピュータに伝え、()は"
+"関数のコード行を実行します。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Also, make sure that there's a [b]tab character[/b] at the start of the "
+"line, just like on line 13: %s. That's how Godot knows that the line belongs "
+"to the [b]loot[/b] function."
+msgstr ""
+"また、13行目のように行頭に[b]タブ文字[/b]：%sがあることを確認してください。\n"
+"これでGodotはその行が[b]loot[/b]関数のものだとわかるのです。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Press the [b]Tab[/b] key on your keyboard to write a tab character."
+msgstr "キーボードの[b]Tab[/b]キーを押して、タブ文字を書いて下さい。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Call the function [b]create_pickup[/b] on line 14."
+msgstr "14行目の関数[b]create_pickup[/b]を呼び出します。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Let's now head back to the [b]Start[/b] scene so we can test the result."
+msgstr "それでは結果をテストするために、[b]Start[/b]シーンに戻りましょう。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Click on the scene tab that says [b]start[/b] above the viewport."
+msgstr "画面領域の上にある[b]start[/b]と書かれたシーンタブをクリックします。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "The game is now complete and ready to play!"
+msgstr "これでゲームは完成しプレーできるようになりました！"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Click the [b]Play Current Scene[/b] button and move near a chest to test "
+"your code."
+msgstr ""
+"[b]現在のシーンを実行[/b]ボタンをクリックし、箱の近くに移動してコードをテスト"
+"してください。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Feel free to explore the rest of the game and appreciate all you just "
+"learned."
+msgstr "ゲームの残りの部分を自由に探索し、学んだことを見直してみて下さい。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"Once you're done, press [b]%s[/b] on your keyboard or close the game window "
+"to return to the editor."
+msgstr ""
+"終わったらキーボードの[b]%s[/b]を押すか、ゲームウィンドウを閉じてエディターに"
+"戻ります。"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid "Congratulations on assembling your first game in Godot!"
+msgstr "はじめてのGodotゲームの組み立て、完成おめでとう！"
+
+#: tours/102_assemble_your_first_game/05_add_chest_that_spawns_pickups/05_add_chest_that_spawns_pickups.gd
+msgid ""
+"[center]Head to the next module to keep learning how to code games![/center]"
+msgstr ""
+"[center]次のモジュールに進んで、\n"
+"ゲームのコーディング方法を学び続けましょう！[/center]"

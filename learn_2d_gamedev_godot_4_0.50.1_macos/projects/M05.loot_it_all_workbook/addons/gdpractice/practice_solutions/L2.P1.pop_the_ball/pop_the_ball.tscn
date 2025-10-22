@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6c3t31iabqkd"]
+
+[ext_resource type="PackedScene" uid="uid://bfgqh50gl65fh" path="res://addons/gdpractice/practice_solutions/L2.P1.pop_the_ball/ball.tscn" id="1_xqixp"]
+[ext_resource type="PackedScene" uid="uid://dtvknghopx72o" path="res://addons/gdpractice/practice_solutions/L2.P1.pop_the_ball/needle.tscn" id="2_ka8hs"]
+[ext_resource type="PackedScene" uid="uid://ba5hs75s7keqi" path="res://addons/gdpractice/practice_solutions/L2.P1.pop_the_ball/background.tscn" id="3_24h4q"]
+
+[node name="PopTheBall" type="Node2D"]
+position = Vector2(960, 540)
+
+[node name="Ball" parent="." instance=ExtResource("1_xqixp")]
+position = Vector2(-136, 38)
+
+[node name="Ball2" parent="." instance=ExtResource("1_xqixp")]
+position = Vector2(69, 38)
+
+[node name="Ball3" parent="." instance=ExtResource("1_xqixp")]
+position = Vector2(278, 38)
+
+[node name="Needle" parent="." instance=ExtResource("2_ka8hs")]
+position = Vector2(-399, 38)
+
+[node name="Background" parent="." instance=ExtResource("3_24h4q")]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmdplhbajlq3e"]
+
+[ext_resource type="Script" path="res://addons/gdpractice/practice_solutions/L3.P1.hover_the_balloon/balloon_hover.gd" id="1_ctkfo"]
+[ext_resource type="Shader" path="res://addons/gdpractice/practice_solutions/L3.P1.hover_the_balloon/group_outline.gdshader" id="2_ma3x0"]
+[ext_resource type="Texture2D" uid="uid://cf487car4l5gm" path="res://addons/gdpractice/practice_solutions/L3.P1.hover_the_balloon/balloon_tail.png" id="3_omn12"]
+[ext_resource type="Texture2D" uid="uid://b1adpk1vpdh7r" path="res://addons/gdpractice/practice_solutions/L3.P1.hover_the_balloon/balloon_top.png" id="4_i0c6e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cs4t6"]
+radius = 47.0
+height = 166.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_57c3v"]
+shader = ExtResource("2_ma3x0")
+shader_parameter/line_color = Color(0, 0, 0, 1)
+shader_parameter/line_thickness = 5.0
+shader_parameter/viewport_scale = Vector2(1, 1)
+
+[node name="BalloonHover" type="Area2D"]
+position = Vector2(960, 540)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_ctkfo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("CapsuleShape2D_cs4t6")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+material = SubResource("ShaderMaterial_57c3v")
+position = Vector2(0, 33)
+
+[node name="Tail" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(0, -37)
+texture = ExtResource("3_omn12")
+offset = Vector2(0, 34)
+
+[node name="Top" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(0, -79)
+texture = ExtResource("4_i0c6e")
+offset = Vector2(0, 5)

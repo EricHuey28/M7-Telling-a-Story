@@ -1,0 +1,149 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4rqr65vbt0jf"]
+
+[ext_resource type="Theme" uid="uid://cshg3sgf0xxq" path="res://assets/main_theme.tres" id="1_vxmmq"]
+
+[node name="ContainerTest" type="VBoxContainer"]
+offset_right = 1917.0
+offset_bottom = 1636.0
+theme = ExtResource("1_vxmmq")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Example 1: All Default"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Default"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Default"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Default"
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+text = "Example 2: All Fill + One Expanded"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "Default"
+
+[node name="Button2" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "Default"
+
+[node name="Button3" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fill + Expand"
+
+[node name="HSeparator2" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 2
+text = "Example 3: All Fill +  All Expanded"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fill + Expand"
+
+[node name="Button2" type="Button" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fill + Expand"
+
+[node name="Button3" type="Button" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fill + Expand"
+
+[node name="HSeparator3" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 2
+text = "Example 4: All Expanded, but first button has \"Shrink Begin\""
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Shrink + Expand"
+
+[node name="Button2" type="Button" parent="HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fill + Expand"
+
+[node name="Button3" type="Button" parent="HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fill + Expand"
+
+[node name="HSeparator4" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 2
+text = "Example 5: All Fill + Expanded, but first button has a \"Stretch Ratio\" of 0.5"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+text = "Fill + Expand"
+
+[node name="Button3" type="Button" parent="HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fill + Expand"
+
+[node name="HSeparator5" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 2
+text = "Example 6: All Expanded + All have \"Shrink Center\""
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Shrink + Expand"
+
+[node name="Button2" type="Button" parent="HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Shrink + Expand"
+
+[node name="Button3" type="Button" parent="HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Shrink + Expand"
+
+[node name="HSeparator6" type="HSeparator" parent="."]
+layout_mode = 2

@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://practices/L2.P1.pop_the_ball/needle.gd" id="1_fw6g8"]
+[ext_resource type="Texture2D" path="res://assets/practice_assets/ellipse_white.png" id="2_cno1g"]
+[ext_resource type="Texture2D" path="res://assets/practice_assets/needle.png" id="3_ijbed"]
+
+[sub_resource type="Curve" id="Curve_f7g5y"]
+_data = [Vector2(0, 0.663194), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.0319997, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_wu7u1"]
+curve = SubResource("Curve_f7g5y")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8umco"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 12.04
+scale_curve = SubResource("CurveTexture_wu7u1")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cwkdh"]
+radius = 52.2398
+
+[node name="Needle" type="Area2D"]
+script = ExtResource("1_fw6g8")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(0.584314, 0.380392, 0.933333, 1)
+show_behind_parent = true
+z_index = -2
+texture = ExtResource("2_cno1g")
+visibility_rect = Rect2(-4000, -4000, 4000, 4000)
+process_material = SubResource("ParticleProcessMaterial_8umco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 0)
+shape = SubResource("CircleShape2D_cwkdh")
+
+[node name="Needle" type="Sprite2D" parent="."]
+position = Vector2(14, 0)
+texture = ExtResource("3_ijbed")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmtql68gr0vie"]
+
+[ext_resource type="Shader" path="res://lessons_reference/completed/bird/shadow.gdshader" id="1_q1ld0"]
+[ext_resource type="Texture2D" uid="uid://b01mnp8qxfbh7" path="res://assets/small_circle.png" id="2_i1cgc"]
+
+[sub_resource type="Gradient" id="Gradient_1pcbm"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.4, 0.6)
+colors = PackedColorArray(0.4, 0.4, 0.4, 1, 0.2, 0.2, 0.2, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rg04a"]
+gradient = SubResource("Gradient_1pcbm")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3o8dr"]
+shader = ExtResource("1_q1ld0")
+shader_parameter/shadow_gradient = SubResource("GradientTexture1D_rg04a")
+
+[node name="Shadow" type="Sprite2D"]
+show_behind_parent = true
+material = SubResource("ShaderMaterial_3o8dr")
+position = Vector2(-7, 17)
+scale = Vector2(1.5625, 0.976562)
+texture = ExtResource("2_i1cgc")

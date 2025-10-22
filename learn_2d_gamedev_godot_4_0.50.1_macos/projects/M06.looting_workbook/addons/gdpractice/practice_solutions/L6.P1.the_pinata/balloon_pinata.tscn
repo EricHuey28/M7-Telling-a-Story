@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bw7xpqdakrh5n"]
+
+[ext_resource type="Script" path="res://addons/gdpractice/practice_solutions/L6.P1.the_pinata/balloon_pinata.gd" id="1_wddlk"]
+[ext_resource type="Material" uid="uid://dwoekm186ke5c" path="res://addons/gdpractice/practice_solutions/L6.P1.the_pinata/material.tres" id="2_dqgtm"]
+[ext_resource type="Texture2D" uid="uid://ypt6hxuqpeen" path="res://addons/gdpractice/practice_solutions/L6.P1.the_pinata/balloon_tail.png" id="3_ja7u5"]
+[ext_resource type="Texture2D" uid="uid://c5wl76sq80jjm" path="res://addons/gdpractice/practice_solutions/L6.P1.the_pinata/balloon_top.png" id="4_qqtiy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xb8xq"]
+radius = 47.0
+height = 166.0
+
+[node name="BalloonPinata" type="Area2D"]
+position = Vector2(960, 540)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_wddlk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("CapsuleShape2D_xb8xq")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+material = ExtResource("2_dqgtm")
+position = Vector2(0, 33)
+
+[node name="Bottom" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(0, -37)
+texture = ExtResource("3_ja7u5")
+offset = Vector2(0, 34)
+
+[node name="Top" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(0, -79)
+texture = ExtResource("4_qqtiy")
+offset = Vector2(0, 5)

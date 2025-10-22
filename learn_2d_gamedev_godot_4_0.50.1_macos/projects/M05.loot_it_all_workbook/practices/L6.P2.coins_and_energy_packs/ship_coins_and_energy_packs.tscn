@@ -1,0 +1,90 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://practices/L6.P2.coins_and_energy_packs/ship_coins_and_energy_packs.gd" id="1_f20ne"]
+[ext_resource type="Texture2D" path="res://assets/practice_assets/ellipse_white.png" id="2_4erif"]
+[ext_resource type="Texture2D" path="res://assets/practice_assets/shape_ship.png" id="3_7duyo"]
+[ext_resource type="Texture2D" path="res://assets/practice_assets/coin.png" id="4_r7m8a"]
+
+[sub_resource type="Curve" id="Curve_f7g5y"]
+_data = [Vector2(0, 0.663194), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.0319997, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_wu7u1"]
+curve = SubResource("Curve_f7g5y")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8umco"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 12.04
+scale_curve = SubResource("CurveTexture_wu7u1")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cwkdh"]
+radius = 52.2398
+
+[sub_resource type="LabelSettings" id="LabelSettings_ddqnf"]
+font_size = 40
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iv1v0"]
+bg_color = Color(1, 0.254902, 0.490196, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Ship" type="Area2D"]
+script = ExtResource("1_f20ne")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(0.584314, 0.380392, 0.933333, 1)
+show_behind_parent = true
+z_index = -2
+texture = ExtResource("2_4erif")
+visibility_rect = Rect2(-4000, -4000, 4000, 4000)
+process_material = SubResource("ParticleProcessMaterial_8umco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cwkdh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_7duyo")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="UI"]
+position = Vector2(-39, -138)
+scale = Vector2(0.382609, 0.382609)
+texture = ExtResource("4_r7m8a")
+
+[node name="CoinsCount" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -1.15
+anchor_bottom = -1.15
+offset_left = -10.0
+offset_top = -118.0
+offset_right = 35.0
+offset_bottom = -63.0
+size_flags_horizontal = 2
+text = "x0"
+label_settings = SubResource("LabelSettings_ddqnf")
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="EnergyBar" type="ProgressBar" parent="UI"]
+custom_minimum_size = Vector2(100, 8)
+layout_mode = 0
+offset_left = -66.0
+offset_top = -99.0
+offset_right = 58.0
+offset_bottom = -81.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_iv1v0")
+step = 1.0
+value = 10.0
+show_percentage = false

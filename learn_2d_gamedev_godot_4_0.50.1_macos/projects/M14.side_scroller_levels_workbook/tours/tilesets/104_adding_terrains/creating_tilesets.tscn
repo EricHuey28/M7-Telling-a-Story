@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://41ls6t8jhl8y"]
+
+[ext_resource type="PackedScene" uid="uid://brdsbllfrxj4k" path="res://player/player.tscn" id="1_m1jp5"]
+[ext_resource type="TileSet" uid="uid://dqb80758or5dr" path="res://assets/tilesets/dark_forest/mushroom_tileset.tres" id="2_fksc3"]
+
+[node name="CreatingTilesets" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_m1jp5")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, -16)
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+
+[node name="Ground" type="TileMapLayer" parent="."]
+tile_set = ExtResource("2_fksc3")

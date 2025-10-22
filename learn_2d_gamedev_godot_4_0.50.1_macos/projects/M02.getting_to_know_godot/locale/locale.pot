@@ -1,0 +1,362 @@
+# LANGUAGE translation for M2. Getting to Know Godot (Interactive Tours) for the following files:
+# res://tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+# res://addons/godot_tours/tour.gd
+# res://tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: M2. Getting to Know Godot (Interactive Tours)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid "Open the start scene"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid "Let's start by opening the scene we will be working with."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid "In the [b]FileSystem Dock[/b] at the bottom-left, find and [b]double-click[/b] on the scene we will be working with: [b]%s[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid "Open the scene [b]%s[/b]."
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Press the [b]%s[/b] button."
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Turn the [b]%s[/b] button %s."
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Change to the [b]%s[/b] tab."
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Select the %s %s in the [b]Scene Dock[/b]."
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Set [b]%s[/b] to [code]%s[/code]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Set [b]%s[/b]'s [b]%s[/b] property to [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Open the scene [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Expand the property [b]%s[/b] in the [b]Inspector[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Move [b]%s[/b] inside the guide box"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Instantiate the [b]%s[/b] scene as a child of [b]%s[/b]"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Fleshing out the game"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "You will usually start creating a game with the character and level structure, then flesh out the background and add user interface."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "We have the playable character and level, so we'll add a sky and health bar next."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "The background is a dull flat color. Let's start with the sky."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Re-select the Start node"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "We usually add background elements as children of the scene root node to keep the scene organized."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "In this case, the scene root node is the [b]Start[/b] node."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Click on the [b]Start[/b] node in the [b]Scene Dock[/b] to re-select it."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Add the sky scene"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Drag and drop the [b]%s[/b] file onto the viewport to create an instance of it."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "This will add the sky to the game as a child of the selected [b]Start[/b] node."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Add the [b]Background Blue Sky Scene[/b] to the [b]Scene[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Perfect!"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Run the game to see how the sky always fills up the background and improves the experience."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "A game's feel improves with all the little things you add: background, animations, sounds, special effects..."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Click the [b]Play Edited Scene[/b] button to run the scene."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Play Edited Scene"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Adding user interface"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Our next task is to add a health bar to see when the character takes damage."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Until now, we've only created scene instances. This time, we will also create a node."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "The CanvasLayer node"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "When we add visual elements to the game, by default, they don't move with the player."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "For the user interface, we want it to move with the player so it always stays on screen."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "We can use a [b]CanvasLayer node[/b] for this. By default, it keeps visuals we add as a child of it on screen at all times."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Let's add a CanvasLayer node to the scene so that our user interface moves with the player."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Select the Start node"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "We want to add the [b]CanvasLayer[/b] node as a child of the [b]Start[/b] node, [b]not[/b] as a child of the currently selected [b]BackgroundBlueSky[/b], to keep our scene hierarchy organized."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Click on the [b]Start[/b] node in the [b]Scene Dock[/b] to select it."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "The Create Node dialog"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "To add a node, click on the plus icon in the top-left of the [b]Scene Dock[/b], or press [b]%s + A[/b] on your keyboard."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "This will open a popup window listing all the types of nodes built into Godot."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Godot's built-in nodes"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "This popup window is the [b]Create Node[/b] dialog."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "It lists over 100 node types Godot provides out of the box!"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Each has a specific purpose, like displaying an image, playing a sound, or letting you draw with a tilemap."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Add the CanvasLayer node"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "We need to add a [b]CanvasLayer node[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Click the search bar at the top to select it and search the node list. It's the fastest way to find nodes."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "In the central panel of the popup window, click on the [b]CanvasLayer[/b] node to select it."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Then, click the [b]Create[/b] button at the bottom of the window to add the node (or press the [b]Enter[/b] key on your keyboard)."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Create the [b]CanvasLayer[/b] node."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Great job!"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "You just created your first node. Godot automatically selects a newly created node for you, so that you can immediately change its properties in the Inspector on the right."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Let's add the health bar next."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Add the health bar"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "To stay on screen at all times, the health bar must be a child of the [b]CanvasLayer[/b] node."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Drag and drop the [b]%s[/b] scene onto the [b]CanvasLayer[/b] node in the [b]Scene Dock[/b] to create an instance of it."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Dragging the scene onto a node in the [b]Scene Dock[/b] creates the instance as a child of the node."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Add the [b]Health Bar Scene[/b] to the [b]Scene[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "The screen area"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "We need to ensure that the health bar is positioned correctly to be visible on-screen."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "In the viewport, four thin lines are forming a rectangle. They represent the extent of the game window, the window that opens when you run the game."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "The four lines can be difficult to spot as they're thin. Look at the flashing area in the viewport. It highlights this window extent area."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Any user interface you want to keep on-screen in the game should be placed inside this rectangle."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Place the health bar on-screen"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Let's learn a third way to move an element: using the [b]Inspector[/b] and typing coordinates manually."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "We currently have the [b]UIHealthBar[/b] node selected in the [b]Scene[/b] dock."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "On the right, in the [b]Inspector Dock[/b], in the section [b]Layout -> Transform[/b], you can find the [b]Position[/b] property."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Earlier, when you moved and placed rooms around the viewport with the select and move modes, you changed the [b]Position[/b] property of individual rooms."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "The position property"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "The Position property has two coordinates: the [b]x[/b] coordinate controls the [b]horizontal[/b] position of the health bar, and the [b]y[/b] coordinate controls its [b]vertical[/b] position."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Click the number of each coordinate to edit it. Type a new number and press [b]Enter[/b] on your keyboard to confirm the new value."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Change the x coordinate to 60, and the y coordinate to 60 as well. This will place the health bar in the top-left corner of the game window when playing."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Set the [b]x Position[/b] property of the [b]UIHealthBar[/b] to [b]60px[/b] (pixels)."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Set the [b]y Position[/b] property of the [b]UIHealthBar[/b] to [b]60px[/b] (pixels)."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Excellent!"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "You know what time it is? Yes, let's run the scene!"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Click the [b]Play Current Scene[/b] button and pay attention to how the health bar stays on screen as your progress through the level."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Also, try to go touch an enemy and pay attention to what happens to the health bar."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "Play Current Scene"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "In summary"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "You added a background and a health bar to the game. Most importantly, you learned to create a node and add the health bar as a child of it to make the user interface stay on screen."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/03_add_sky_and_healthbar/03_add_sky_and_healthbar.gd
+msgid "In the next part, you'll use signals to connect the health bar to the player's health."
+msgstr ""

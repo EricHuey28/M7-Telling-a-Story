@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://vg7hkcqoic4h"]
+
+[ext_resource type="PackedScene" uid="uid://7yshiiggo05s" path="res://practice_solutions/L5.P1.open_the_door/door_open.tscn" id="1_e2r1d"]
+[ext_resource type="Texture2D" uid="uid://dwbwn5t4dfiib" path="res://practice_solutions/L5.P1.open_the_door/wall.png" id="2_3pljs"]
+[ext_resource type="PackedScene" uid="uid://45t04n8i2831" path="res://practice_solutions/L5.P1.open_the_door/background.tscn" id="3_hr766"]
+
+[node name="OpenTheDoor" type="Node2D"]
+metadata/_edit_horizontal_guides_ = []
+
+[node name="DoorOpen" parent="." instance=ExtResource("1_e2r1d")]
+position = Vector2(960, 446.5)
+
+[node name="Wall" type="Sprite2D" parent="."]
+position = Vector2(959, 929.5)
+texture = ExtResource("2_3pljs")
+
+[node name="Wall2" type="Sprite2D" parent="."]
+position = Vector2(959, 155.5)
+rotation = 3.14159
+texture = ExtResource("2_3pljs")
+
+[node name="Background" parent="." instance=ExtResource("3_hr766")]

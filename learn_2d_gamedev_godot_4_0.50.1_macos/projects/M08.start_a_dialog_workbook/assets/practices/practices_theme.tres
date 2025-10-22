@@ -1,0 +1,51 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://qk3rjf73qo8w"]
+
+[ext_resource type="FontFile" uid="uid://dyrsmldl66u55" path="res://assets/practices/Stacked pixel.ttf" id="1_1tfqc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mpxf6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiqas"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.423529, 0.172549, 0.854902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5k2nx"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.423529, 0.172549, 0.854902, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r2052"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4qrn"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.156863, 0.0784314, 0.305882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jy7ap"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.156863, 0.0784314, 0.305882, 1)
+
+[resource]
+default_font = ExtResource("1_1tfqc")
+default_font_size = 32
+InventorySlotButton/base_type = &"Button"
+InventorySlotButton/styles/disabled = SubResource("StyleBoxEmpty_mpxf6")
+InventorySlotButton/styles/focus = SubResource("StyleBoxFlat_eiqas")
+InventorySlotButton/styles/hover = SubResource("StyleBoxFlat_5k2nx")
+InventorySlotButton/styles/normal = SubResource("StyleBoxEmpty_r2052")
+InventorySlotButton/styles/pressed = SubResource("StyleBoxFlat_m4qrn")
+InventorySlotPanel/base_type = &"PanelContainer"
+InventorySlotPanel/styles/panel = SubResource("StyleBoxFlat_jy7ap")
+SmallText/base_type = &"RichTextLabel"
+SmallText/font_sizes/normal_font_size = 24

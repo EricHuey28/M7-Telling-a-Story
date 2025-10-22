@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://deh632vyqvntt"]
+
+[ext_resource type="Shader" uid="uid://48d3cfqfxrnl" path="res://assets/ship_visual_effects/ship_perspective_layered.gdshader" id="1_t3lhq"]
+[ext_resource type="Texture2D" uid="uid://ccaltbfx5mgyo" path="res://assets/ship_visual_effects/ship_layers.png" id="2_fp5ln"]
+[ext_resource type="Script" uid="uid://drvnctqusxghq" path="res://lessons_reference/02.code_a_health_pack/ship_with_health.gd" id="3_a3mym"]
+[ext_resource type="Texture2D" uid="uid://bniyrxn3r2v8h" path="res://assets/ship.png" id="4_75c48"]
+[ext_resource type="PackedScene" uid="uid://dgf54k70yiiff" path="res://assets/ship_visual_effects/main_thruster/main_thruster.tscn" id="5_1s5b2"]
+[ext_resource type="PackedScene" uid="uid://bklom8bhpxg4h" path="res://assets/ship_visual_effects/side_thruster/side_thruster.tscn" id="6_5gb26"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_quu6q"]
+shader = ExtResource("1_t3lhq")
+shader_parameter/parts_sampler = ExtResource("2_fp5ln")
+shader_parameter/field_of_view = 90.0
+shader_parameter/rotation_y = 0.0
+shader_parameter/rotation_x = 0.0
+shader_parameter/inset = 0.0
+shader_parameter/line_thickness = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kpkmc"]
+radius = 26.0192
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q70ie"]
+bg_color = Color(0.623529, 0.866667, 0.317647, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Ship" type="Area2D"]
+material = SubResource("ShaderMaterial_quu6q")
+script = ExtResource("3_a3mym")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("4_75c48")
+
+[node name="MainThruster" parent="Sprite2D" instance=ExtResource("5_1s5b2")]
+position = Vector2(-33, 0)
+points = PackedVector2Array(0, 0, 33.3333, 0, 66.6667, 0)
+
+[node name="SideThruster" parent="Sprite2D" instance=ExtResource("6_5gb26")]
+position = Vector2(-44, -21)
+rotation = 1.74987
+
+[node name="SideThruster2" parent="Sprite2D" instance=ExtResource("6_5gb26")]
+position = Vector2(-45, 19)
+rotation = 1.36715
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kpkmc")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBar" type="ProgressBar" parent="UI"]
+custom_minimum_size = Vector2(100, 8)
+layout_mode = 0
+offset_left = -50.0
+offset_top = -60.0
+offset_right = 50.0
+offset_bottom = -52.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_q70ie")
+step = 1.0
+value = 50.0
+show_percentage = false

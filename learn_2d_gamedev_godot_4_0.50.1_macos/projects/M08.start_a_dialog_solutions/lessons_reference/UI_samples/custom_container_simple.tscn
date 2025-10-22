@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dagam1qmkhehn"]
+
+[ext_resource type="Theme" uid="uid://dp1nmwxx5vbr5" path="res://lessons_reference/UI_samples/assets/ui_samples_theme.tres" id="1_7qdn5"]
+[ext_resource type="Script" uid="uid://cjwno077yr0mx" path="res://lessons_reference/UI_samples/custom_container_simple.gd" id="1_p14fe"]
+
+[node name="CustomContainerSimple" type="Container"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_7qdn5")
+script = ExtResource("1_p14fe")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+text = "a button"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+text = "a button"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 2
+text = "a button"

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://crmpn7k4k4rfd"]
+
+[ext_resource type="Script" uid="uid://xu5ich62w2gh" path="res://entities/door/door.gd" id="1_ftraa"]
+[ext_resource type="Texture2D" uid="uid://d3tkq6dmpboeq" path="res://entities/door/rock_door.png" id="2_vquj6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vok6n"]
+size = Vector2(16, 48)
+
+[node name="Door" type="StaticBody2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_ftraa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(0, 24)
+shape = SubResource("RectangleShape2D_vok6n")
+
+[node name="Sprite" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+offset_left = -12.0
+offset_right = 12.0
+offset_bottom = 48.0
+texture = ExtResource("2_vquj6")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+metadata/_edit_use_anchors_ = true

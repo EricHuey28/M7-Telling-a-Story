@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dwoekm186ke5c"]
+
+[ext_resource type="Shader" path="res://practices/L6.P1.the_pinata/group_outline.gdshader" id="1_nd60o"]
+
+[resource]
+shader = ExtResource("1_nd60o")
+shader_parameter/line_color = Color(0, 0, 0, 1)
+shader_parameter/line_thickness = 5.0
+shader_parameter/viewport_scale = Vector2(1, 1)

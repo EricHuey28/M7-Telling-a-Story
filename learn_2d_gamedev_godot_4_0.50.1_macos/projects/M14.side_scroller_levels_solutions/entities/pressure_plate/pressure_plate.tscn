@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c555fwr7rcm5t"]
+
+[ext_resource type="Texture2D" uid="uid://b5ikoybwua50g" path="res://entities/pressure_plate/pressure_plate.png" id="1_4qsy0"]
+[ext_resource type="Script" uid="uid://df0ujcyymqh1q" path="res://entities/pressure_plate/pressure_plate.gd" id="1_c7txb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmm23"]
+size = Vector2(32, 8)
+
+[node name="PressurePlate" type="Area2D"]
+collision_layer = 0
+collision_mask = 5
+monitorable = false
+script = ExtResource("1_c7txb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_cmm23")
+
+[node name="ButtonSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_4qsy0")
+offset = Vector2(0, -8)
+vframes = 2

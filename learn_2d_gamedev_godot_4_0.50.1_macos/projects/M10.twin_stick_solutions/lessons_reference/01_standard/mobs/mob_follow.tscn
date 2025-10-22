@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://dg3p8oikrnmhw"]
+
+[ext_resource type="Script" uid="uid://blsnam5q72es2" path="res://lessons_reference/01_standard/mobs/mob.gd" id="1_jnlwd"]
+[ext_resource type="AudioStream" uid="uid://dfc5tcrthtntk" path="res://mobs/hurt.wav" id="2_iwil2"]
+[ext_resource type="AudioStream" uid="uid://cte8ddxd7o4de" path="res://mobs/kill.wav" id="3_hh6un"]
+[ext_resource type="PackedScene" uid="uid://5ays6kuo0xio" path="res://common/shadow.tscn" id="4_mhvkd"]
+[ext_resource type="Texture2D" uid="uid://nohjoiah3jgr" path="res://mobs/sword_inactive.png" id="5_n5nx1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bos3"]
+size = Vector2(118, 32)
+
+[sub_resource type="CircleShape2D" id="2"]
+radius = 440.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6an4s"]
+size = Vector2(136, 44)
+
+[node name="MobFollow" type="CharacterBody2D"]
+collision_layer = 4
+motion_mode = 1
+script = ExtResource("1_jnlwd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1bos3")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+visible = false
+position = Vector2(0, 0.33371)
+shape = SubResource("2")
+
+[node name="DieSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_hh6un")
+volume_db = -10.0
+
+[node name="HurtSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_iwil2")
+volume_db = -5.0
+
+[node name="Shadow" parent="." instance=ExtResource("4_mhvkd")]
+position = Vector2(0, 64)
+
+[node name="HitBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("RectangleShape2D_6an4s")
+debug_color = Color(0.77688, 0.112227, 0.246872, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("5_n5nx1")

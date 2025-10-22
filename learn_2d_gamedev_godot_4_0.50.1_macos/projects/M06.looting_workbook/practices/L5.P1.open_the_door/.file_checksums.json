@@ -1,0 +1,14 @@
+{
+  "background.tscn": "ea2fadda5509747653ebc9a64d9acbfb",
+  "door.gd": "e4553fd5452552b9137d2979c8a9d279",
+  "door_body.png": "a2e82cd183d0136bb9e71769eaf8c240",
+  "door_body.png.import": "99d8fa2ff2f41b7fcd0b8ac6b5e42898",
+  "door_hinge.png": "659a64b2280f128848f6a06f1f28c434",
+  "door_hinge.png.import": "c316e60beb0f8eeda61ad641acadf44e",
+  "door_open.tscn": "bc50a39de19d9568738469215f660ff2",
+  "group_outline.gdshader": "515709e97afab7c27405c6deb0129123",
+  "material.tres": "302eac667a33be9b99afa1aacebe6eac",
+  "open_the_door.tscn": "676eb0eef81a38cb149e43cd5574de34",
+  "wall.png": "0dcac8081a5bdb9268d655b15a8b6d68",
+  "wall.png.import": "1005ce4b84b2058bf25804acdde84545"
+}

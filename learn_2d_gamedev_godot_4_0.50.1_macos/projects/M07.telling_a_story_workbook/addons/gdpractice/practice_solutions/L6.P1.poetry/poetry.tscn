@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://826iha1ol5y4"]
+
+[ext_resource type="Material" uid="uid://blciib2n6bpvf" path="res://addons/gdpractice/practice_solutions/L6.P1.poetry/assets/practice_background_material.tres" id="1_5xskb"]
+[ext_resource type="Theme" uid="uid://dt2geayaiwfiv" path="res://addons/gdpractice/practice_solutions/L6.P1.poetry/assets/practice_exercises_theme.tres" id="2_5k8fu"]
+[ext_resource type="Script" uid="uid://bocxkc4u1bndw" path="res://addons/gdpractice/practice_solutions/L6.P1.poetry/poetry.gd" id="3_ciyto"]
+
+[node name="Poetry" type="ColorRect"]
+material = ExtResource("1_5xskb")
+custom_minimum_size = Vector2(960, 540)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_5k8fu")
+script = ExtResource("3_ciyto")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 150.0
+offset_top = 35.0
+offset_right = -150.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+scroll_following = true

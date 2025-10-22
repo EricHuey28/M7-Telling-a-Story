@@ -1,0 +1,103 @@
+[gd_scene load_steps=9 format=3 uid="uid://by4spho51hxj4"]
+
+[ext_resource type="Theme" uid="uid://cshg3sgf0xxq" path="res://npc/dialogue/dialogue_box_theme.tres" id="1_gv6o5"]
+[ext_resource type="Script" uid="uid://d2dk1vrgg1d7p" path="res://lessons_reference/02_extended/npc/dialogue/dialogue_box.gd" id="2_e6k2t"]
+[ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://npc/dialogue/sophia.png" id="4_yxcng"]
+[ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://npc/dialogue/emotion_regular.png" id="5_pvm7n"]
+[ext_resource type="AudioStream" uid="uid://chgko4hmxwxu5" path="res://npc/dialogue/talking_synth.ogg" id="9_qrndx"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_wt2qg"]
+action = &"ui_accept"
+
+[sub_resource type="InputEventAction" id="InputEventAction_yynpk"]
+action = &"interact"
+
+[sub_resource type="Shortcut" id="Shortcut_qhgl3"]
+events = [SubResource("InputEventAction_wt2qg"), SubResource("InputEventAction_yynpk")]
+
+[node name="DialogueBox" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_gv6o5")
+script = ExtResource("2_e6k2t")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -280.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 0.352941)
+
+[node name="Body" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 0.253
+anchor_bottom = 1.0
+offset_top = -479.0
+offset_right = 0.23996
+offset_bottom = 1.0
+texture = ExtResource("4_yxcng")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Expression" type="TextureRect" parent="Body"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_pvm7n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 440.0
+offset_top = -253.0
+offset_right = -274.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "hello world"
+fit_content = true
+
+[node name="NextButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -140.0
+offset_right = -74.0
+offset_bottom = -41.0
+grow_horizontal = 0
+grow_vertical = 0
+shortcut = SubResource("Shortcut_qhgl3")
+text = "next"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("9_qrndx")

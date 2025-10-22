@@ -1,0 +1,80 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn7j0o6lh5jxw"]
+
+[ext_resource type="Theme" uid="uid://cshg3sgf0xxq" path="res://assets/main_theme.tres" id="1_xsuty"]
+
+[node name="ContainerTest" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xsuty")
+alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Example 1: Alignement Left"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Default"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Default"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Default"
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+text = "Example 2: Alignement Right"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 2
+
+[node name="Button" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "Default"
+
+[node name="Button2" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "Default"
+
+[node name="Button3" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "Default"
+
+[node name="HSeparator2" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 2
+text = "Example 3: Alignement Center"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer3"]
+layout_mode = 2
+text = "Default"
+
+[node name="Button2" type="Button" parent="HBoxContainer3"]
+layout_mode = 2
+text = "Default"
+
+[node name="Button3" type="Button" parent="HBoxContainer3"]
+layout_mode = 2
+text = "Default"
+
+[node name="HSeparator3" type="HSeparator" parent="."]
+layout_mode = 2

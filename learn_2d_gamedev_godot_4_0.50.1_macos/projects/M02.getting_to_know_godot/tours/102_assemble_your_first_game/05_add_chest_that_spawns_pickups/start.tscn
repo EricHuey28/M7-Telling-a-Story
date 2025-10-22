@@ -1,0 +1,50 @@
+[gd_scene load_steps=10 format=4 uid="uid://cmr5s4gdy73ka"]
+
+[ext_resource type="Script" uid="uid://c8bobnn0pww6u" path="res://game.gd" id="1_g0vp7"]
+[ext_resource type="TileSet" uid="uid://crkgfdw1y80hc" path="res://levels/rooms/tileset_bridges.tres" id="2_xlg80"]
+[ext_resource type="TileSet" uid="uid://cqb2wtrubw0n6" path="res://levels/rooms/tileset_invisible_walls.tres" id="3_0hggd"]
+[ext_resource type="PackedScene" uid="uid://dds7yrrx56gcy" path="res://player/player.tscn" id="4_0li5k"]
+[ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="5_umdqa"]
+[ext_resource type="PackedScene" uid="uid://dgayuh42w4v6u" path="res://levels/rooms/room_b.tscn" id="6_kxvpa"]
+[ext_resource type="PackedScene" uid="uid://cq0mmphkbrvmm" path="res://levels/rooms/room_c.tscn" id="7_6kk7u"]
+[ext_resource type="PackedScene" uid="uid://wdey00p3syru" path="res://levels/background/background_blue_sky.tscn" id="8_sgwbi"]
+[ext_resource type="PackedScene" uid="uid://cce7r30dfjm4r" path="res://interface/bars/ui_health_bar.tscn" id="9_dae58"]
+
+[node name="Start" type="Node2D"]
+script = ExtResource("1_g0vp7")
+
+[node name="Bridges" type="TileMapLayer" parent="."]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD9/w4AAAABAAEAAAD+/w4AAAAAAAEAAAD//w4AAAAAAAEAAAAAAA4AAAAAAAEAAAABAA4AAAAAAAEAAAACAA4AAAAAAAEAAAADAA4AAAADAAAAAAADAA0AAAADAAEAAAADAAwAAAABAAAAAAAEAAwAAAAAAAEAAAAFAAwAAAAAAAEAAAAGAAwAAAACAAEAAAAQAP//AAAFAAEAAAAQAAAAAAADAAEAAAAQAAEAAAADAAEAAAAQAAIAAAADAAAAAAAPAAIAAAAAAAEAAAAOAAIAAAABAAAAAAAOAAMAAAADAAEAAAAOAAQAAAADAAEAAAAOAAUAAAADAAEAAAAOAAYAAAADAAEAAAAOAAcAAAAEAAEAAAA=")
+tile_set = ExtResource("2_xlg80")
+metadata/_edit_lock_ = true
+
+[node name="InvisibleWalls" type="TileMapLayer" parent="."]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD+/w0AAAAAAAAAAAD//w0AAAAAAAAAAAAAAA0AAAAAAAAAAAABAA0AAAAAAAAAAAACAA0AAAAAAAAAAAD+/w8AAAAAAAAAAAD//w8AAAAAAAAAAAAAAA8AAAAAAAAAAAABAA8AAAAAAAAAAAACAA8AAAAAAAAAAAADAA8AAAAAAAAAAAAEAA8AAAAAAAAAAAAEAA4AAAAAAAAAAAAEAA0AAAAAAAAAAAAFAA0AAAAAAAAAAAAFAAsAAAAAAAAAAAAEAAsAAAAAAAAAAAADAAsAAAAAAAAAAAACAAsAAAAAAAAAAAACAAwAAAAAAAAAAAANAAIAAAAAAAAAAAANAAMAAAAAAAAAAAANAAQAAAAAAAAAAAANAAUAAAAAAAAAAAANAAYAAAAAAAAAAAANAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAPAAEAAAAAAAAAAAARAAAAAAAAAAAAAAARAAEAAAAAAAAAAAARAAIAAAAAAAAAAAARAAMAAAAAAAAAAAAQAAMAAAAAAAAAAAAPAAMAAAAAAAAAAAAPAAQAAAAAAAAAAAAPAAUAAAAAAAAAAAAPAAYAAAAAAAAAAAAPAAAAAAAAAAAAAAA=")
+tile_set = ExtResource("3_0hggd")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("4_0li5k")]
+position = Vector2(-1280, 1536)
+
+[node name="RoomA" parent="." instance=ExtResource("5_umdqa")]
+position = Vector2(-1792, 1280)
+
+[node name="RoomB" parent="." instance=ExtResource("6_kxvpa")]
+position = Vector2(896, 1024)
+
+[node name="RoomC" parent="." instance=ExtResource("7_6kk7u")]
+position = Vector2(896, -1536)
+
+[node name="BackgroundBlueSky" parent="." instance=ExtResource("8_sgwbi")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UIHealthBar" parent="CanvasLayer" instance=ExtResource("9_dae58")]
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 378.0
+offset_bottom = 132.725
+
+[connection signal="health_changed" from="Player" to="CanvasLayer/UIHealthBar" method="_on_player_health_changed"]

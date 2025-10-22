@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://cejnq1ea5wvgq"]
+
+[ext_resource type="Texture2D" uid="uid://o1ly1j8egvra" path="res://assets/kenney-particles/star_06.png" id="1_1n8da"]
+[ext_resource type="Texture2D" uid="uid://c65eb75bduhju" path="res://assets/kenney-particles/star_07.png" id="2_ggi35"]
+
+[sub_resource type="Curve" id="Curve_1fqtc"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 1), 0.0, 0.0, 0, 0, Vector2(0.8, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_08j2v"]
+curve = SubResource("Curve_1fqtc")
+
+[sub_resource type="Gradient" id="Gradient_dnqug"]
+colors = PackedColorArray(0.489982, 0.660417, 1, 1, 0.714844, 0.886383, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4cnjk"]
+gradient = SubResource("Gradient_dnqug")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ew14i"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(800, 1, 1)
+angle_min = -180.0
+angle_max = 180.0
+direction = Vector3(0, -1, 0)
+spread = 0.0
+gravity = Vector3(0, -200, 0)
+scale_min = 0.1
+scale_max = 0.5
+color_ramp = SubResource("GradientTexture1D_4cnjk")
+alpha_curve = SubResource("CurveTexture_08j2v")
+hue_variation_min = -0.02
+hue_variation_max = 0.02
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_n4buy"]
+
+[node name="TestParticlesHealingEffect" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 300
+process_material = SubResource("ParticleProcessMaterial_ew14i")
+texture = ExtResource("1_1n8da")
+lifetime = 5.0
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_n4buy")
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_ew14i")
+texture = ExtResource("2_ggi35")
+lifetime = 5.0

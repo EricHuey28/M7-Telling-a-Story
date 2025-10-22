@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ke0kmcp0efiv"]
+
+[ext_resource type="TileSet" uid="uid://bq65uwha45com" path="res://levels/rooms/tilesets/floating_dungeon_tileset.tres" id="1_k5dfl"]
+
+[node name="Walls" type="TileMapLayer"]
+y_sort_enabled = true
+use_parent_material = true
+position = Vector2(0, -1)
+tile_set = ExtResource("1_k5dfl")

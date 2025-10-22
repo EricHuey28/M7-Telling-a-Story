@@ -1,0 +1,9 @@
+{
+  "background.tscn": "159e6913f3ffad73107e0b3c4f724d45",
+  "coin.tscn": "ac4984cfd83637e075b03997410fea14",
+  "coins_and_energy_packs.tscn": "ca6ba9d2af4d5b76117f404c43e408a3",
+  "collectible.gd": "1a7f4fe5eda5949d93b3dcb77aa55cb2",
+  "energy_pack.tscn": "6a692e64ab66817c462af62038b34fd2",
+  "ship_coins_and_energy_packs.gd": "51e0f4c0f7cb529b529dd46b10a9fe20",
+  "ship_coins_and_energy_packs.tscn": "ddcd028d9c2d7a0206129b81e6e92014"
+}

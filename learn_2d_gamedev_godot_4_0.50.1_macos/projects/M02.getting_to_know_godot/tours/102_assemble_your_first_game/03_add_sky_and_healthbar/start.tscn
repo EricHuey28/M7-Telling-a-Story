@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=4 uid="uid://bi016hs41sglx"]
+
+[ext_resource type="Script" uid="uid://c8bobnn0pww6u" path="res://game.gd" id="1_w8li0"]
+[ext_resource type="TileSet" uid="uid://crkgfdw1y80hc" path="res://levels/rooms/tileset_bridges.tres" id="2_0osqv"]
+[ext_resource type="TileSet" uid="uid://cqb2wtrubw0n6" path="res://levels/rooms/tileset_invisible_walls.tres" id="3_f3nog"]
+[ext_resource type="PackedScene" uid="uid://dds7yrrx56gcy" path="res://player/player.tscn" id="4_s5g3p"]
+[ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="5_wgeey"]
+[ext_resource type="PackedScene" uid="uid://dgayuh42w4v6u" path="res://levels/rooms/room_b.tscn" id="6_71vyi"]
+[ext_resource type="PackedScene" uid="uid://cq0mmphkbrvmm" path="res://levels/rooms/room_c.tscn" id="7_gd30k"]
+
+[node name="Start" type="Node2D"]
+script = ExtResource("1_w8li0")
+
+[node name="Bridges" type="TileMapLayer" parent="."]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD9/w4AAAABAAEAAAD+/w4AAAAAAAEAAAD//w4AAAAAAAEAAAAAAA4AAAAAAAEAAAABAA4AAAAAAAEAAAACAA4AAAAAAAEAAAADAA4AAAADAAAAAAADAA0AAAADAAEAAAADAAwAAAABAAAAAAAEAAwAAAAAAAEAAAAFAAwAAAAAAAEAAAAGAAwAAAACAAEAAAAQAP//AAAFAAEAAAAQAAAAAAADAAEAAAAQAAEAAAADAAEAAAAQAAIAAAADAAAAAAAPAAIAAAAAAAEAAAAOAAIAAAABAAAAAAAOAAMAAAADAAEAAAAOAAQAAAADAAEAAAAOAAUAAAADAAEAAAAOAAYAAAADAAEAAAAOAAcAAAAEAAEAAAA=")
+tile_set = ExtResource("2_0osqv")
+metadata/_edit_lock_ = true
+
+[node name="InvisibleWalls" type="TileMapLayer" parent="."]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD+/w0AAAAAAAAAAAD//w0AAAAAAAAAAAAAAA0AAAAAAAAAAAABAA0AAAAAAAAAAAACAA0AAAAAAAAAAAD+/w8AAAAAAAAAAAD//w8AAAAAAAAAAAAAAA8AAAAAAAAAAAABAA8AAAAAAAAAAAACAA8AAAAAAAAAAAADAA8AAAAAAAAAAAAEAA8AAAAAAAAAAAAEAA4AAAAAAAAAAAAEAA0AAAAAAAAAAAAFAA0AAAAAAAAAAAAFAAsAAAAAAAAAAAAEAAsAAAAAAAAAAAADAAsAAAAAAAAAAAACAAsAAAAAAAAAAAACAAwAAAAAAAAAAAANAAIAAAAAAAAAAAANAAMAAAAAAAAAAAANAAQAAAAAAAAAAAANAAUAAAAAAAAAAAANAAYAAAAAAAAAAAANAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAPAAEAAAAAAAAAAAARAAAAAAAAAAAAAAARAAEAAAAAAAAAAAARAAIAAAAAAAAAAAARAAMAAAAAAAAAAAAQAAMAAAAAAAAAAAAPAAMAAAAAAAAAAAAPAAQAAAAAAAAAAAAPAAUAAAAAAAAAAAAPAAYAAAAAAAAAAAAPAAAAAAAAAAAAAAA=")
+tile_set = ExtResource("3_f3nog")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("4_s5g3p")]
+position = Vector2(-1280, 1536)
+
+[node name="RoomA" parent="." instance=ExtResource("5_wgeey")]
+position = Vector2(-1792, 1280)
+
+[node name="RoomB" parent="." instance=ExtResource("6_71vyi")]
+position = Vector2(896, 1024)
+
+[node name="RoomC" parent="." instance=ExtResource("7_gd30k")]
+position = Vector2(896, -1536)

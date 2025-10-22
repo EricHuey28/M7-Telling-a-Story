@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://0i1g0cunmseb"]
+
+[ext_resource type="Script" path="res://lessons/items/item.gd" id="1_xf7tg"]
+[ext_resource type="Texture2D" uid="uid://bayg35bajtsiq" path="res://lessons/items/apple.png" id="2_47kmu"]
+[ext_resource type="PackedScene" uid="uid://bdooawbxdlh2s" path="res://assets/sparks_particles.tscn" id="3_0inye"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_63pc6"]
+radius = 25.0
+
+[node name="Apple" type="Area2D" groups=["gem"]]
+collision_layer = 2
+script = ExtResource("1_xf7tg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_63pc6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(0.729167, 0.729167)
+texture = ExtResource("2_47kmu")
+
+[node name="Sparks" parent="." instance=ExtResource("3_0inye")]

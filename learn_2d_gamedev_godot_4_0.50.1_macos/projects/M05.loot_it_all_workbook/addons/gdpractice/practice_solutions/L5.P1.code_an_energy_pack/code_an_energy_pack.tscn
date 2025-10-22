@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://mi6oe3jtducj"]
+
+[ext_resource type="PackedScene" uid="uid://dyt4nddd3y2iv" path="res://addons/gdpractice/practice_solutions/L5.P1.code_an_energy_pack/ship_energy_pack.tscn" id="1_ok3ql"]
+[ext_resource type="PackedScene" uid="uid://c8quq7cyf586g" path="res://addons/gdpractice/practice_solutions/L5.P1.code_an_energy_pack/energy_pack.tscn" id="2_glefu"]
+[ext_resource type="PackedScene" uid="uid://oyn3rldsb24d" path="res://addons/gdpractice/practice_solutions/L5.P1.code_an_energy_pack/background.tscn" id="3_pjso1"]
+
+[node name="CodeAnEnergyPack" type="Node2D"]
+position = Vector2(960, 540)
+
+[node name="ShipEnergyPack" parent="." instance=ExtResource("1_ok3ql")]
+position = Vector2(-556, 0)
+
+[node name="EnergyPack" parent="." instance=ExtResource("2_glefu")]
+position = Vector2(-221, -1)
+
+[node name="EnergyPack2" parent="." instance=ExtResource("2_glefu")]
+position = Vector2(2, -1)
+
+[node name="EnergyPack3" parent="." instance=ExtResource("2_glefu")]
+position = Vector2(197, -1)
+
+[node name="Background" parent="." instance=ExtResource("3_pjso1")]

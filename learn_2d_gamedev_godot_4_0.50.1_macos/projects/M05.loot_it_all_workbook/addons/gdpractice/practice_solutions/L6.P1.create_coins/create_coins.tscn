@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://deuvron5rq70v"]
+
+[ext_resource type="PackedScene" uid="uid://gttgp1gxtdwr" path="res://addons/gdpractice/practice_solutions/L6.P1.create_coins/ship_create_coins.tscn" id="1_ujvxq"]
+[ext_resource type="PackedScene" uid="uid://jig50aa2cktb" path="res://addons/gdpractice/practice_solutions/L6.P1.create_coins/coin.tscn" id="2_58hax"]
+[ext_resource type="PackedScene" uid="uid://dve5ij18xkf86" path="res://addons/gdpractice/practice_solutions/L6.P1.create_coins/background.tscn" id="3_2axtf"]
+
+[node name="CreateCoins" type="Node2D"]
+
+[node name="Ship" parent="." instance=ExtResource("1_ujvxq")]
+position = Vector2(973, 541)
+
+[node name="Coin" parent="." instance=ExtResource("2_58hax")]
+position = Vector2(1422, 413)
+
+[node name="Coin2" parent="." instance=ExtResource("2_58hax")]
+position = Vector2(652, 176)
+
+[node name="Coin3" parent="." instance=ExtResource("2_58hax")]
+position = Vector2(420, 679)
+
+[node name="Coin4" parent="." instance=ExtResource("2_58hax")]
+position = Vector2(1122, 904)
+
+[node name="Background" parent="." instance=ExtResource("3_2axtf")]

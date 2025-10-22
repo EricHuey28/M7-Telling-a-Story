@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2qvl00jtajpe"]
+
+[ext_resource type="Script" uid="uid://ejc0m140ukna" path="res://lessons_reference/04.spawn_items_randomly/item.gd" id="1_otulg"]
+[ext_resource type="Texture2D" uid="uid://dknpi2mq4dhpa" path="res://assets/health_icon.svg" id="2_xu083"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2nj2t"]
+radius = 30.0
+
+[node name="HealthPack" type="Area2D" groups=["healing_item"]]
+script = ExtResource("1_otulg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_xu083")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2nj2t")

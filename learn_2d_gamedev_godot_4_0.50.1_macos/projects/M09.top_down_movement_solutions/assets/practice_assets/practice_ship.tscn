@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccri8jfdgsx8s"]
+
+[ext_resource type="Script" uid="uid://jp8kg3uskeu3" path="res://assets/practice_assets/practice_ship.gd" id="1_871aw"]
+[ext_resource type="Texture2D" uid="uid://d1xp2mgpkkc42" path="res://assets/practice_assets/shape_ship.png" id="2_wia1a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_641cr"]
+radius = 52.0096
+
+[node name="PracticeShip" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_871aw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_wia1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_641cr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true

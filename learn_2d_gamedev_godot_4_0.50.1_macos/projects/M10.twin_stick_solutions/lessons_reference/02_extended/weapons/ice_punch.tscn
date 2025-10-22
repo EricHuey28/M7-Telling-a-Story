@@ -1,0 +1,143 @@
+[gd_scene load_steps=13 format=3 uid="uid://cj0x710n085m0"]
+
+[ext_resource type="PackedScene" uid="uid://byeiutbbmq633" path="res://lessons_reference/02_extended/weapons/bullets/ice_fist.tscn" id="1"]
+[ext_resource type="Script" uid="uid://djnechhe7hb6i" path="res://lessons_reference/02_extended/weapons/ice_punch.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://b06w3ol0nwhi5" path="res://weapons/shoot_ice.wav" id="3_54ech"]
+[ext_resource type="Texture2D" uid="uid://bnylevqfafff1" path="res://common/particles/ice_1.png" id="4_hu2hk"]
+
+[sub_resource type="Gradient" id="Gradient_mqer8"]
+offsets = PackedFloat32Array(0, 0.237838, 0.732394)
+colors = PackedColorArray(0.25098, 0.722702, 0.929412, 1, 0.980392, 1, 1, 1, 0.25098, 0.929412, 0.929412, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wci35"]
+gradient = SubResource("Gradient_mqer8")
+
+[sub_resource type="Curve" id="Curve_rm0c4"]
+_data = [Vector2(0, 0.181818), 0.0, 0.0, 0, 0, Vector2(0.490385, 0.954545), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_pre0n"]
+curve = SubResource("Curve_rm0c4")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_s7ww1"]
+emission_shape = 1
+emission_sphere_radius = 2.0
+spread = 180.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.3
+scale_max = 0.4
+scale_curve = SubResource("CurveTexture_pre0n")
+color_ramp = SubResource("GradientTexture2D_wci35")
+
+[sub_resource type="Animation" id="Animation_mje7d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:process_material:initial_velocity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 100)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GPUParticles2D:process_material:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.3, 0.4)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GPUParticles2D:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_xvhiq"]
+resource_name = "charge"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:process_material:initial_velocity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(4.14106, 1),
+"update": 0,
+"values": [Vector2(0, 100), Vector2(0, 200)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GPUParticles2D:process_material:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(3.36358, 1),
+"update": 0,
+"values": [Vector2(0.3, 0.4), Vector2(0.45, 0.6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GPUParticles2D:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t2r4o"]
+_data = {
+&"RESET": SubResource("Animation_mje7d"),
+&"charge": SubResource("Animation_xvhiq")
+}
+
+[node name="IcePunch" type="Node2D"]
+script = ExtResource("2")
+bullet_scene = ExtResource("1")
+max_range = 300.0
+max_bullet_speed = 800.0
+
+[node name="ShootIce" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_54ech")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+z_index = 1
+position = Vector2(1, 0)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_s7ww1")
+texture = ExtResource("4_hu2hk")
+lifetime = 0.5
+randomness = 1.0
+visibility_rect = Rect2(-1000, -1000, 1000, 1000)
+draw_order = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_t2r4o")
+}

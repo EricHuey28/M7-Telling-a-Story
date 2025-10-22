@@ -1,0 +1,578 @@
+# LANGUAGE translation for M2. Getting to Know Godot (Interactive Tours) for the following files:
+# res://addons/godot_tours/tour.gd
+# res://tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: M2. Getting to Know Godot (Interactive Tours)\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: addons/godot_tours/tour.gd
+msgid "Press the [b]%s[/b] button."
+msgstr "[b]%s[/b]ボタンを押してください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Turn the [b]%s[/b] button %s."
+msgstr "[b]%s[/b]ボタンを%sしてください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Change to the [b]%s[/b] tab."
+msgstr "タブを[b]%s[/b]に変更してください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Select the %s %s in the [b]Scene Dock[/b]."
+msgstr "[b]シーンドック[/b]で%s %sを選択してください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Set [b]%s[/b] to [code]%s[/code]"
+msgstr "[b]%s[/b]を[code]%s[/code]に設定してください。"
+
+#: addons/godot_tours/tour.gd
+msgid "Set [b]%s[/b]'s [b]%s[/b] property to [b]%s[/b]"
+msgstr "[b]%s[/b]の[b]%s[/b]プロパティを[b]%s[/b] に設定してください"
+
+#: addons/godot_tours/tour.gd
+msgid "Open the scene [b]%s[/b]"
+msgstr "[b]%s[/b]シーンを開いてください"
+
+#: addons/godot_tours/tour.gd
+msgid "Expand the property [b]%s[/b] in the [b]Inspector[/b]"
+msgstr "[b]Inspector[/b]のプロパティ[b]%s[/b]を展開してください"
+
+#: addons/godot_tours/tour.gd
+msgid "Move [b]%s[/b] inside the guide box"
+msgstr "ガイドボックスの内側に[b]%s[/b]を移動してください"
+
+#: addons/godot_tours/tour.gd
+msgid "Instantiate the [b]%s[/b] scene as a child of [b]%s[/b]"
+msgstr "[b]%s[/b] シーンを [b]%s[/b] の子としてインスタンス化してください"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Assemble your first game"
+msgstr "初めてのゲームを組み立てる"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "In this tour, you get to assemble your first game from premade parts."
+msgstr ""
+"このツアーでは、あらかじめ用意されたパーツから\n"
+"最初のゲームを組み立てます。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "You will put what you learned in the previous tour into practice."
+msgstr "前回のツアーで学んだことを実践しましょう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"You'll select and move nodes, create scene instances, use Godot's tilemap "
+"editor, and more."
+msgstr ""
+"ノードの選択と移動・シーンインスタンスの作成・\n"
+"Godotのタイルマップエディターなどを使っていきます。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Let's get started!"
+msgstr "それでは始めましょう！"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Let's make a little game"
+msgstr "小さなゲームを作ろう"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"By the end of this tutorial, you'll have a little playable game like this "
+"one."
+msgstr ""
+"このチュートリアルが終わるころには、このようなちょっと遊べるゲームができてい"
+"るでしょう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"In this first part, you'll learn how to instantiate scenes, move entities, "
+"and draw bridges between rooms using a tilemap."
+msgstr ""
+"最初のパートでは、シーンのインスタンス化・エンティティの移動・タイルマップを"
+"使った部屋の橋の描き方を学びます。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"You can try it right now: click the play icon in the top right of the editor "
+"to run the Godot project."
+msgstr ""
+"エディターの右上にある再生アイコンをクリックして、Godotプロジェクトを実行して"
+"ください。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Then, press [b]%s[/b] or close the game window to stop the game."
+msgstr "次に[b]%s[/b]を押すか、ゲームウィンドウを閉じてゲームを停止します。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Let's head to the starter scene and assemble the game."
+msgstr "スターターシーンを使ってゲームを組み立てよう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Open the start scene"
+msgstr "startシーンを開く"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"In the [b]FileSystem Dock[/b] at the bottom-left, find and [b]double-click[/"
+"b] on the scene we will be working with: [b]%s[/b]."
+msgstr ""
+"左下の[b]ファイルシステムドック[/b]から、これから作業する[b]%s[/b]シーンを見"
+"つけて[b]ダブルクリック[/b]します。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Open the scene [b]%s[/b]."
+msgstr "[b]%s[/b]シーンを開いてください。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Add Player Scene"
+msgstr "Playerシーンを追加する"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Now let's add a playable character to the scene! Drag and drop the player "
+"from the [b]FileSystem Dock[/b]."
+msgstr ""
+"それでは、プレイアブルキャラクターをシーンに追加しましょう！\n"
+"[b]ファイルシステムドック[/b]からドラッグ＆ドロップしてください。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Add the [b]Player Scene[/b] to the [b]Scene[/b]."
+msgstr "[b]シーン[/b]に [b]player.tscn[/b]を追加しましょう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Great job!"
+msgstr "よくできました！"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Remember [b]a scene is a template[/b]."
+msgstr "[b]シーンはテンプレート[/b]だということを思い出してください。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"By dragging the [b]Player Scene[/b] into the viewport in the center, you "
+"created a copy of the player template in the start scene."
+msgstr ""
+"中央の画面に[b]Playerシーン[/b]をドラッグすると、StartシーンにPlayerのテンプ"
+"レートのコピーが作成されます。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"You can see in the [b]Scene Dock[/b] that there is now an [b]instance[/b] of "
+"the player scene in the start scene."
+msgstr ""
+"[b]シーンドック[/b]を見ると、StartシーンにPlayerシーンの[b]インスタンス[/b]が"
+"あることがわかります。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Flesh out the environment"
+msgstr "環境の具体化"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"We're lacking an environment for players to explore. Let's add a couple of "
+"rooms next."
+msgstr ""
+"Playerが探検できる環境が不足しています。次に部屋をいくつか追加してみましょ"
+"う。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "We've prepared rooms for you to place in the level."
+msgstr "レベルに合わせて部屋を用意しました。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Snap to grid"
+msgstr "グリッドにスナップする"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "To place the rooms accurately, we will use grid snapping."
+msgstr "部屋を正確に配置するために、グリッドスナップを使いましょう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"You can toggle the grid on and off by clicking the [b]Grid[/b] button at the "
+"top (but keep it on!)."
+msgstr ""
+"上部の[b]グリッド[/b]ボタンをクリックすると、グリッドのON/OFFを切り替えること"
+"ができます\n"
+"（ただし、ONのままにしておいてください！）。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Change grid size"
+msgstr "グリッドサイズを変更する"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "The grid is too small. Let's make it bigger."
+msgstr "今のグリッドはとても小さいです。大きくしてみましょう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Click the the three vertical dots in the toolbar to access the grid settings."
+msgstr "ツールバーの︙アイコンをクリックしてグリッド設定にアクセスします。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Then, click [b]Configure Snap...[/b], and change [b]Grid Step[/b] to "
+"[b]128px[/b] by [b]128px[/b]. Then, click [b]Ok[/b] to confirm."
+msgstr ""
+"次に、[b]スナップの設定…[/b]をクリックし、[b]グリッドのステップ[/b]を"
+"[b]128px[/b]×[b]128px[/b]に変更します。\n"
+"次に、[b]Ok[/b]をクリックして確定します。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "How to zoom in and out"
+msgstr "画面のズームインとズームアウトの仕方"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Before adding rooms, let's learn to zoom and pan the view. You'll likely "
+"need to zoom out to place the rooms comfortably."
+msgstr ""
+"部屋を追加する前に、画面のズームインとズームアウトの仕方を学びましょう。\n"
+"部屋を快適に配置するためには、ズームアウトした方がやりやすいでしょう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "To zoom in and out, use your [b]Mouse Wheel[/b]."
+msgstr "ズームインとズームアウトをするには、[b]マウスホイール[/b]を使います."
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "On touch displays and supported touchpads, you can pinch two fingers."
+msgstr ""
+"タッチディスプレイや対応タッチパッドでは、2本の指をつまむようにして動かすこと"
+"もできます。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Give it a try!"
+msgstr "ぜひお試しください！"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Using the zoom buttons"
+msgstr "ズームボタンの使い方"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Alternatively, you can click the [b]Zoom In[/b] button %s and [b]Zoom Out[/"
+"b] %s button in the top-left of the viewport to zoom in and out."
+msgstr ""
+"別の方法として、画面の左上にある[b]ズームイン[/b] %s ボタンと[b]ズームアウト"
+"[/b]%s ボタンをクリックすると、ズームインとズームアウトができます。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "How to pan the view"
+msgstr "視点を動かす方法"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "To pan the view, click and drag using the [b]Middle Mouse Button[/b]."
+msgstr ""
+"視点を動かしたい場合は、[b]マウスの中ボタン[/b]を使ってクリック＆ドラッグしま"
+"す。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"If you don't have a mouse wheel, press the [b]Spacebar[/b] and click and "
+"drag with the [b]Left Mouse Button[/b]."
+msgstr ""
+"マウスホイールがない場合は、[b]スペースバー[/b]を押し、[b]左マウスボタン[/b]"
+"でクリック＆ドラッグします。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"And if you're using a touchpad, you can keep the [b]%s[/b] key down and "
+"slide two fingers over your touchpad."
+msgstr ""
+"またタッチパッドを使用している場合は、\n"
+"[b]%s[/b]キーを押したまま、タッチパッド上で2本の指をスライドさせることができ"
+"ます。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Add Rooms"
+msgstr "部屋を追加する"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Now, you can start placing rooms!"
+msgstr "それでは、部屋を置いてみましょう！"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Drag and drop one of each room type (a, b, and c) from the [b]FileSystem "
+"Dock[/b]."
+msgstr ""
+"[b]ファイルシステムドック[/b]から各部屋タイプ（a、b、c）を1つずつドラッグ＆ド"
+"ロップします。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Place them so that the rooms do not overlap, and keep some space between "
+"them, as we'll connect the rooms with bridges later."
+msgstr ""
+"部屋と部屋が重ならないように配置します。\n"
+"後で橋で部屋をつなげるので、部屋と部屋の間は少し間隔を空けて置きましょう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Use the [b]Middle Mouse Button[/b] to pan the view if you need to."
+msgstr "必要であれば[b]マウス中ボタン[/b]で視点を動かしましょう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Use the [b]Mouse Wheel[/b] to zoom in and out."
+msgstr "[b]マウスホイール[/b]でズームインズームアウトもできます。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Don't worry if their position isn't perfect: we'll learn to move the rooms "
+"next."
+msgstr ""
+"部屋の位置が完璧でなくても心配ありません。次に部屋を移動する方法を学びます。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Add [b]RoomA[/b] to the [b]Scene[/b]."
+msgstr "[b]RoomA[/b]を[b]シーン[/b]に追加してください。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Add [b]RoomB[/b] to the [b]Scene[/b]."
+msgstr "[b]RoomB[/b]を[b]シーン[/b]に追加してください。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Add [b]RoomC[/b] to the [b]Scene[/b]."
+msgstr "[b]RoomC[/b]を[b]シーン[/b]に追加してください。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Your game now has 3 rooms."
+msgstr "あなたのゲームには今三つの部屋があります。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Did you notice how rooms snap to the grid?"
+msgstr "どのように部屋がグリッドに沿って動くか気づきましたか？"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Next, let's learn to select and move the rooms directly in the viewport."
+msgstr "次に、画面で直接部屋を選択して移動する方法を学びましょう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Move the rooms"
+msgstr "部屋を移動する"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"To move a node, like the rooms, you first need to [b]select[/b] it. You can "
+"use the [b]Select Mode[/b] for that."
+msgstr ""
+"部屋のようなノードを移動するには、まずそれを[b]選択[/b]する必要があります。\n"
+"そのためには[b]選択モード[/b]を使うことができます。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Ensure that the [b]Select Mode[/b] is active in the toolbar at the top."
+msgstr ""
+"上部のツールバーで[b]選択モード[/b]がアクティブになっていることを確認しましょ"
+"う。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Its icon looks like a mouse cursor. If it's active, the icon will be blue."
+msgstr ""
+"アイコンはマウスカーソルのように見えます。アクティブな場合はアイコンは青くな"
+"ります。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"The select tool is active by default when you create a new project in Godot."
+msgstr ""
+"Godotで新しいプロジェクトを作成すると、デフォルトで選択モードが有効になりま"
+"す。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Select a room"
+msgstr "部屋を選択する"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "With the [b]Select Mode[/b] active, you can now select the rooms."
+msgstr ""
+"[b]選択モード[/b]をアクティブにすると、部屋を選択できるようになります。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"To select a room, in the viewport, click on the room's little grey cross %s "
+"with the [b]Left Mouse Button[/b]."
+msgstr ""
+"部屋を選択するには、画面で部屋の小さな灰色の十字%sを[b]左マウスボタン[/b]でク"
+"リックします。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Once you've selected a room, the cross will turn orange %s."
+msgstr "部屋を選択すると、十字がオレンジ色 %s に変わります。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "You can visually select any node that has a cross in the viewport."
+msgstr "画面で十字があるノードを視覚的に選択できます。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Select one of the [b]Room[/b] nodes."
+msgstr "[b]ルーム[/b]ノードの1つを選択します。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Move with the select mode"
+msgstr "選択モードで移動する"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Click and drag [b]on the cross[/b] to move the node. Try to move the rooms."
+msgstr ""
+"[b]十字[/b]をクリックしてからドラッグするとノードを移動させることができま"
+"す。\n"
+"部屋を移動してみましょう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"If you need to pan the view, move the mouse while pressing the [b]Middle "
+"Mouse Button[/b]."
+msgstr ""
+"視点を動かしたい場合は、[b]マウス中ボタン[/b]を押しながらマウスを動かしましょ"
+"う。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Alternatively, you can press down the [b]Spacebar[/b] and click and drag on "
+"the view with the [b]Left Mouse Button[/b]."
+msgstr ""
+"代わりに[b]スペースバー[/b]を押しながら、[b]左マウスボタン[/b]をクリック＆ド"
+"ラッグで視点を動かすこともできます。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Excellent!"
+msgstr "素晴らしい！"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Take a moment to move the rooms around and arrange them to your liking."
+msgstr "時間をかけて部屋を移動させて、好みの配置にしてみましょう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Try to make the openings between rooms align a bit. It will make it easier "
+"to add bridges between them later."
+msgstr ""
+"部屋と部屋の間の開口部を少し揃えるようにしてください。\n"
+"後で部屋と部屋の間に橋をかけやすくなります。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Also, try to keep some space between the rooms so you can add bridges "
+"between them later."
+msgstr ""
+"また、部屋と部屋の間にスペースを空けておくと、後で部屋と部屋の間に橋を架けや"
+"すくなります。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Once you're happy with the layout, move on to the next step."
+msgstr "レイアウトに満足したら次のステップに進みましょう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Moving the player to the first room"
+msgstr "Playerを最初の部屋に移動させる"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Next, we'll move the player inside [b]RoomA[/b] so that when running the "
+"game, the player starts in the room."
+msgstr ""
+"次に、Playerを[b]RoomA[/b]の中に移動させ、ゲームを実行するときにプレーヤーが"
+"部屋からスタートするようにします。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"We'll take this opportunity to learn another useful way of selecting and "
+"moving nodes."
+msgstr ""
+"この機会に、ノードを選択して移動するもうひとつの便利な方法を学んでおきましょ"
+"う。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Find RoomA"
+msgstr "RoomAを探す"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"To find [b]RoomA[/b], we'll use the [b]Scene Dock[/b] and the viewport in "
+"the center."
+msgstr "[b]RoomA[/b]を探すには、[b]シーンドック[/b]と中央画面を使います。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Click each of the room nodes and pay attention to the crosses in the "
+"viewport."
+msgstr "各部屋のノードをクリックし、画面の十字に注目してください。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Each cross %s represents the position of one room. When you select a room, "
+"its cross turns orange: %s."
+msgstr ""
+"各十字%sは一つの部屋の位置を表します。\n"
+"部屋を選択すると、その十字がオレンジ色%sに変わります。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Click on [b]RoomA[/b] to select it and find the room's location."
+msgstr "[b]RoomA[/b]をクリックして選択し、部屋の位置を確認しましょう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Select the Player"
+msgstr "Playerを選択する"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"Let's select the player node to move it next. Click on [b]Player[/b] node in "
+"the [b]Scene Dock[/b] to select it."
+msgstr ""
+"次にPlayerノードを選択して移動させましょう。[b]シーンドック[/b]の[b]Player[/"
+"b]ノードをクリックして選択します。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Move the Player"
+msgstr "Playerを動かす"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "To move a node, you can use the [b]Move Mode[/b] "
+msgstr "ノードを移動するには、[b]移動モード[/b]を使用します。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid " in the toolbar. Click the move tool to activate it."
+msgstr "ツールバーの移動モードをクリックして有効にします。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"With the move tool selected, click and drag anywhere on the viewport until "
+"the player is inside of [b]RoomA[/b]."
+msgstr ""
+"移動ツールを選択した状態で、プレイヤーが[b]RoomA[/b]の中に入るまで、ビュー"
+"ポート上の任意の場所をクリックしてドラッグします。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid "Move the [b]Player[/b] inside of [b]RoomA[/b]."
+msgstr "[b]Player[/b]を[b]RoomA[/b]の中に移動させましょう。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"You created several scene instances and learned to select and move them in "
+"the viewport."
+msgstr ""
+"あなたはいくつかのシーンインスタンスを作成し、画面でそれらを選択して移動する"
+"ことを学びました。"
+
+#: tours/102_assemble_your_first_game/01_add_player_and_rooms/01_add_player_and_rooms.gd
+msgid ""
+"In the next part, you'll learn how to use the TileMap editor and Terrains to "
+"draw bridges that connect the rooms."
+msgstr ""
+"次のパートではTileMapエディターと地形を使って、部屋をつなぐ橋を描く方法を学び"
+"ます。"

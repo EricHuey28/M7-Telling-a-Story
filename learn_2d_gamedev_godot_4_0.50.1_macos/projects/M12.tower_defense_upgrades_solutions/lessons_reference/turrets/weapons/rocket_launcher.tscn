@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkyp7bwsbgo2w"]
+
+[ext_resource type="Texture2D" uid="uid://hwqaxrtlk8lo" path="res://turrets/weapons/rocket_launcher.png" id="1_r0dfa"]
+[ext_resource type="Script" uid="uid://ckvf5vo724aev" path="res://lessons_reference/turrets/weapons/rocket_launcher.gd" id="2_sco46"]
+[ext_resource type="PackedScene" uid="uid://bnikx6qolb8dl" path="res://turrets/weapons/smoke_puff.tscn" id="3_w3bji"]
+
+[node name="RocketLauncher" type="Sprite2D"]
+unique_name_in_owner = true
+z_index = 10
+texture_filter = 4
+texture = ExtResource("1_r0dfa")
+offset = Vector2(-8.85714, 4.76837e-07)
+script = ExtResource("2_sco46")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(60, 0)
+
+[node name="SmokePuff" parent="." instance=ExtResource("3_w3bji")]
+unique_name_in_owner = true
+position = Vector2(-77, 0)

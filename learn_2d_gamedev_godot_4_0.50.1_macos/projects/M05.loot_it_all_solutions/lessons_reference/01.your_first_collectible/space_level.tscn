@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7mjlu6w0lyhr"]
+
+[ext_resource type="PackedScene" uid="uid://ul1ys48qmbs4" path="res://lessons_reference/01.your_first_collectible/health_pack.tscn" id="1_ba647"]
+[ext_resource type="PackedScene" uid="uid://csvcjtttpo038" path="res://lessons_reference/01.your_first_collectible/ship.tscn" id="2_2j1u5"]
+[ext_resource type="PackedScene" uid="uid://bxfevggvxo634" path="res://assets/background/space_background.tscn" id="3_e6xy1"]
+
+[node name="Level" type="Node2D"]
+
+[node name="HealthPack" parent="." instance=ExtResource("1_ba647")]
+position = Vector2(413, 721)
+
+[node name="HealthPack2" parent="." instance=ExtResource("1_ba647")]
+position = Vector2(1448, 713)
+
+[node name="HealthPack3" parent="." instance=ExtResource("1_ba647")]
+position = Vector2(973, 230)
+
+[node name="Area2D" parent="." instance=ExtResource("2_2j1u5")]
+position = Vector2(946, 546)
+
+[node name="SpaceBackground" parent="." instance=ExtResource("3_e6xy1")]

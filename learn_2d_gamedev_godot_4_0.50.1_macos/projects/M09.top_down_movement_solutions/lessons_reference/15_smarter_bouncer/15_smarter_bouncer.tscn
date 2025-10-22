@@ -1,0 +1,89 @@
+[gd_scene load_steps=11 format=3 uid="uid://dlj6ghsms5qaf"]
+
+[ext_resource type="Script" uid="uid://bnu47op1plhiq" path="res://lessons_reference/13_playing_cop/13_playing_cop.gd" id="1_dkc7n"]
+[ext_resource type="Texture2D" uid="uid://5vl7p0xb7nd8" path="res://assets/circuit_background.png" id="2_e5vur"]
+[ext_resource type="PackedScene" uid="uid://xl56q8amb611" path="res://assets/finish_line/finish_line.tscn" id="3_qn504"]
+[ext_resource type="PackedScene" uid="uid://dvtdgo0n3gkyq" path="res://lessons_reference/08_finish_line/08_runner.tscn" id="4_7f15e"]
+[ext_resource type="PackedScene" uid="uid://cwk136csprv66" path="res://lessons_reference/04_obstacles/04_circuit_obstacle.tscn" id="5_5kc7h"]
+[ext_resource type="PackedScene" uid="uid://cc57s0hxnsxsk" path="res://lessons_reference/15_smarter_bouncer/bouncer_with_avoidance.tscn" id="5_xkh0f"]
+[ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="6_yxrye"]
+[ext_resource type="Script" uid="uid://57e8080cpukf" path="res://assets/countdown/count_down.gd" id="7_1o5jo"]
+[ext_resource type="PackedScene" uid="uid://ciegbyfrx5lf3" path="res://lessons_reference/10_pause_screen/pause_screen.tscn" id="8_chrc1"]
+[ext_resource type="PackedScene" uid="uid://c7le2os75mfd2" path="res://lessons_reference/04_obstacles/04_simple_obstacle.tscn" id="10_0xoer"]
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_dkc7n")
+
+[node name="CircuitBackground" type="Sprite2D" parent="."]
+texture = ExtResource("2_e5vur")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="FinishLine" parent="." instance=ExtResource("3_qn504")]
+unique_name_in_owner = true
+position = Vector2(576, 1152)
+area_width = 256
+
+[node name="Runner" parent="." instance=ExtResource("4_7f15e")]
+unique_name_in_owner = true
+position = Vector2(1205, 574)
+
+[node name="Bouncer" parent="." instance=ExtResource("5_xkh0f")]
+unique_name_in_owner = true
+position = Vector2(850, 870)
+
+[node name="Circuit" parent="." instance=ExtResource("5_5kc7h")]
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CountDown" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+process_mode = 1
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -109.5
+offset_right = 20.0
+offset_bottom = 109.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_yxrye")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_1o5jo")
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("8_chrc1")]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="SimpleObstacle" parent="." instance=ExtResource("10_0xoer")]
+position = Vector2(1758, 387)
+
+[node name="SimpleObstacle2" parent="." instance=ExtResource("10_0xoer")]
+position = Vector2(2212, 495)
+
+[node name="SimpleObstacle3" parent="." instance=ExtResource("10_0xoer")]
+position = Vector2(3200, 1210)
+
+[node name="SimpleObstacle4" parent="." instance=ExtResource("10_0xoer")]
+position = Vector2(3329, 1521)
+
+[node name="SimpleObstacle5" parent="." instance=ExtResource("10_0xoer")]
+position = Vector2(2813, 1985)
+
+[node name="SimpleObstacle6" parent="." instance=ExtResource("10_0xoer")]
+position = Vector2(1914, 1196)
+
+[node name="SimpleObstacle7" parent="." instance=ExtResource("10_0xoer")]
+position = Vector2(1025, 2093)
+
+[node name="SimpleObstacle8" parent="." instance=ExtResource("10_0xoer")]
+position = Vector2(640, 1432)

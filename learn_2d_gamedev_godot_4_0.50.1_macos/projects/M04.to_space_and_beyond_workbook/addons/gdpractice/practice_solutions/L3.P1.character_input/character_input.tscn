@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://cte0c165ijc60"]
+
+[ext_resource type="Texture2D" uid="uid://d1xp2mgpkkc42" path="res://assets/practice_assets/shape_ship.png" id="1_gqndx"]
+[ext_resource type="Script" uid="uid://dny1mbpil88tj" path="res://addons/gdpractice/practice_solutions/L3.P1.character_input/character_input.gd" id="2_ipksy"]
+[ext_resource type="Texture2D" uid="uid://bkueifls7csiy" path="res://assets/practice_assets/ellipse_white.png" id="3_yojb6"]
+[ext_resource type="PackedScene" uid="uid://qr85v0tvl371" path="res://addons/gdpractice/practice_solutions/L3.P1.character_input/background.tscn" id="4_jv5a0"]
+
+[sub_resource type="Curve" id="Curve_8vjn6"]
+_data = [Vector2(0, 0.663194), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.0319997, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_gyk3c"]
+curve = SubResource("Curve_8vjn6")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jr3h6"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 12.04
+scale_curve = SubResource("CurveTexture_gyk3c")
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(960, 540)
+texture = ExtResource("1_gqndx")
+script = ExtResource("2_ipksy")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(0.584314, 0.380392, 0.933333, 1)
+show_behind_parent = true
+z_index = -2
+process_material = SubResource("ParticleProcessMaterial_jr3h6")
+texture = ExtResource("3_yojb6")
+visibility_rect = Rect2(-4000, -4000, 4000, 4000)
+
+[node name="Background" parent="." instance=ExtResource("4_jv5a0")]

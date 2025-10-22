@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6yn36oe8fy86"]
+
+[ext_resource type="Script" uid="uid://ddvy3uf0sfi1j" path="res://lessons_reference/02_extended/weapons/fire_spray.gd" id="1_ae4mo"]
+[ext_resource type="AudioStream" uid="uid://8k3b4dtgtm7h" path="res://weapons/shoot_fire.wav" id="2_ivd2h"]
+
+[node name="FireSpray" type="Node2D"]
+script = ExtResource("1_ae4mo")
+min_range = 200.0
+min_bullet_speed = 800.0
+max_range = 400.0
+max_bullet_speed = 1600.0
+
+[node name="ShootFire" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ivd2h")
+
+[node name="CooldownTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.6
+one_shot = true

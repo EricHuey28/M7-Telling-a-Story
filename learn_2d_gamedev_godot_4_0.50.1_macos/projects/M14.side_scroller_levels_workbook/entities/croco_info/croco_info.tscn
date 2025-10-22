@@ -1,0 +1,99 @@
+[gd_scene load_steps=9 format=3 uid="uid://78d1g6rme6if"]
+
+[ext_resource type="Script" uid="uid://cara6xvs2mfm" path="res://entities/croco_info/croco_info.gd" id="1_xw88f"]
+[ext_resource type="Texture2D" uid="uid://blhd2tb6ycp0o" path="res://assets/croco/idle/000.png" id="2_s3shg"]
+[ext_resource type="Texture2D" uid="uid://cd4w3cnjttg0o" path="res://assets/croco/idle/001.png" id="3_3u7j0"]
+[ext_resource type="Script" uid="uid://cvruxwna5vme4" path="res://entities/croco_info/bubble.gd" id="3_hta5s"]
+[ext_resource type="Texture2D" uid="uid://cqixi2bh23ktl" path="res://assets/croco/idle/002.png" id="4_ru76i"]
+[ext_resource type="Texture2D" uid="uid://bn445xcu2fj4r" path="res://assets/croco/idle/003.png" id="5_oadgy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j08ev"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_oadgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ru76i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3u7j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ru76i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s3shg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ru76i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kdpgs"]
+radius = 32.0
+
+[node name="CrocoInfo" type="Node2D"]
+script = ExtResource("1_xw88f")
+
+[node name="BubbleTarget" type="Node2D" parent="."]
+position = Vector2(0, -24)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_j08ev")
+autoplay = "default"
+frame_progress = 0.608873
+offset = Vector2(0, -12)
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_kdpgs")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Bubble" type="MarginContainer" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = -17.0
+offset_right = 7.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("3_hta5s")
+
+[node name="BG" type="ColorRect" parent="CanvasLayer/Bubble"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Bubble"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/Bubble/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 16
+text = "Default text"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="resized" from="CanvasLayer/Bubble" to="CanvasLayer/Bubble" method="_on_resized"]

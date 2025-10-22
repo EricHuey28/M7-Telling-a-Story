@@ -1,0 +1,103 @@
+[gd_scene load_steps=13 format=3 uid="uid://brkciit14wn4"]
+
+[ext_resource type="Script" uid="uid://dd6mx8y5av5k" path="res://entities/mob/mob.gd" id="1_7phps"]
+[ext_resource type="Texture2D" uid="uid://c75naf5uir138" path="res://entities/mob/ant_sprite.png" id="2_8wdvu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aesui"]
+size = Vector2(19, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gfj7"]
+atlas = ExtResource("2_8wdvu")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qw2lc"]
+atlas = ExtResource("2_8wdvu")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1l5or"]
+atlas = ExtResource("2_8wdvu")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8n13d"]
+atlas = ExtResource("2_8wdvu")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfgwx"]
+atlas = ExtResource("2_8wdvu")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tti2x"]
+atlas = ExtResource("2_8wdvu")
+region = Rect2(96, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_leikt"]
+atlas = ExtResource("2_8wdvu")
+region = Rect2(120, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iaa0t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gfj7")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qw2lc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1l5or")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8n13d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfgwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tti2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_leikt")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8v3gn"]
+radius = 5.0
+
+[node name="Mob" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_7phps")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_aesui")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 8)
+sprite_frames = SubResource("SpriteFrames_iaa0t")
+animation = &"walk"
+autoplay = "walk"
+offset = Vector2(0, -12)
+
+[node name="GroundCast" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-8, -9)
+target_position = Vector2(0, 24)
+collision_mask = 8
+
+[node name="HitBox" type="Area2D" parent="GroundCast"]
+unique_name_in_owner = true
+position = Vector2(0, 10)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundCast/HitBox"]
+shape = SubResource("CircleShape2D_8v3gn")

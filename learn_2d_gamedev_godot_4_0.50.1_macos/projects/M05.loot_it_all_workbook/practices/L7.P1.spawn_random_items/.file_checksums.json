@@ -1,0 +1,9 @@
+{
+  "background.tscn": "159e6913f3ffad73107e0b3c4f724d45",
+  "coin.tscn": "e8ff4a70c73437495452a224a33a44d8",
+  "collectible.gd": "1a7f4fe5eda5949d93b3dcb77aa55cb2",
+  "energy_pack.tscn": "3c0b5429fd607ffeb63033754318ab58",
+  "random_collectible_placer.gd": "11ceeebb7a9f50134f5f24f911b659e6",
+  "random_collectible_placer.tscn": "75d9cfc388a5d74c80d98e9fdd166dbe",
+  "spawn_random_items.tscn": "187b46d96074760f3d8ce946afeddb9e"
+}

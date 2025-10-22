@@ -1,0 +1,122 @@
+[gd_scene load_steps=16 format=3 uid="uid://by4spho51hxj4"]
+
+[ext_resource type="Theme" uid="uid://cshg3sgf0xxq" path="res://assets/main_theme.tres" id="1_ngkm2"]
+[ext_resource type="Script" uid="uid://b8n12xqpx7gem" path="res://lessons_reference/02.strong_guarantees/strong_guarantees.gd" id="2_uhmet"]
+[ext_resource type="Shader" uid="uid://dm7717xxg836f" path="res://assets/sliding_background.gdshader" id="3_kw1sd"]
+[ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="4_7ftmc"]
+[ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="5_avwcv"]
+[ext_resource type="Script" uid="uid://cicgqq5n2ql1f" path="res://lessons_reference/02.strong_guarantees/slideshow_entry.gd" id="5_grftp"]
+[ext_resource type="Texture2D" uid="uid://dchimpdsnda13" path="res://assets/emotion_happy.png" id="6_fomrd"]
+[ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="6_wtwdo"]
+[ext_resource type="AudioStream" uid="uid://chgko4hmxwxu5" path="res://assets/talking_synth.ogg" id="9_8p0j8"]
+
+[sub_resource type="Resource" id="Resource_jj4vs"]
+script = ExtResource("5_grftp")
+expression = ExtResource("6_wtwdo")
+character = ExtResource("5_avwcv")
+text = "I've decided to use [wave]Resources[/wave]!"
+
+[sub_resource type="Resource" id="Resource_chm03"]
+script = ExtResource("5_grftp")
+expression = ExtResource("6_fomrd")
+character = ExtResource("5_avwcv")
+text = "And now my properties are all well typed!"
+
+[sub_resource type="Resource" id="Resource_jerdt"]
+script = ExtResource("5_grftp")
+expression = ExtResource("6_wtwdo")
+character = ExtResource("5_avwcv")
+text = "It feels [tornado]Fancy![/tornado]"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_efgpg"]
+shader = ExtResource("3_kw1sd")
+shader_parameter/pattern_sampler = ExtResource("4_7ftmc")
+shader_parameter/bg_color = Color(0.980392, 0.94902, 0.72549, 1)
+shader_parameter/pattern_color = Color(0.996078, 0.878431, 0.564706, 1)
+shader_parameter/pattern_size = 256.0
+
+[sub_resource type="InputEventAction" id="InputEventAction_wt2qg"]
+action = &"advance_text"
+
+[sub_resource type="Shortcut" id="Shortcut_qhgl3"]
+events = [SubResource("InputEventAction_wt2qg")]
+
+[node name="SlideShow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ngkm2")
+script = ExtResource("2_uhmet")
+dialogue_items = Array[ExtResource("5_grftp")]([SubResource("Resource_jj4vs"), SubResource("Resource_chm03"), SubResource("Resource_jerdt")])
+
+[node name="Background" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_efgpg")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Body" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = 174.0
+texture = ExtResource("5_avwcv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Expression" type="TextureRect" parent="Body"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_wtwdo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -416.0
+offset_top = 440.0
+offset_right = -176.0
+offset_bottom = -519.0
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "hello world"
+fit_content = true
+
+[node name="NextButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -202.0
+offset_top = -115.0
+offset_right = -28.0
+offset_bottom = -28.0
+grow_horizontal = 0
+grow_vertical = 0
+shortcut = SubResource("Shortcut_qhgl3")
+text = "next"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("9_8p0j8")

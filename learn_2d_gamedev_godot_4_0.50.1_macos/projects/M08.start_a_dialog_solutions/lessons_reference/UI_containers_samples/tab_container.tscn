@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcjlcl6aj4cpw"]
+
+[ext_resource type="PackedScene" uid="uid://cbbj6xlffto47" path="res://lessons_reference/UI_containers_samples/h_box_container.tscn" id="1_4hjf5"]
+[ext_resource type="PackedScene" uid="uid://ch4vdkw7ggfr8" path="res://lessons_reference/UI_containers_samples/v_box_container.tscn" id="2_stq1b"]
+[ext_resource type="PackedScene" uid="uid://dtjui1a1k10ak" path="res://lessons_reference/UI_containers_samples/grid_container.tscn" id="3_7pkqc"]
+
+[node name="TabContainer" type="TabContainer"]
+offset_right = 435.0
+offset_bottom = 288.0
+use_hidden_tabs_for_min_size = true
+
+[node name="HBoxContainer" parent="." instance=ExtResource("1_4hjf5")]
+layout_mode = 2
+
+[node name="VBoxContainer" parent="." instance=ExtResource("2_stq1b")]
+visible = false
+layout_mode = 2
+
+[node name="GridContainer" parent="." instance=ExtResource("3_7pkqc")]
+visible = false
+layout_mode = 2

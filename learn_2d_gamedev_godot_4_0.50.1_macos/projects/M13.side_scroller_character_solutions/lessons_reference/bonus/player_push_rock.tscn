@@ -1,0 +1,164 @@
+[gd_scene load_steps=24 format=3 uid="uid://dpc1hmyhnlbls"]
+
+[ext_resource type="Script" uid="uid://6a2ukijjrrrm" path="res://lessons_reference/bonus/player_push_rock.gd" id="1_lyos8"]
+[ext_resource type="Texture2D" uid="uid://cdg77ke4d61ji" path="res://assets/lucy/hurt.png" id="2_v0rsb"]
+[ext_resource type="Texture2D" uid="uid://c030uv7w2bgs3" path="res://assets/lucy/run/003.png" id="3_xiy7u"]
+[ext_resource type="Texture2D" uid="uid://d07un6ita4esd" path="res://assets/lucy/idle/idle.png" id="4_lr6mt"]
+[ext_resource type="Texture2D" uid="uid://ckdstkswgy7yp" path="res://assets/lucy/idle/blinking.png" id="5_fs3b0"]
+[ext_resource type="Texture2D" uid="uid://c3i67gf5xtur1" path="res://assets/lucy/idle/crouching.png" id="6_ydcao"]
+[ext_resource type="Texture2D" uid="uid://1w6y4aov8x8i" path="res://assets/lucy/idle/looking_right.png" id="7_xnu7p"]
+[ext_resource type="Texture2D" uid="uid://cxslh8teup70q" path="res://assets/lucy/idle/looking_front.png" id="8_olfv6"]
+[ext_resource type="Texture2D" uid="uid://dwyuakhy2ud5k" path="res://assets/lucy/push/lucy_push1.png" id="9_f0cao"]
+[ext_resource type="Texture2D" uid="uid://cqg8gqqj5lch1" path="res://assets/lucy/push/lucy_push2.png" id="10_1klgj"]
+[ext_resource type="Texture2D" uid="uid://b05i1vr64dcfa" path="res://assets/lucy/push/lucy_push3.png" id="11_cr8cp"]
+[ext_resource type="Texture2D" uid="uid://dj8tfn2eji8r" path="res://assets/lucy/push/lucy_push4.png" id="12_u6n82"]
+[ext_resource type="Texture2D" uid="uid://pk8wb3owg84f" path="res://assets/lucy/run/005.png" id="13_v42fu"]
+[ext_resource type="Texture2D" uid="uid://dw8wfsxexlcit" path="res://assets/lucy/run/004.png" id="14_trkgi"]
+[ext_resource type="Texture2D" uid="uid://7hdpmnwe0m7k" path="res://assets/lucy/run/002.png" id="15_0g60f"]
+[ext_resource type="Texture2D" uid="uid://cqhwdqlpfm50e" path="res://assets/lucy/run/001.png" id="16_0unn0"]
+[ext_resource type="Texture2D" uid="uid://byi5d5liq08bu" path="res://assets/lucy/run/000.png" id="17_81bq5"]
+[ext_resource type="Texture2D" uid="uid://vcwnftmgqlr4" path="res://assets/lucy/dust_particle.png" id="18_nlok7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dx5ib"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_v0rsb")
+}],
+"loop": false,
+"name": &"Die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xiy7u")
+}],
+"loop": true,
+"name": &"Fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 12.0,
+"texture": ExtResource("4_lr6mt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fs3b0")
+}, {
+"duration": 6.0,
+"texture": ExtResource("4_lr6mt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fs3b0")
+}, {
+"duration": 0.7,
+"texture": ExtResource("6_ydcao")
+}, {
+"duration": 10.0,
+"texture": ExtResource("7_xnu7p")
+}, {
+"duration": 0.7,
+"texture": ExtResource("6_ydcao")
+}, {
+"duration": 5.0,
+"texture": ExtResource("8_olfv6")
+}, {
+"duration": 0.7,
+"texture": ExtResource("6_ydcao")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xiy7u")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("9_f0cao")
+}, {
+"duration": 4.0,
+"texture": ExtResource("10_1klgj")
+}, {
+"duration": 4.0,
+"texture": ExtResource("11_cr8cp")
+}, {
+"duration": 4.0,
+"texture": ExtResource("12_u6n82")
+}],
+"loop": true,
+"name": &"Push",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_v42fu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_trkgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xiy7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0g60f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0unn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_81bq5")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjkh3"]
+size = Vector2(8, 12)
+
+[sub_resource type="Curve" id="Curve_rfexl"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_3xgy5"]
+curve = SubResource("Curve_rfexl")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qaha4"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_min = 1.0
+initial_velocity_max = 10.0
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_3xgy5")
+
+[node name="Player_PushRock" type="CharacterBody2D"]
+collision_mask = 6
+floor_snap_length = 1.1
+script = ExtResource("1_lyos8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -11)
+sprite_frames = SubResource("SpriteFrames_dx5ib")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_qjkh3")
+
+[node name="Dust" type="GPUParticles2D" parent="."]
+visible = false
+z_index = 20
+emitting = false
+texture = ExtResource("18_nlok7")
+lifetime = 1.25
+explosiveness = 0.05
+randomness = 0.05
+process_material = SubResource("ParticleProcessMaterial_qaha4")

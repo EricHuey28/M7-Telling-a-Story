@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/practice_assets/practice_stage_2.tscn" id="1_eqa2l"]
+[ext_resource type="Script" path="res://practices/L8.P1.move_to_mouse/move_to_mouse.gd" id="2_n6t42"]
+[ext_resource type="Texture2D" path="res://assets/practice_assets/shape_ship.png" id="3_lfa6c"]
+[ext_resource type="PackedScene" path="res://assets/cursor/cursor.tscn" id="4_ik1r2"]
+[ext_resource type="Script" path="res://assets/cursor/cursor_main.gd" id="5_f66wi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4hqje"]
+radius = 70.0
+
+[node name="MouseGame" type="Node2D"]
+
+[node name="PracticeStage2" type="StaticBody2D" parent="." instance=ExtResource("1_eqa2l")]
+
+[node name="MouseShip" type="CharacterBody2D" parent="."]
+motion_mode = 1
+script = ExtResource("2_n6t42")
+
+[node name="Sprite2D" type="Sprite2D" parent="MouseShip"]
+unique_name_in_owner = true
+rotation = 1.5708
+texture = ExtResource("3_lfa6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseShip"]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_4hqje")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+zoom = Vector2(0.5, 0.5)
+
+[node name="Cursor" type="Area2D" parent="." instance=ExtResource("4_ik1r2")]
+unique_name_in_owner = true
+script = ExtResource("5_f66wi")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyqlrwscsrwyk"]
+
+[ext_resource type="Texture2D" uid="uid://bvpadyoo5i3u3" path="res://assets/practice_assets/practice_stage.png" id="1_4gaq1"]
+[ext_resource type="PackedScene" uid="uid://ccri8jfdgsx8s" path="res://assets/practice_assets/practice_ship.tscn" id="2_v3op1"]
+
+[node name="BumpingInWalls" type="Node2D"]
+
+[node name="PracticeStage" type="Sprite2D" parent="."]
+texture = ExtResource("1_4gaq1")
+metadata/_edit_lock_ = true
+
+[node name="ExternalWallsStaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ExternalWallsStaticBody2D"]
+polygon = PackedVector2Array(1920, -1088, 1920, 1088, -1920, 1088, -1920, -1088, 1792, -1088, 1792, -960, -1792, -960, -1792, 960, 1792, 960, 1792, -1088)
+
+[node name="InternalWallsStaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InternalWallsStaticBody2D"]
+polygon = PackedVector2Array(-384, -448, 384, -448, 384, 320, 128, 320, 128, 192, 256, 192, 256, -320, -256, -320, -256, 192, -128, 192, -128, 320, -384, 320)
+
+[node name="PracticeShip" parent="." instance=ExtResource("2_v3op1")]
+max_zoom_factor = 0.9

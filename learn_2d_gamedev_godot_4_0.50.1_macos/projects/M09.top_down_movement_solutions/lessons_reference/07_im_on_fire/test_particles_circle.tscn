@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://frb8jn8g3nhv"]
+
+[ext_resource type="Texture2D" uid="uid://bjrhvpm5ym8hw" path="res://assets/kenney-particles/circle_01.png" id="1_jogue"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jowie"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_vtwpr"]
+_data = [Vector2(0.00817439, 0.787223), 0.0, 1.48177, 0, 0, Vector2(0.569482, 0.0253432), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0890284, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_10uq6"]
+curve = SubResource("Curve_vtwpr")
+
+[sub_resource type="Curve" id="Curve_8kcgs"]
+_data = [Vector2(0, 0), 0.0, 3.39485, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_txihl"]
+curve = SubResource("Curve_8kcgs")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5ka5a"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 100.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.01
+scale_max = 0.3
+scale_curve = SubResource("CurveTexture_txihl")
+alpha_curve = SubResource("CurveTexture_10uq6")
+
+[node name="TestParticlesCircle" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_jowie")
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_5ka5a")
+texture = ExtResource("1_jogue")

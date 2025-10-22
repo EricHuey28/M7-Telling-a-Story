@@ -1,0 +1,96 @@
+[gd_scene load_steps=6 format=3 uid="uid://bupmhfc4kqusq"]
+
+[ext_resource type="Texture2D" uid="uid://miqpabclq30c" path="res://lessons_reference/01.interesting_choices/ui_challenge_solution/bell.svg" id="1_csqis"]
+[ext_resource type="Texture2D" uid="uid://cnhyuw7r7bjek" path="res://lessons_reference/01.interesting_choices/ui_challenge_solution/person.svg" id="2_2k2p2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u21s1"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.564706, 0.917647, 0.592157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtpip"]
+bg_color = Color(1, 1, 0.411765, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="Theme" id="Theme_na5yj"]
+Button/colors/font_color = Color(0.564706, 0.917647, 0.592157, 1)
+Button/styles/disabled = SubResource("StyleBoxFlat_u21s1")
+Button/styles/focus = SubResource("StyleBoxFlat_u21s1")
+Button/styles/hover = SubResource("StyleBoxFlat_u21s1")
+Button/styles/normal = SubResource("StyleBoxFlat_u21s1")
+Button/styles/pressed = SubResource("StyleBoxFlat_u21s1")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/styles/normal = SubResource("StyleBoxFlat_qtpip")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_u21s1")
+
+[node name="PanelContainer" type="PanelContainer"]
+offset_right = 471.0
+offset_bottom = 47.0
+theme = SubResource("Theme_na5yj")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ButtonLogo" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = " LOGO "
+
+[node name="ButtonLink" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "LINK"
+
+[node name="ButtonNotifications" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+icon = ExtResource("1_csqis")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="HBoxContainer/ButtonNotifications"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -11.0
+offset_top = -12.0
+offset_right = 13.0
+offset_bottom = 12.0
+grow_horizontal = 0
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonProfile" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+icon = ExtResource("2_2k2p2")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="HBoxContainer/ButtonProfile"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -11.0
+offset_top = -12.0
+offset_right = 13.0
+offset_bottom = 12.0
+grow_horizontal = 0
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1

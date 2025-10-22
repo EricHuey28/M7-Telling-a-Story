@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhpnb5gnh2yrm"]
+
+[ext_resource type="PackedScene" uid="uid://co2cfo25rvn1g" path="res://mobs/mob.tscn" id="1_e3028"]
+[ext_resource type="Texture2D" uid="uid://28rkffksa53r" path="res://turrets/turret_base.png" id="2_xavdb"]
+[ext_resource type="Script" uid="uid://4laqqufwve6b" path="res://turrets/turret.gd" id="3_fr0nu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e3028"]
+font_size = 32
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="FindClosestMob" type="Node2D"]
+
+[node name="Mob" parent="." instance=ExtResource("1_e3028")]
+position = Vector2(629, 396)
+
+[node name="Label" type="Label" parent="Mob"]
+offset_left = -19.0
+offset_top = 37.0
+offset_right = 21.0
+offset_bottom = 60.0
+text = "1"
+label_settings = SubResource("LabelSettings_e3028")
+horizontal_alignment = 1
+
+[node name="Mob2" parent="." instance=ExtResource("1_e3028")]
+position = Vector2(921, 402)
+
+[node name="Label2" type="Label" parent="Mob2"]
+offset_left = -18.0
+offset_top = 36.0
+offset_right = 22.0
+offset_bottom = 81.0
+text = "2"
+label_settings = SubResource("LabelSettings_e3028")
+horizontal_alignment = 1
+
+[node name="Mob3" parent="." instance=ExtResource("1_e3028")]
+position = Vector2(913, 610)
+
+[node name="Label3" type="Label" parent="Mob3"]
+offset_left = -20.0
+offset_top = 41.0
+offset_right = 20.0
+offset_bottom = 86.0
+text = "3"
+label_settings = SubResource("LabelSettings_e3028")
+horizontal_alignment = 1
+
+[node name="Turret" type="Sprite2D" parent="."]
+position = Vector2(815, 524)
+texture = ExtResource("2_xavdb")
+script = ExtResource("3_fr0nu")
+metadata/_custom_type_script = "uid://4laqqufwve6b"
+
+[node name="Camera2D" type="Camera2D" parent="Turret"]
+zoom = Vector2(1.5, 1.5)

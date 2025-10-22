@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://practices/L6.P1.the_pinata/balloon_pinata.tscn" id="1_8wema"]
+[ext_resource type="Script" path="res://practices/L6.P1.the_pinata/balloon_pinata.gd" id="2_r4rp3"]
+[ext_resource type="PackedScene" path="res://practices/L6.P1.the_pinata/background.tscn" id="3_fvgdu"]
+
+[node name="ThePiñata" type="Node2D"]
+metadata/_edit_horizontal_guides_ = []
+
+[node name="BalloonPinata" type="Area2D" parent="." instance=ExtResource("1_8wema")]
+position = Vector2(960, 540)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2_r4rp3")
+
+[node name="Background" type="Node" parent="." instance=ExtResource("3_fvgdu")]

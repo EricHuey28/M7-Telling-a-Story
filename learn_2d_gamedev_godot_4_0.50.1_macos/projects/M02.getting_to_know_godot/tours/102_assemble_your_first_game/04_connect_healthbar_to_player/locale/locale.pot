@@ -1,0 +1,262 @@
+# LANGUAGE translation for M2. Getting to Know Godot (Interactive Tours) for the following files:
+# res://tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+# res://addons/godot_tours/tour.gd
+# res://tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: M2. Getting to Know Godot (Interactive Tours)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid "Open the start scene"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid "Let's start by opening the scene we will be working with."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid "In the [b]FileSystem Dock[/b] at the bottom-left, find and [b]double-click[/b] on the scene we will be working with: [b]%s[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/102_assemble_your_first_game.gd
+msgid "Open the scene [b]%s[/b]."
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Press the [b]%s[/b] button."
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Turn the [b]%s[/b] button %s."
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Change to the [b]%s[/b] tab."
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Select the %s %s in the [b]Scene Dock[/b]."
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Set [b]%s[/b] to [code]%s[/code]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Set [b]%s[/b]'s [b]%s[/b] property to [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Open the scene [b]%s[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Expand the property [b]%s[/b] in the [b]Inspector[/b]"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Move [b]%s[/b] inside the guide box"
+msgstr ""
+
+#: addons/godot_tours/tour.gd
+msgid "Instantiate the [b]%s[/b] scene as a child of [b]%s[/b]"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Updating the health bar"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "We have a problem. When we touch an enemy, the character loses one health point, but this is not reflected in the health bar."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "This is because the [b]UIHealthBar[/b] node is [b]not connected[/b] to changes in the [b]Player[/b] node."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Godot comes with a handy feature to react to changes in a node, like the player's health changing: [b]signals[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "In this project, when the player takes damage, the [b]Player[/b] node [b]emits[/b] a signal called [b]health_changed[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "We need to [b]connect[/b] this signal to the [b]UIHealthBar[/b] node to update the health bar."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Select the player node"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "To see and connect the signals of a node, we first need to select that node."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "So once again, select the [b]Player[/b] node in the [b]Scene Dock[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "The Node Dock"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Next to the [b]Inspector[/b] dock on the right lives the [b]Node dock[/b]. The node dock lists the selected node's signals."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "The node dock is located in its own tab next to the tab of the [b]Inspector[/b] dock."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Click on the Node tab in the top-right to select the Node dock."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "All the signals"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "As you can see, the player node has many signals. Most of them come built into Godot."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Throughout the course, you will learn to use the most useful ones."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "At the top of the list, notice the [b]health_changed[/b] signal."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Connect the health_changed signal"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Let's connect the signal."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Double-click the [b]health_changed[/b] signal to open the window [b]Connect a Signal to a Method[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Double-click the [b]health_changed[/b] signal "
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "The connect signal window"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "This window on the left is the [b]Connect a Signal to a Method[/b] window. It lists all the nodes in your scene."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Many nodes are greyed out. This is because we can only connect signals to a node that has a code file %s attached to it, like the [b]UIHealthBar[/b] node."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "The called function"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "At the bottom of the window, Godot lets us pick a \"Receiver Method\"."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "This is a piece of code that Godot will run when the player node emits the [b]health_changed[/b] signal."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "We can keep the default value."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "You will learn more about what a [b]method[/b] (also called a function) is in the next module, where we'll learn to write code."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Connect the signal"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "To connect the signal, double-click on the [b]UIHealthBar[/b] node."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "You may need to scroll down the list to find it. You can do so using the [b]Mouse Wheel[/b] or by clicking and dragging on the scrollbar on the right."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "This will immediately take you to the code file attached to the UI health bar node."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Double-click on the [b]UIHealthBar[/b] node."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Excellent!"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "You are now looking at the code file attached to the [b]UIHealthBar[/b] node."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Don't worry if the code doesn't make sense yet. You will learn to read and write code throughout the course."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "The connected function"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Your signal is now connected to the function named [b]_on_player_health_changed[/b]."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Godot indicates the connection with the green icon %s in the margin on the left."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Time to play!"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Let's see if everything works as expected."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Click the [b]Play Current Scene[/b] button and go fight some baddies."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "When you touch an enemy and lose health, the health bar should now update accordingly."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "Play Current Scene"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "In summary"
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "In this part, you learned where to find the list of signals a node emits and how to connect a signal to a function. Thanks to this, the player can now see their health decreasing when they take damage."
+msgstr ""
+
+#: tours/102_assemble_your_first_game/04_connect_healthbar_to_player/04_connect_healthbar_to_player.gd
+msgid "In the next and last part, you will add a chest to one of the room scenes and write your first line of code to complete the game."
+msgstr ""

@@ -1,0 +1,42 @@
+[gd_scene load_steps=10 format=3 uid="uid://eundh35r605v"]
+
+[ext_resource type="Texture2D" uid="uid://d3unutq03pfot" path="res://assets/torch/torch_body.png" id="1_6r3s4"]
+[ext_resource type="Script" path="res://assets/torch/torch.gd" id="1_8rman"]
+[ext_resource type="Shader" path="res://assets/torch/flame_shape.gdshader" id="2_2ljxm"]
+[ext_resource type="Texture2D" uid="uid://88m347xt4ima" path="res://assets/torch/flame_shape.png" id="3_5oi5q"]
+
+[sub_resource type="Gradient" id="Gradient_8r0r1"]
+offsets = PackedFloat32Array(0.0869565, 0.666667)
+colors = PackedColorArray(1, 0.4, 0, 1, 1, 0.716667, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cnwig"]
+gradient = SubResource("Gradient_8r0r1")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ht4je"]
+noise_type = 2
+fractal_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_1dd3t"]
+seamless = true
+noise = SubResource("FastNoiseLite_ht4je")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tuqmc"]
+resource_local_to_scene = true
+shader = ExtResource("2_2ljxm")
+shader_parameter/time_scale = 1.0
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/noise_sampler = SubResource("NoiseTexture2D_1dd3t")
+shader_parameter/flame_gradient = SubResource("GradientTexture1D_cnwig")
+
+[node name="Torch" type="Node2D"]
+script = ExtResource("1_8rman")
+
+[node name="TorchBody" type="Sprite2D" parent="."]
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("1_6r3s4")
+
+[node name="Flame" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_tuqmc")
+position = Vector2(0, -30)
+scale = Vector2(0.28038, 0.28038)
+texture = ExtResource("3_5oi5q")

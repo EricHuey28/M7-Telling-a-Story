@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Material" path="res://practices/L6.P1.poetry/assets/practice_background_material.tres" id="1_4bdlg"]
+[ext_resource type="Theme" path="res://practices/L6.P1.poetry/assets/practice_exercises_theme.tres" id="2_6ni1p"]
+[ext_resource type="Script" path="res://practices/L6.P1.poetry/poetry.gd" id="3_j8xat"]
+
+[node name="Poetry" type="ColorRect"]
+material = ExtResource("1_4bdlg")
+custom_minimum_size = Vector2(960, 540)
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_6ni1p")
+script = ExtResource("3_j8xat")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 150.0
+offset_top = 35.0
+offset_right = -150.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+scroll_following = true

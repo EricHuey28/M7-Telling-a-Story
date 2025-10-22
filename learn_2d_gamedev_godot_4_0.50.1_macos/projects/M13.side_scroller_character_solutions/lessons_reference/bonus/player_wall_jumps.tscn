@@ -1,0 +1,181 @@
+[gd_scene load_steps=27 format=3 uid="uid://isy122ttld8u"]
+
+[ext_resource type="Script" uid="uid://482wp5imqhda" path="res://lessons_reference/bonus/player_wall_jumps.gd" id="1_i00on"]
+[ext_resource type="Texture2D" uid="uid://cdg77ke4d61ji" path="res://assets/lucy/hurt.png" id="2_hvuk3"]
+[ext_resource type="Texture2D" uid="uid://bb43c0s5ktt4e" path="res://assets/lucy/fall.png" id="3_tmkg8"]
+[ext_resource type="Texture2D" uid="uid://d07un6ita4esd" path="res://assets/lucy/idle/idle.png" id="4_b52i7"]
+[ext_resource type="Texture2D" uid="uid://ckdstkswgy7yp" path="res://assets/lucy/idle/blinking.png" id="5_1ahq2"]
+[ext_resource type="Texture2D" uid="uid://c3i67gf5xtur1" path="res://assets/lucy/idle/crouching.png" id="6_nel8e"]
+[ext_resource type="Texture2D" uid="uid://1w6y4aov8x8i" path="res://assets/lucy/idle/looking_right.png" id="7_w2onc"]
+[ext_resource type="Texture2D" uid="uid://cxslh8teup70q" path="res://assets/lucy/idle/looking_front.png" id="8_7xuyx"]
+[ext_resource type="Texture2D" uid="uid://c030uv7w2bgs3" path="res://assets/lucy/run/003.png" id="9_afgqb"]
+[ext_resource type="Texture2D" uid="uid://dwyuakhy2ud5k" path="res://assets/lucy/push/lucy_push1.png" id="10_3mder"]
+[ext_resource type="Texture2D" uid="uid://cqg8gqqj5lch1" path="res://assets/lucy/push/lucy_push2.png" id="11_w5p14"]
+[ext_resource type="Texture2D" uid="uid://b05i1vr64dcfa" path="res://assets/lucy/push/lucy_push3.png" id="12_s336g"]
+[ext_resource type="Texture2D" uid="uid://dj8tfn2eji8r" path="res://assets/lucy/push/lucy_push4.png" id="13_dapab"]
+[ext_resource type="Texture2D" uid="uid://pk8wb3owg84f" path="res://assets/lucy/run/005.png" id="14_dr7cn"]
+[ext_resource type="Texture2D" uid="uid://dw8wfsxexlcit" path="res://assets/lucy/run/004.png" id="15_sbgda"]
+[ext_resource type="Texture2D" uid="uid://7hdpmnwe0m7k" path="res://assets/lucy/run/002.png" id="16_6fwr8"]
+[ext_resource type="Texture2D" uid="uid://cqhwdqlpfm50e" path="res://assets/lucy/run/001.png" id="17_bdt8x"]
+[ext_resource type="Texture2D" uid="uid://byi5d5liq08bu" path="res://assets/lucy/run/000.png" id="18_2dp5q"]
+[ext_resource type="Texture2D" uid="uid://vcwnftmgqlr4" path="res://assets/lucy/dust_particle.png" id="19_a47fa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dx5ib"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hvuk3")
+}],
+"loop": false,
+"name": &"Die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tmkg8")
+}],
+"loop": true,
+"name": &"Fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 12.0,
+"texture": ExtResource("4_b52i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1ahq2")
+}, {
+"duration": 6.0,
+"texture": ExtResource("4_b52i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1ahq2")
+}, {
+"duration": 0.7,
+"texture": ExtResource("6_nel8e")
+}, {
+"duration": 10.0,
+"texture": ExtResource("7_w2onc")
+}, {
+"duration": 0.7,
+"texture": ExtResource("6_nel8e")
+}, {
+"duration": 5.0,
+"texture": ExtResource("8_7xuyx")
+}, {
+"duration": 0.7,
+"texture": ExtResource("6_nel8e")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_afgqb")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("10_3mder")
+}, {
+"duration": 4.0,
+"texture": ExtResource("11_w5p14")
+}, {
+"duration": 4.0,
+"texture": ExtResource("12_s336g")
+}, {
+"duration": 4.0,
+"texture": ExtResource("13_dapab")
+}],
+"loop": true,
+"name": &"Push",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_dr7cn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_sbgda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_afgqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6fwr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bdt8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_2dp5q")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjkh3"]
+size = Vector2(8, 12)
+
+[sub_resource type="Gradient" id="Gradient_xiy7u"]
+offsets = PackedFloat32Array(0, 0.638814, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lr6mt"]
+gradient = SubResource("Gradient_xiy7u")
+
+[sub_resource type="Curve" id="Curve_rfexl"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_3xgy5"]
+curve = SubResource("Curve_rfexl")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qaha4"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+initial_velocity_min = 2.0
+initial_velocity_max = 8.0
+scale_min = 0.7
+scale_max = 1.2
+scale_curve = SubResource("CurveTexture_3xgy5")
+color_ramp = SubResource("GradientTexture1D_lr6mt")
+
+[node name="Player_WallJumps" type="CharacterBody2D"]
+collision_mask = 6
+floor_snap_length = 1.1
+script = ExtResource("1_i00on")
+max_fall_speed = 400.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_dx5ib")
+animation = &"Idle"
+offset = Vector2(0, -11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_qjkh3")
+
+[node name="Dust" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+show_behind_parent = true
+emitting = false
+texture = ExtResource("19_a47fa")
+explosiveness = 0.05
+randomness = 0.05
+process_material = SubResource("ParticleProcessMaterial_qaha4")
+
+[node name="WallRaycastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-8, 0)
+collision_mask = 2
+
+[node name="WallRaycastRight" type="RayCast2D" parent="."]
+target_position = Vector2(8, 0)
+collision_mask = 2

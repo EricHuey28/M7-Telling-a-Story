@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4acye50vxpai"]
+
+[ext_resource type="Material" uid="uid://dmef1amrv175m" path="res://addons/gdpractice/practice_solutions/L6.P2.typewriter/assets/practice_background_material.tres" id="1_x6ybp"]
+[ext_resource type="Theme" uid="uid://v0dvpkkl7lel" path="res://addons/gdpractice/practice_solutions/L6.P2.typewriter/assets/practice_exercises_theme.tres" id="2_ey2ki"]
+[ext_resource type="Script" uid="uid://cibfswy51vvol" path="res://addons/gdpractice/practice_solutions/L6.P2.typewriter/typewriter.gd" id="4_yclwh"]
+[ext_resource type="AudioStream" uid="uid://lediykc1phcl" path="res://addons/gdpractice/practice_solutions/L6.P2.typewriter/assets/human_vel-002.wav" id="5_giixa"]
+
+[node name="Typewriter" type="ColorRect"]
+material = ExtResource("1_x6ybp")
+custom_minimum_size = Vector2(960, 540)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ey2ki")
+script = ExtResource("4_yclwh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 166.0
+offset_top = 102.0
+offset_right = -166.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 2
+scroll_following = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_giixa")

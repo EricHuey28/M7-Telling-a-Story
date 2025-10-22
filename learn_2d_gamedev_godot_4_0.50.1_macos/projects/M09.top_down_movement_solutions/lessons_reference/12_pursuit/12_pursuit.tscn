@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbe6tsc47perd"]
+
+[ext_resource type="PackedScene" uid="uid://c3uiihxdxjwc2" path="res://lessons_reference/12_pursuit/bouncer.tscn" id="1_734ca"]
+
+[node name="TestingSteering" type="Node2D"]
+
+[node name="Bouncer" parent="." instance=ExtResource("1_734ca")]
+position = Vector2(673, 462)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(960, 540)
+zoom = Vector2(1.3, 1.3)

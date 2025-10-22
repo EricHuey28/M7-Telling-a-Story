@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://ct5wvoffsjt04"]
+
+[ext_resource type="Script" uid="uid://bltcxwo4xtoev" path="res://lessons_reference/mobs/mob.gd" id="1_73yqg"]
+[ext_resource type="Texture2D" uid="uid://c06dsq2gfbcd8" path="res://mobs/mouse_01.png" id="2_0yxb3"]
+[ext_resource type="Texture2D" uid="uid://b4pkvbcpxqr5k" path="res://mobs/car.png" id="2_m7kbf"]
+
+[sub_resource type="CircleShape2D" id="6"]
+radius = 32.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04gd2"]
+bg_color = Color(0.156863, 0.0784314, 0.305882, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1qb7w"]
+bg_color = Color(0.623529, 0.866667, 0.317647, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Mob" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_73yqg")
+speed = 200.0
+health = 40.0
+damage = 15.0
+coins = 10
+texture_variations = Array[Texture]([ExtResource("2_m7kbf")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-6, 0)
+scale = Vector2(0.861538, 0.861538)
+texture = ExtResource("2_0yxb3")
+
+[node name="BarPivot" type="Marker2D" parent="."]
+unique_name_in_owner = true
+
+[node name="HealthBar" type="ProgressBar" parent="BarPivot"]
+unique_name_in_owner = true
+offset_left = -26.0
+offset_top = -53.0
+offset_right = 26.0
+offset_bottom = -45.0
+theme_override_styles/background = SubResource("StyleBoxFlat_04gd2")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1qb7w")
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true

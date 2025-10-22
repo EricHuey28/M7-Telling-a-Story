@@ -1,0 +1,41 @@
+This project uses 3 licenses:
+
+1. Interactive tours (GDTours) and interactive practices (GDPractices) are All Rights Reserved.
+2. The rest of the game's source code (script files, scene files, shaders, and generally all Godot-generated resources) is available under the MIT license.
+3. Art assets (image textures and 3D models) are [CC-By 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+In short, this means you can reuse code and art assets in your own projects freely (other than interactive tours and auto-tested practices), including commercial ones, as long as you give credit to GDQuest. For assets, you can add this to your credits: "Additional assets CC-By 4.0 GDQuest (https://www.gdquest.com/)".
+
+The above is just for clarity. You can find the exact terms of each license below.
+
+## All Rights Reserved (Interactive Tours and Practices)
+
+All interactive tours (files that use our GDTour technology to implement an interactive tour - generally but not exclusively located in a folder named "tours/") and interactive practices (files that use our GDPractice technology to implement interactive practices - generally but not exclusively located in folders named "practices/" or "practice_solutions/" folders) are the property of GDQuest and are not to be shared, copied, or redistributed without explicit permission. These materials are intended for personal use only as part of the learning experience provided by GDQuest.
+
+For the purpose of this license, "sharing" means providing access to these files to any other person, whether directly or indirectly, for free or for a fee, uploading the content to any platform or service accessible by others, or enabling others to access the content through any means.
+
+## MIT License
+
+Copyright (c) 2024-2025 GDQuest
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## CC-By 4.0 License
+
+You are free to:
+
+- Share — copy and redistribute the material in any medium or format for any purpose, even commercially.
+- Adapt — remix, transform, and build upon the material for any purpose, even commercially.
+
+Under the following terms:
+
+1. Attribution — You must give appropriate credit , provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+2. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+The licensor cannot revoke these freedoms as long as you follow the license terms.
+
+Read the full Creative Commons Attribution 4.0 International Public License: https://creativecommons.org/licenses/by/4.0/legalcode

@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://c80alrqqbvsnk"]
+
+[ext_resource type="Script" path="res://practice_solutions/L3.P2.sting_the_balloon/balloon_sting.gd" id="1_uxaeg"]
+[ext_resource type="Material" uid="uid://mu3l3tnidk6h" path="res://practice_solutions/L3.P2.sting_the_balloon/material.tres" id="2_ebupg"]
+[ext_resource type="Texture2D" uid="uid://bkhg7vixe1w41" path="res://practice_solutions/L3.P2.sting_the_balloon/balloon_tail.png" id="3_neqkn"]
+[ext_resource type="Texture2D" uid="uid://bn6jrawnf5ijj" path="res://practice_solutions/L3.P2.sting_the_balloon/balloon_top.png" id="4_fiobc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lppgf"]
+radius = 47.0
+height = 166.0
+
+[node name="BalloonSting" type="Area2D"]
+position = Vector2(960, 540)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_uxaeg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("CapsuleShape2D_lppgf")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+material = ExtResource("2_ebupg")
+position = Vector2(0, 33)
+
+[node name="Tail" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(0, -37)
+texture = ExtResource("3_neqkn")
+offset = Vector2(0, 34)
+
+[node name="Top" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(0, -79)
+texture = ExtResource("4_fiobc")
+offset = Vector2(0, 5)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxgyys8v2sevt"]
+
+[ext_resource type="Texture2D" uid="uid://cv328i4tw2cc1" path="res://turrets/weapons/simple_cannon.png" id="1_d547h"]
+[ext_resource type="Script" uid="uid://d3bs2ckydi3if" path="res://lessons_reference/turrets/weapons/simple_cannon.gd" id="2_3nv4o"]
+
+[node name="SimpleCannon" type="Sprite2D"]
+unique_name_in_owner = true
+z_index = 10
+texture = ExtResource("1_d547h")
+script = ExtResource("2_3nv4o")
+
+[node name="RocketSpawnPoint" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(56, 0)

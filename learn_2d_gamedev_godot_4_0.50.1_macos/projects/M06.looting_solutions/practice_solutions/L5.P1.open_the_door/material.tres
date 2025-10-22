@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bea3lj1m2qape"]
+
+[ext_resource type="Shader" path="res://practice_solutions/L5.P1.open_the_door/group_outline.gdshader" id="1_hkit0"]
+
+[resource]
+shader = ExtResource("1_hkit0")
+shader_parameter/line_color = Color(0, 0, 0, 1)
+shader_parameter/line_thickness = 5.0
+shader_parameter/viewport_scale = Vector2(1, 1)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci7o17vrdk23u"]
+
+[ext_resource type="Texture2D" uid="uid://bniyrxn3r2v8h" path="res://assets/ship.png" id="1_4jhes"]
+[ext_resource type="Script" uid="uid://e1n6qgsbnek1" path="res://lessons_reference/04.ship_with_steering/ship_with_steering.gd" id="2_2sqdw"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(932, 519)
+texture = ExtResource("1_4jhes")
+script = ExtResource("2_2sqdw")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

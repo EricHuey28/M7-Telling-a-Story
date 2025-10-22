@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://bciysjphqdjbt"]
+
+[ext_resource type="Material" uid="uid://blciib2n6bpvf" path="res://addons/gdpractice/practice_solutions/L6.P1.poetry/assets/practice_background_material.tres" id="1_5n6w4"]
+[ext_resource type="Theme" uid="uid://cwucu7cyg5cxp" path="res://addons/gdpractice/practice_solutions/L5.P1.pick_correct_response/assets/practice_exercises_theme.tres" id="2_i4nwe"]
+[ext_resource type="Script" uid="uid://si4bc0qd0qjx" path="res://addons/gdpractice/practice_solutions/L5.P1.pick_correct_response/pick_correct_response.gd" id="4_fswm8"]
+
+[node name="PickCorrectWord" type="ColorRect"]
+material = ExtResource("1_5n6w4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_i4nwe")
+script = ExtResource("4_fswm8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -292.0
+offset_top = -363.0
+offset_right = 292.0
+offset_bottom = 363.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="QuestionLabel" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Why don't programmers like nature?"
+autowrap_mode = 3
+
+[node name="responseLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+autowrap_mode = 3

@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://d308a1bgxorpw"]
+
+[ext_resource type="Script" uid="uid://dso7k2wt03cso" path="res://lessons_reference/02_extended/npc/npc.gd" id="1_taywy"]
+[ext_resource type="Resource" uid="uid://byce57cqdx5qp" path="res://lessons_reference/02_extended/npc/dialogue/dialogue_introduction.tres" id="2_hicn8"]
+[ext_resource type="Texture2D" uid="uid://dvjpow1ete6qb" path="res://npc/sophia.png" id="3_4ge73"]
+[ext_resource type="PackedScene" uid="uid://5ays6kuo0xio" path="res://common/shadow.tscn" id="4_imcj6"]
+[ext_resource type="PackedScene" uid="uid://by4spho51hxj4" path="res://lessons_reference/02_extended/npc/dialogue/dialogue_box.tscn" id="5_eb61j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ct2l"]
+radius = 49.0918
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3xgi"]
+size = Vector2(52, 61)
+
+[node name="NPC" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_taywy")
+dialogue = ExtResource("2_hicn8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.00006, -67)
+scale = Vector2(0.734375, 0.734375)
+texture = ExtResource("3_4ge73")
+
+[node name="Shadow" parent="." instance=ExtResource("4_imcj6")]
+position = Vector2(1.00006, 10)
+scale = Vector2(0.734375, 0.734375)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8ct2l")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="DialogueBox" parent="CanvasLayer" instance=ExtResource("5_eb61j")]
+unique_name_in_owner = true
+visible = false
+dialogue = ExtResource("2_hicn8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -18.5)
+shape = SubResource("RectangleShape2D_j3xgi")

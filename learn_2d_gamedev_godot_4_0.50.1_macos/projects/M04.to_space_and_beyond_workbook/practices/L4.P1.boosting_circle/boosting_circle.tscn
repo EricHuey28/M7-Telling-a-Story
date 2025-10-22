@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/practice_assets/shape_ship.png" id="1_w7vm3"]
+[ext_resource type="Script" path="res://practices/L4.P1.boosting_circle/boosting_circle.gd" id="2_v458s"]
+[ext_resource type="Texture2D" path="res://assets/practice_assets/ellipse_white.png" id="3_geoet"]
+[ext_resource type="PackedScene" path="res://practices/L4.P1.boosting_circle/background.tscn" id="4_4en4c"]
+
+[sub_resource type="Curve" id="Curve_w5itb"]
+_data = [Vector2(0, 0.663194), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.0319997, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_8ky8q"]
+curve = SubResource("Curve_w5itb")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_q610u"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 12.04
+scale_curve = SubResource("CurveTexture_8ky8q")
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(960, 540)
+texture = ExtResource("1_w7vm3")
+script = ExtResource("2_v458s")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(0.584314, 0.380392, 0.933333, 1)
+show_behind_parent = true
+z_index = -2
+texture = ExtResource("3_geoet")
+visibility_rect = Rect2(-4000, -4000, 4000, 4000)
+process_material = SubResource("ParticleProcessMaterial_q610u")
+
+[node name="Background" type="Node" parent="." instance=ExtResource("4_4en4c")]

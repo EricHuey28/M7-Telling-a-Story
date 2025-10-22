@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmbts55s480qg"]
+
+[ext_resource type="PackedScene" uid="uid://bip4jh48thu7n" path="res://lessons_reference/UI_samples/editable_widget.tscn" id="1_suf2u"]
+[ext_resource type="Theme" uid="uid://dp1nmwxx5vbr5" path="res://lessons_reference/UI_samples/assets/ui_samples_theme.tres" id="1_tbcng"]
+
+[node name="EditableWidgetInUse" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tbcng")
+
+[node name="EditableWidget" parent="." instance=ExtResource("1_suf2u")]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+title = "This label can be modified from outsde the scene. Yey!"
+
+[node name="EditableWidget2" parent="." instance=ExtResource("1_suf2u")]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+title = "It's easy to preview the UI this way."

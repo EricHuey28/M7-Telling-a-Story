@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://dfbfv0gxetook"]
+
+[ext_resource type="Texture2D" uid="uid://d07un6ita4esd" path="res://assets/lucy/idle/004.png" id="2_7fijd"]
+[ext_resource type="Texture2D" uid="uid://ckdstkswgy7yp" path="res://assets/lucy/idle/003.png" id="3_g8ipx"]
+[ext_resource type="Texture2D" uid="uid://pk8wb3owg84f" path="res://assets/lucy/run/005.png" id="4_m3xrn"]
+[ext_resource type="Texture2D" uid="uid://dw8wfsxexlcit" path="res://assets/lucy/run/004.png" id="5_uroeg"]
+[ext_resource type="Texture2D" uid="uid://c030uv7w2bgs3" path="res://assets/lucy/run/003.png" id="6_hh7dr"]
+[ext_resource type="Texture2D" uid="uid://7hdpmnwe0m7k" path="res://assets/lucy/run/002.png" id="7_5h60u"]
+[ext_resource type="Texture2D" uid="uid://cqhwdqlpfm50e" path="res://assets/lucy/run/001.png" id="8_u4a8x"]
+[ext_resource type="Texture2D" uid="uid://byi5d5liq08bu" path="res://assets/lucy/run/000.png" id="9_iysqt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wmgir"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_hh7dr")
+}],
+"loop": true,
+"name": &"Fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 20.0,
+"texture": ExtResource("2_7fijd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g8ipx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_7fijd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g8ipx")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_hh7dr")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_m3xrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uroeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hh7dr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5h60u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_u4a8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_iysqt")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_wmgir")
+animation = &"Fall"

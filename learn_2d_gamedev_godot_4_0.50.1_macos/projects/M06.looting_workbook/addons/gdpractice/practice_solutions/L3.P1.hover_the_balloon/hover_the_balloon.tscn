@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfsm5sn5fomt2"]
+
+[ext_resource type="PackedScene" uid="uid://bmdplhbajlq3e" path="res://addons/gdpractice/practice_solutions/L3.P1.hover_the_balloon/balloon_hover.tscn" id="1_an6m0"]
+[ext_resource type="PackedScene" uid="uid://dhvgsnnl8ad8b" path="res://addons/gdpractice/practice_solutions/L3.P1.hover_the_balloon/background.tscn" id="2_70psj"]
+
+[node name="HoverTheBalloon" type="Node2D"]
+metadata/_edit_horizontal_guides_ = []
+
+[node name="BalloonHover" parent="." instance=ExtResource("1_an6m0")]
+
+[node name="Background" parent="." instance=ExtResource("2_70psj")]

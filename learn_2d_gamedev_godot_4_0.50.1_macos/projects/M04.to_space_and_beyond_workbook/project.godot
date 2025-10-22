@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="M04. To Space and Beyond (Workbook)"
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="res://assets/ship.png"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
+window/size/window_width_override=1152
+window/size/window_height_override=648
+window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="M04. To Space and Beyond"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdpractice/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.188235, 0.188235, 0.286275, 1)

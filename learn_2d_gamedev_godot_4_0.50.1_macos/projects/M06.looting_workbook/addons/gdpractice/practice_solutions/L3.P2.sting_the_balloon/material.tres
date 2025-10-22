@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://mu3l3tnidk6h"]
+
+[ext_resource type="Shader" path="res://addons/gdpractice/practice_solutions/L3.P2.sting_the_balloon/group_outline.gdshader" id="1_4gimc"]
+
+[resource]
+shader = ExtResource("1_4gimc")
+shader_parameter/line_color = Color(0, 0, 0, 1)
+shader_parameter/line_thickness = 5.0
+shader_parameter/viewport_scale = Vector2(1, 1)

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bip4jh48thu7n"]
+
+[ext_resource type="Script" uid="uid://dtx0bw3bahksw" path="res://lessons_reference/UI_samples/editable_widget.gd" id="1_gb6kk"]
+[ext_resource type="Texture2D" uid="uid://ckht6ne2j2gb" path="res://lessons_reference/UI_samples/assets/character_gdbot.png" id="2_jdqy8"]
+
+[node name="EditableWidget" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gb6kk")
+title = "A label that can be changed from the root node or in another scene"
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="TextureRect" type="TextureRect" parent="AspectRatioContainer"]
+layout_mode = 2
+texture = ExtResource("2_jdqy8")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "A label that can be changed from the root node or in another scene"

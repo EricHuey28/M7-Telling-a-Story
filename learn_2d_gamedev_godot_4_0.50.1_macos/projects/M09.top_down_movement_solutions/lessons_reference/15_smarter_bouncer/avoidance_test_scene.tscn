@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnicretjm4a7i"]
+
+[ext_resource type="PackedScene" uid="uid://dvtdgo0n3gkyq" path="res://lessons_reference/08_finish_line/08_runner.tscn" id="1_4ek3a"]
+[ext_resource type="PackedScene" uid="uid://cc57s0hxnsxsk" path="res://lessons_reference/15_smarter_bouncer/bouncer_with_avoidance.tscn" id="2_w2pfa"]
+[ext_resource type="PackedScene" uid="uid://c7le2os75mfd2" path="res://lessons_reference/04_obstacles/04_simple_obstacle.tscn" id="3_dse11"]
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Runner" parent="." instance=ExtResource("1_4ek3a")]
+position = Vector2(1333, 456)
+
+[node name="BouncerWithAvoidance" parent="." instance=ExtResource("2_w2pfa")]
+position = Vector2(324, 474)
+max_speed = 200.0
+
+[node name="SimpleObstacle" parent="." instance=ExtResource("3_dse11")]
+position = Vector2(953, 553)
+
+[node name="SimpleObstacle4" parent="." instance=ExtResource("3_dse11")]
+position = Vector2(934, 195)
+
+[node name="SimpleObstacle6" parent="." instance=ExtResource("3_dse11")]
+position = Vector2(1077, 429)

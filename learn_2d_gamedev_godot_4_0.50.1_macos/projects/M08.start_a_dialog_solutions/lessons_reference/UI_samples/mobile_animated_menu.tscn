@@ -1,0 +1,121 @@
+[gd_scene load_steps=5 format=3 uid="uid://7r00l26lw0ae"]
+
+[ext_resource type="Theme" uid="uid://dp1nmwxx5vbr5" path="res://lessons_reference/UI_samples/assets/ui_samples_theme.tres" id="1_kkgub"]
+[ext_resource type="Script" uid="uid://ll118cft2653" path="res://lessons_reference/UI_samples/mobile_animated_menu.gd" id="2_acx4r"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_i17ck"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_k6sch"]
+events = [SubResource("InputEventAction_i17ck")]
+
+[node name="MobileAnimatedMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_kkgub")
+script = ExtResource("2_acx4r")
+
+[node name="AnimatedScreen" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="AnimatedScreen"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -350.0
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="AnimatedScreen/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnimatedScreen/PanelContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"VBoxSecondary"
+
+[node name="HomeButton" type="Button" parent="AnimatedScreen/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Home"
+
+[node name="HomeButton2" type="Button" parent="AnimatedScreen/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Profile"
+
+[node name="HomeButton3" type="Button" parent="AnimatedScreen/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Messages"
+
+[node name="HomeButton4" type="Button" parent="AnimatedScreen/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Notifications"
+
+[node name="HomeButton5" type="Button" parent="AnimatedScreen/PanelContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Settings"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnimatedScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"VBoxSecondary"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AnimatedScreen/VBoxContainer"]
+layout_mode = 2
+
+[node name="DrawerButton" type="Button" parent="AnimatedScreen/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+shortcut = SubResource("Shortcut_k6sch")
+text = "|||"
+
+[node name="Label" type="Label" parent="AnimatedScreen/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionsScreenTitle"
+text = "Some Mobile App Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="AnimatedScreen/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AnimatedScreen/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 272.0
+offset_right = -272.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[font size=64]Mew mew pelt around the house and up and down stairs chasing phantoms cat snacks[/font]
+
+Sugar, my siamese, stalks me (in a good way), day and night ignore the squirrels, you'll never catch them anyway cats woo
+Cat ipsum dolor sit amet, get scared by doggo also cucumerro . Eat an easter feather as if it were a bird then burp victoriously, but tender hate dogs chase the pig around the house, so hide from vacuum cleaner and give attitude that box? i can fit in that box run at 3am. Meow to be let out steal the warm chair right after you get up, nya nya nyan intrigued by the shower, or claw your carpet in places everyone can see - why hide my amazing artistic clawing skills? 
+
+take a deep sniff of sock then walk around with mouth half open for try to hold own back foot to clean it but foot reflexively kicks you in face, go into a rage and bite own foot, hard. Pooping rainbow while flying in a toasted bread costume in space litter kitter kitty litty little kitten big roar roar feed me lick butt am in trouble, roll over, too cute for human to get mad. Enslave the hooman. Ask to be pet then attack owners hand sit by the fire but meow meow we are 3 small kittens sleeping most of our time, we are around 15 weeks old i think, i donâ€™t know i canâ€™t count for blow up sofa in 3 seconds, friends are not food and i cry and cry and cry unless you pet me, and then maybe i cry just for fun don't nosh on the birds. Flee in terror at cucumber discovered on floor leave hair everywhere miaow then turn around and show you my bum meow all night having their mate disturbing sleeping humans or scamper. 
+
+It's 3am, time to create some chaos . Pee in the shoe purr like an angel pelt around the house and up and down stairs chasing phantoms so purr for no reason do doodoo in the litter-box, clickityclack on the piano, be frumpygrumpy what a cat-ass-trophy!. Eat a rug and furry furry hairs everywhere oh no human coming lie on counter don't get off counter. Put toy mouse in food bowl run out of litter box at full speed . Where is it? i saw that bird i need to bring it home to mommy squirrel! the fat cat sat on the mat bat away with paws for pet me pet me pet me pet me, bite, scratch, why are you petting me plays league of legends in the middle of the night i crawl onto your chest and purr gently to help you sleep and leave fur on owners clothes scream at teh bath. 
+
+Gnaw the corn cob. Check cat door for ambush 10 times before coming in. If it smells like fish eat as much as you wish litter box is life meoooow so intrigued by the shower. In the middle of the night i crawl onto your chest and purr gently to help you sleep chase after silly colored fish toys around the house sleep on my human's head, groom yourself 4 hours - checked, have your beauty sleep 18 hours - checked, be fabulous for the rest of the day - checked. Meowwww sniff other cat's butt and hang jaw half open thereafter if it fits, i sits i like to spend my days sleeping and eating fishes that my human fished for me we live on a luxurious yacht, sailing proudly under the sun, i like to walk on the deck, watching the horizon, dreaming of a good bowl of milk. Dismember a mouse and then regurgitate parts of it on the family room floor destroy couch as revenge. Check cat door for ambush 10 times before coming in chirp at birds, cat sit like bread thinking about you i'm joking it's food always food or nyan fluffness ahh cucumber! i like to spend my days sleeping and eating fishes that my human fished for me we live on a luxurious yacht, sailing proudly under the sun, i like to walk on the deck, watching the horizon, dreaming of a good bowl of milk human is behind a closed door, emergency! abandoned! meeooowwww!!!. Spit up on light gray carpet instead of adjacent linoleum check cat door for ambush 10 times before coming in somehow manage to catch a bird but have no idea what to do next, so play with it until it dies of shock eat too much then proceed to regurgitate all over living room carpet while humans eat dinner when in doubt, wash chase imaginary bugs. Leave buried treasure in the sandbox for the toddlers. Going to catch the red dot today going to catch the red dot today meow meow mama but if human is on laptop sit on the keyboard or run up and down stairs fart in owners food . Walk on car leaving trail of paw prints on hood and windshield chase imaginary bugs waffles skid on floor, crash into wall knock dish off table head butt cant eat out of my own dish. "

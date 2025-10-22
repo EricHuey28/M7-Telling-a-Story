@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[node name="Background" type="Node"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" groups=["GDFExcludeVisibility"]]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.152941, 0.168627, 0.188235, 1)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true

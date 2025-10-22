@@ -1,0 +1,8 @@
+{
+  "background.tscn": "159e6913f3ffad73107e0b3c4f724d45",
+  "coin.gd": "1a7f4fe5eda5949d93b3dcb77aa55cb2",
+  "coin.tscn": "5b16a3ff58d9527c57045e63b257e7f9",
+  "create_coins.tscn": "2bbd57a397f0893877e1f303d5c5495d",
+  "ship_create_coins.gd": "507c2fe07c9570067099e11e91e7d98a",
+  "ship_create_coins.tscn": "f3617f9ca6587f678c6e73adb42a6706"
+}

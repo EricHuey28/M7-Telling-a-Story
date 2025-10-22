@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://practices/L6.P1.create_coins/ship_create_coins.tscn" id="1_uh8a7"]
+[ext_resource type="Script" path="res://practices/L6.P1.create_coins/ship_create_coins.gd" id="2_kl2ax"]
+[ext_resource type="PackedScene" path="res://practices/L6.P1.create_coins/background.tscn" id="3_uysdr"]
+
+[node name="CreateCoins" type="Node2D"]
+
+[node name="Ship" type="Area2D" parent="." instance=ExtResource("1_uh8a7")]
+position = Vector2(973, 541)
+script = ExtResource("2_kl2ax")
+
+[node name="Background" type="Node" parent="." instance=ExtResource("3_uysdr")]

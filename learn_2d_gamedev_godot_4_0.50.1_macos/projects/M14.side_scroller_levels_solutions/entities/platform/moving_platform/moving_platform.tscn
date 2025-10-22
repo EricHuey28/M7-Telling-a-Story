@@ -1,0 +1,106 @@
+[gd_scene load_steps=17 format=3 uid="uid://bio5frexqas2h"]
+
+[ext_resource type="PackedScene" uid="uid://c10ucj5wvv6hj" path="res://entities/platform/platform.tscn" id="1_7ampt"]
+[ext_resource type="Script" uid="uid://d1wp65u5lydea" path="res://entities/platform/moving_platform/moving_platform.gd" id="2_uh4oc"]
+[ext_resource type="Texture2D" uid="uid://b8qsuovr6h60b" path="res://entities/platform/yellow_platform.png" id="3_ekp02"]
+[ext_resource type="Texture2D" uid="uid://burfa5btfkvgb" path="res://entities/platform/moving_platform/wings_sprite.png" id="4_w1wq7"]
+[ext_resource type="Shader" uid="uid://durrpygpkynv3" path="res://entities/platform/moving_platform/sparkling_particles.gdshader" id="5_i38n6"]
+[ext_resource type="Texture2D" uid="uid://b7co7m5saxi11" path="res://entities/platform/light_particle.png" id="6_11b1s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vas0l"]
+resource_local_to_scene = true
+size = Vector2(32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vh82u"]
+atlas = ExtResource("4_w1wq7")
+region = Rect2(0, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2d13r"]
+atlas = ExtResource("4_w1wq7")
+region = Rect2(12, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a16vl"]
+atlas = ExtResource("4_w1wq7")
+region = Rect2(24, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkw2r"]
+atlas = ExtResource("4_w1wq7")
+region = Rect2(36, 0, 12, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q3hr6"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_vh82u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2d13r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a16vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkw2r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qfs4b"]
+shader = ExtResource("5_i38n6")
+
+[sub_resource type="Curve" id="Curve_bih1n"]
+_data = [Vector2(0, 0), 0.0, 16.0131, 0, 0, Vector2(0.1, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_n14a0"]
+curve = SubResource("Curve_bih1n")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hs6ah"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(16, 8, 1)
+gravity = Vector3(0, -10, 0)
+alpha_curve = SubResource("CurveTexture_n14a0")
+anim_speed_min = 0.5
+anim_speed_max = 1.0
+
+[node name="MovingPlatform" instance=ExtResource("1_7ampt")]
+script = ExtResource("2_uh4oc")
+start_at_end = false
+back_and_forth = true
+movement_speed = 16.0
+tween_trans_type = 1
+wave_height = 7.0
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_vas0l")
+
+[node name="Sprite" parent="VisualRoot" index="0"]
+texture = ExtResource("3_ekp02")
+
+[node name="RightWing" type="AnimatedSprite2D" parent="." index="2"]
+unique_name_in_owner = true
+position = Vector2(15, 2)
+sprite_frames = SubResource("SpriteFrames_q3hr6")
+autoplay = "default"
+frame_progress = 0.40907
+offset = Vector2(6, 0)
+
+[node name="LeftWing" type="AnimatedSprite2D" parent="." index="3"]
+unique_name_in_owner = true
+position = Vector2(-15, 2)
+sprite_frames = SubResource("SpriteFrames_q3hr6")
+autoplay = "default"
+frame_progress = 0.482107
+offset = Vector2(-6, 0)
+flip_h = true
+
+[node name="SparklingParticles" type="GPUParticles2D" parent="." index="4"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_qfs4b")
+position = Vector2(0, 4)
+texture = ExtResource("6_11b1s")
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_hs6ah")

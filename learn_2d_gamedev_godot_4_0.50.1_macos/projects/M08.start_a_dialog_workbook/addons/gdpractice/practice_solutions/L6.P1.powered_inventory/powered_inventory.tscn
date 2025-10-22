@@ -1,0 +1,167 @@
+[gd_scene load_steps=27 format=3 uid="uid://chusjyme8gdf6"]
+
+[ext_resource type="Theme" uid="uid://qk3rjf73qo8w" path="res://assets/practices/practices_theme.tres" id="1_40xt8"]
+[ext_resource type="Shader" uid="uid://dm7717xxg836f" path="res://assets/sliding_background.gdshader" id="1_ewtfc"]
+[ext_resource type="Script" uid="uid://bfyhlkty1p8u7" path="res://addons/gdpractice/practice_solutions/L6.P1.powered_inventory/powered_inventory.gd" id="2_ak5dh"]
+[ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="2_s4jqe"]
+[ext_resource type="Texture2D" uid="uid://c7a7f8owvgxvn" path="res://addons/gdpractice/practice_solutions/L6.P1.powered_inventory/assets/energy.svg" id="3_fvbip"]
+[ext_resource type="Script" uid="uid://bhulrv0fl5ls8" path="res://addons/gdpractice/practice_solutions/L6.P1.powered_inventory/power.gd" id="4_grike"]
+[ext_resource type="Texture2D" uid="uid://dyv3xd2oahsmj" path="res://addons/gdpractice/practice_solutions/L6.P1.powered_inventory/assets/fire.svg" id="5_07hrl"]
+[ext_resource type="Script" uid="uid://bwljp5f3dgjb6" path="res://addons/gdpractice/practice_solutions/L6.P1.powered_inventory/powered_item.gd" id="6_pnir6"]
+[ext_resource type="Texture2D" uid="uid://c2foyfreg33ox" path="res://addons/gdpractice/practice_solutions/L6.P1.powered_inventory/assets/water.svg" id="7_1miil"]
+[ext_resource type="Texture2D" uid="uid://bsott820l68g2" path="res://addons/gdpractice/practice_solutions/L6.P1.powered_inventory/assets/triforce.svg" id="8_hl0g3"]
+[ext_resource type="Texture2D" uid="uid://bet4y7xcieqbw" path="res://addons/gdpractice/practice_solutions/L6.P1.powered_inventory/assets/poison.svg" id="9_3ilgi"]
+[ext_resource type="Texture2D" uid="uid://chn4x1koooklt" path="res://addons/gdpractice/practice_solutions/L6.P1.powered_inventory/assets/health.svg" id="10_ixt2m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p0ea8"]
+shader = ExtResource("1_ewtfc")
+shader_parameter/pattern_sampler = ExtResource("2_s4jqe")
+shader_parameter/bg_color = Color(0.537824, 0.0789613, 0.817605, 1)
+shader_parameter/pattern_color = Color(0.467561, 0.0634301, 0.715504, 1)
+shader_parameter/pattern_size = 256.0
+
+[sub_resource type="Resource" id="Resource_a5xyy"]
+script = ExtResource("4_grike")
+image = ExtResource("3_fvbip")
+
+[sub_resource type="Resource" id="Resource_t1k6h"]
+script = ExtResource("4_grike")
+image = ExtResource("5_07hrl")
+
+[sub_resource type="Resource" id="Resource_783up"]
+script = ExtResource("6_pnir6")
+text = "sword"
+price = 25
+powerups_list = Array[ExtResource("4_grike")]([SubResource("Resource_a5xyy"), SubResource("Resource_t1k6h")])
+
+[sub_resource type="Resource" id="Resource_jkeoe"]
+script = ExtResource("4_grike")
+image = ExtResource("5_07hrl")
+
+[sub_resource type="Resource" id="Resource_tttag"]
+script = ExtResource("4_grike")
+image = ExtResource("7_1miil")
+
+[sub_resource type="Resource" id="Resource_qek3k"]
+script = ExtResource("4_grike")
+image = ExtResource("8_hl0g3")
+
+[sub_resource type="Resource" id="Resource_4h31r"]
+script = ExtResource("4_grike")
+image = ExtResource("9_3ilgi")
+
+[sub_resource type="Resource" id="Resource_1qkrv"]
+script = ExtResource("6_pnir6")
+text = "shrimp"
+price = 99
+powerups_list = Array[ExtResource("4_grike")]([SubResource("Resource_jkeoe"), SubResource("Resource_tttag"), SubResource("Resource_qek3k"), SubResource("Resource_4h31r")])
+
+[sub_resource type="Resource" id="Resource_1usy8"]
+script = ExtResource("4_grike")
+image = ExtResource("10_ixt2m")
+
+[sub_resource type="Resource" id="Resource_4bbu4"]
+script = ExtResource("6_pnir6")
+text = "ring"
+price = 5
+powerups_list = Array[ExtResource("4_grike")]([SubResource("Resource_1usy8")])
+
+[sub_resource type="Resource" id="Resource_8172v"]
+script = ExtResource("4_grike")
+image = ExtResource("8_hl0g3")
+
+[sub_resource type="Resource" id="Resource_k4d6h"]
+script = ExtResource("4_grike")
+image = ExtResource("7_1miil")
+
+[sub_resource type="Resource" id="Resource_fpdoo"]
+script = ExtResource("6_pnir6")
+text = "shield"
+price = 15
+powerups_list = Array[ExtResource("4_grike")]([SubResource("Resource_8172v"), SubResource("Resource_k4d6h")])
+
+[node name="PoweredInventory" type="ColorRect"]
+material = SubResource("ShaderMaterial_p0ea8")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_ak5dh")
+items_list = Array[ExtResource("6_pnir6")]([SubResource("Resource_783up"), SubResource("Resource_1qkrv"), SubResource("Resource_4bbu4"), SubResource("Resource_fpdoo")])
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_40xt8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(324, 384)
+layout_mode = 2
+columns = 2
+
+[node name="Panel" type="Panel" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer/HBoxContainer/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 55.0
+grow_horizontal = 2
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -42.0
+offset_top = -47.0
+offset_right = 42.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "buy"
+
+[node name="PowerupsVBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 2
+theme_type_variation = &"SmallText"
+bbcode_enabled = true
+text = "Icons courtesy of https://game-icons.net"
+fit_content = true
+selection_enabled = true

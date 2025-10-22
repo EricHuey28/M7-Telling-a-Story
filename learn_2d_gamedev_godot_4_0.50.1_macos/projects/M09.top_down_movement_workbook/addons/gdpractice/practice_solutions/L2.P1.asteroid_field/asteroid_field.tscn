@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://qr85v0tvl371"]
+
+[ext_resource type="PackedScene" uid="uid://chkrmqdqbln4f" path="res://assets/practice_assets/asteroid_spawner.tscn" id="2_6qbfy"]
+[ext_resource type="PackedScene" uid="uid://cte0c165ijc60" path="res://addons/gdpractice/practice_solutions/L2.P1.asteroid_field/moving_ship.tscn" id="2_tsd3d"]
+
+[node name="Background" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" groups=["GDFExcludeVisibility"]]
+z_index = -3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.364706, 0.12549, 0.776471, 1)
+
+[node name="AsteroidSpawner" parent="." instance=ExtResource("2_6qbfy")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_tsd3d")]

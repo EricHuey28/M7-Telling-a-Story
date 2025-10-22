@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://xlnp8333w4el"]
+
+[ext_resource type="Script" uid="uid://dxh3lyyk5ax1e" path="res://lessons_reference/05.completed/ship_final.gd" id="2_to4au"]
+[ext_resource type="Texture2D" uid="uid://bniyrxn3r2v8h" path="res://assets/ship.png" id="2_x2kph"]
+[ext_resource type="Texture2D" uid="uid://d0bh8am2qd005" path="res://assets/gem_icon.png" id="3_7klyu"]
+[ext_resource type="PackedScene" uid="uid://bklom8bhpxg4h" path="res://assets/ship_visual_effects/side_thruster/side_thruster.tscn" id="3_k8v64"]
+[ext_resource type="PackedScene" uid="uid://dgf54k70yiiff" path="res://assets/ship_visual_effects/main_thruster/main_thruster.tscn" id="4_syxip"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hh0w0"]
+radius = 45.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14x63"]
+bg_color = Color(0.623529, 0.866667, 0.317647, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_y14ki"]
+font_size = 20
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Area2D" type="Area2D" groups=["player"]]
+collision_mask = 2
+script = ExtResource("2_to4au")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_x2kph")
+
+[node name="MainThruster" parent="Sprite2D" instance=ExtResource("4_syxip")]
+position = Vector2(-33, 0)
+points = PackedVector2Array(0, 0, 33.3333, 0, 66.6667, 0)
+
+[node name="SideThruster" parent="Sprite2D" instance=ExtResource("3_k8v64")]
+position = Vector2(-44, -21)
+rotation = 1.74987
+
+[node name="SideThruster2" parent="Sprite2D" instance=ExtResource("3_k8v64")]
+position = Vector2(-45, 19)
+rotation = 1.36715
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_hh0w0")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="HealthBar" type="ProgressBar" parent="UI"]
+custom_minimum_size = Vector2(100, 8)
+layout_mode = 0
+offset_left = -50.0
+offset_top = -60.0
+offset_right = 50.0
+offset_bottom = -52.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_14x63")
+step = 1.0
+value = 10.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="UI"]
+position = Vector2(-22, -80)
+scale = Vector2(0.714286, 0.714286)
+texture = ExtResource("3_7klyu")
+
+[node name="GemCount" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -95.0
+offset_right = 27.0
+offset_bottom = -67.0
+size_flags_horizontal = 2
+text = "x0"
+label_settings = SubResource("LabelSettings_y14ki")
+vertical_alignment = 2
